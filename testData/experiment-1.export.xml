@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE export SYSTEM "export.dtd">
+<export>
+<properties>
+	<property id="abstract">Abstract</property>
+	<property id="affiliations">Affiliations</property>
+	<property id="pubMedId">PubMedId</property>
+	<property id="name">Name</property>
+	<property id="rawDataType">Raw data type</property>
+	<property id="description">Description</property>
+	<property id="id">ID</property>
+	<property id="entryDate">Registered</property>
+	<property id="bytes">Bytes</property>
+	<property id="directory.name">Directory</property>
+	<property id="title">Title</property>
+	<property id="experimentDesign">Experiment design</property>
+	<property id="experimentType">Experiment type</property>
+	<property id="publication">Publication</property>
+	<property id="owner.name">Owner</property>
+	<property id="publicationDate">Publication date</property>
+	<property id="authors">Authors</property>
+</properties>
+<items>
+<item id="experiment_10">
+  <property-value ref="abstract">The exit of antigen-presenting cells and lymphocytes from infl amed skin to afferent lymph
+is vital for the initiation and maintenance of dermal immune responses. How such an exit
+is achieved and how cells transmigrate the distinct endothelium of lymphatic vessels are
+unknown. We show that infl ammatory cytokines trigger activation of dermal lymphatic
+endothelial cells (LECs), leading to expression of the key leukocyte adhesion receptors
+intercellular adhesion molecule 1 (ICAM-1), vascular cell adhesion molecule 1 (VCAM-1),
+and E-selectin, as well as a discrete panel of chemokines and other potential regulators
+of leukocyte transmigration. Furthermore, we show that both ICAM-1 and VCAM-1 are
+induced in the dermal lymphatic vessels of mice exposed to skin contact hypersensitivity
+where they mediate lymph node traffi cking of dendritic cells (DCs) via afferent lymphatics.
+Lastly, we show that tumor necrosis factor α stimulates both DC adhesion and transmigration
+of dermal LEC monolayers in vitro and that the process is effi ciently inhibited by
+ICAM-1 and VCAM-1 adhesion-blocking monoclonal antibodies. These results reveal a
+CAM-mediated mechanism for recruiting leukocytes to the lymph nodes in infl ammation
+and highlight the process of lymphatic transmigration as a potential new target for
+antiinfl ammatory therapy.</property-value>
+  <property-value ref="affiliations" />
+  <property-value ref="pubMedId">PMID: 17116732</property-value>
+  <property-value ref="name">E-GEOD-6257</property-value>
+  <property-value ref="rawDataType">platform.affymetrix</property-value>
+  <property-value ref="description">An inflammation-induced mechanism for leukocyte transmigration across lymphatic vessel endothelium.</property-value>
+  <property-value ref="id">10</property-value>
+  <property-value ref="entryDate">2011-03-17</property-value>
+  <property-value ref="bytes">29072012</property-value>
+  <property-value ref="directory.name">E-GEOD-6257</property-value>
+  <property-value ref="title">An inflammation-induced mechanism for leukocyte transmigration of lymphatic vessel endothelium</property-value>
+  <property-value ref="experimentDesign" />
+  <property-value ref="experimentType" />
+  <property-value ref="publication">The Journal of Experimental Medicine</property-value>
+  <property-value ref="owner.name">Irina Rusinova</property-value>
+  <property-value ref="publicationDate">2006-11-20</property-value>
+  <property-value ref="authors">Louise A. Johnson,1 Steven Clasper,1 Andrew P. Holt,2 Patricia F. Lalor,2
+Dilair Baban,3 and David G. Jackson1</property-value>
+</item>
+</items>
+</export>

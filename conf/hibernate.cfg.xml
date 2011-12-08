@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="edu.monash.merc.domain.User"/>
+        <mapping class="edu.monash.merc.domain.Avatar"/>
+        <mapping class="edu.monash.merc.domain.Profile"/>
+        <mapping class="edu.monash.merc.domain.BlockIP"/>
+        <mapping class="edu.monash.merc.domain.AuditEvent"/>
+        <mapping class="edu.monash.merc.domain.Experiment"/>
+        <mapping class="edu.monash.merc.domain.Activity"/>
+        <mapping class="edu.monash.merc.domain.Party"/>
+        <mapping class="edu.monash.merc.domain.Licence"/>
+        <mapping class="edu.monash.merc.domain.Permission"/>
+        <mapping class="edu.monash.merc.domain.PermissionRequest"/>
+        <mapping class="edu.monash.merc.domain.Dataset"/>
+        <mapping class="edu.monash.merc.domain.IFNType"/>
+        <mapping class="edu.monash.merc.domain.IFNVariation"/>
+        <mapping class="edu.monash.merc.domain.Data"/>
+        <mapping class="edu.monash.merc.domain.ExperimentFactor"/>
+        <mapping class="edu.monash.merc.domain.ExperimentFactorValue"/>
+        <mapping class="edu.monash.merc.domain.Reporter"/>
+    </session-factory>
+</hibernate-configuration>
