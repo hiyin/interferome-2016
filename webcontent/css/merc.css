@@ -103,31 +103,6 @@ body {
 	-moz-border-radius-bottomleft: 3px 3px;
 }
 
-/** NOT USED **/
-.main_nav_section {
-	margin-left: 40px;
-	border: 1px solid #F0F0F0;
-}
-
-.nav_bar_div {
-	position: static;
-	float: left;
-	margin: 2px;
-}
-
-.nav_bar_div a {
-	margin: 0 auto;
-	display: block;
-	padding: 4px 4px;
-	width: 143px;
-	height: 15px;
-	background: none repeat scroll 0 0 #F0F0F0;
-	border: 1px solid #DDDDDD;
-	color: #000000;
-	text-decoration: none;
-	text-align: center;
-}
-/** end of NOT USED **/
 .navlist ul {
 	list-style: none;
 	padding: 0;
@@ -140,7 +115,7 @@ body {
 .navlist li {
 	display: block;
 	float: left;
-	width: 13%;
+	width: 16%;
 	margin: 0 auto;
 	padding-bottom: 2px;
 	padding-right: 2px;
@@ -1631,6 +1606,34 @@ body {
 
 .s_ds_link a:hover{
     text-decoration: underline;
+}
+
+.citation_img {
+	display: inline;
+    margin-left: 5px;
+	float: left;
+	padding-top: 8px;
+}
+
+.citation_title {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+	font-weight: normal;
+    font-style: italic;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.citation_title a {
+	color: #212121;
+	text-decoration: none;
+}
+
+.citation_title a:hover {
+	color: #003766;
 }
 
 /** pagination **/

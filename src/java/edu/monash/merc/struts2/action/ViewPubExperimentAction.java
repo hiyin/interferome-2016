@@ -88,18 +88,22 @@ public class ViewPubExperimentAction extends DMBaseAction {
 
     private void setNavAndTitleForPubExp() {
         setPageTitle(getText("experiment.list.all.experiments.action.title"));
-        String secondNav = getText("experiment.list.all.experiments.action.title");
-        String secondNavLink = "pubdata/listExperiments.jspx";
-        String thirdNav = experiment.getName();
-        String thirdNavLink = "pubdata/viewExperiment.jspx?experiment.id=" + experiment.getId();
-        navBar = createNavBar("Experiment", null, secondNav, secondNavLink, thirdNav, thirdNavLink);
+        //String secondNav = getText("experiment.list.all.experiments.action.title");
+        //String secondNavLink = "pubdata/listExperiments.jspx";
+        // String thirdNav = experiment.getName();
+        //String thirdNavLink = "pubdata/viewExperiment.jspx?experiment.id=" + experiment.getId();
+
+        String secondNav = experiment.getName();
+        String secondNavLink = "pubdata/viewExperiment.jspx?experiment.id=" + experiment.getId();
+        navBar = createNavBar("Experiment", null, secondNav, secondNavLink, null, null);
     }
 
     private void setNavAndTitleForExc() {
         setPageTitle(getText("experiment.list.all.experiments.action.title"));
-        String secondNav = getText("experiment.list.all.experiments.action.title");
-        String secondNavLink = "pubdata/listExperiments.jspx";
-        String thirdNav = getText("experiment.view.experiment.details.action.title");
-        navBar = createNavBar("Experiment", null, secondNav, secondNavLink, thirdNav, null);
+        // String secondNav = getText("experiment.list.all.experiments.action.title");
+        // String secondNavLink = "pubdata/listExperiments.jspx";
+        // String thirdNav = getText("experiment.view.experiment.details.action.title");
+        String secondNav = getText("experiment.view.experiment.details.action.title");
+        navBar = createNavBar("Experiment", null, secondNav, null, null, null);
     }
 }

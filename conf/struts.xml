@@ -599,6 +599,40 @@
         </action>
     </package>
 
+    <!-- Search -->
+    <package name="core.site" extends="core.merc" namespace="/site">
+        <default-interceptor-ref name="noneAuthStack"/>
+        <action name="*">
+            <result type="freemarker">/web/site/{1}.ftl</result>
+        </action>
+
+        <!-- show citation -->
+        <action name="showCitation" class="site.citationAction" method="showCitation">
+            <result name="error">/web/common/action_error.ftl</result>
+            <result name="success">/web/site/citation.ftl</result>
+        </action>
+
+        <!-- show help -->
+        <action name="showHelp" class="site.helpAction" method="showHelp">
+            <result name="error">/web/common/action_error.ftl</result>
+            <result name="success">/web/site/help.ftl</result>
+        </action>
+
+        <!-- show contact us -->
+        <action name="showContactUs" class="site.contactUsAction" method="showContactUs">
+            <result name="error">/web/common/action_error.ftl</result>
+            <result name="success">/web/site/contact_us.ftl</result>
+        </action>
+
+        <!-- contact us -->
+        <action name="contactUs" class="site.contactUsAction" method="contactUs">
+            <result name="input">/web/site/contact_us.ftl</result>
+            <result name="error">/web/common/action_error.ftl</result>
+            <result name="success">/web/site/contact_us.ftl</result>
+        </action>
+
+    </package>
+
     <!-- Security code -->
     <package name="core.securityCode" extends="core.merc" namespace="/security">
         <default-interceptor-ref name="noneAuthStack"/>
