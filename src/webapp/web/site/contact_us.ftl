@@ -14,7 +14,7 @@ function refresh()
 <body>
 	<#include "../template/navsection.ftl"/>
 	<div class="nav_namebar_div nav_title_gray">
-		<a href="${base}/site/showHelp.jspx"><@s.text name="interferome.contactus.action.title" /></a>
+		<a href="${base}/site/showContactUs.jspx"><@s.text name="interferome.contactus.action.title" /></a>
 	</div>
 	<div style="clear:both"></div>
  	<div class="main_container">
@@ -49,7 +49,7 @@ function refresh()
                     Web Site:
                 </div>
                 <div class="data_value_div">
-                    <a href="http://www.monashinstitute.org/staff/ciiid-paul-hertzog.html">Home Page</a>
+                    <a href="http://www.monashinstitute.org/staff/ciiid-paul-hertzog.html" target="_blank">Home Page</a>
                 </div>
 
                 <br/>
