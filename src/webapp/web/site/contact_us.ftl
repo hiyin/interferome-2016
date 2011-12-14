@@ -27,20 +27,36 @@ function refresh()
             <#include "../template/success_act_message.ftl"/>
             </@s.if>
             <div class="data_outer_div">
-                Text coming here
-                <br/>
-                 <br/>
-                <br/>
-                <br/>
-
-                 <br/>
-                <br/>
-                <br/>
 
                 <br/>
-                <br/>
+                <div class="data_label_div">
+                    &nbsp;
+                </div>
+                <div class="data_value_div">
+                    Professor Paul Hertzog
+                </div>
+                <div class="blank_separator"></div>
+
+                <div class="data_label_div">
+                    E-mail:
+                </div>
+                <div class="data_value_div">
+                    Paul.Hertzog@monash.edu
+                </div>
+                <div class="blank_separator"></div>
+
+                <div class="data_label_div">
+                    Web Site:
+                </div>
+                <div class="data_value_div">
+                    <a href="http://www.monashinstitute.org/staff/ciiid-paul-hertzog.html">Home Page</a>
+                </div>
+
                 <br/>
             </div>
+            <div class="parag_title_div">
+				Contact Us
+		    </div>
             <@s.form action="contactUs.jspx" namespace="/site" method="post">
 			<div class="data_outer_div">
                 <div class="blank_separator"></div>

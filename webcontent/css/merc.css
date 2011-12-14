@@ -485,6 +485,39 @@ body {
 	font-family: Arial, Verdana, sans-serif;
 }
 
+.ands_outer {
+	margin: 0 auto;
+	width: 1022px;
+	border: solid 1px #D9D9D9;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.sponsor_link{
+   float: left;
+   width: 80px;
+}
+.ands_sponsor{
+    padding-top: 5px;
+    text-align: justify;
+    margin-left: 100px;
+    font-size: 11px;
+    color: #212121;
+}
+.ands_sponsor a{
+    color: #003766;
+    text-decoration: none;
+}
+
+.ands_middle {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+
 .input_field_div {
 	color: #212121;
 	padding-top: 2px;

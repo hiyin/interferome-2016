@@ -28,11 +28,15 @@
 
 package edu.monash.merc.struts2.action;
 
+import edu.monash.merc.config.AppPropSettings;
 import edu.monash.merc.util.MercUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * ContactUsAction Action class
@@ -75,6 +79,9 @@ public class ContactUsAction extends DMBaseAction {
             if (checkInputs()) {
                 return INPUT;
             }
+
+            //send the contact details to admin
+            sendContactUsMailToAdmin();
             //set the action success message
             setSuccessActMsg(getText("interferome.site.submit.contactus.success.msg", new String[]{contactName}));
             //reset the inputs
@@ -85,6 +92,34 @@ public class ContactUsAction extends DMBaseAction {
             return ERROR;
         }
         return SUCCESS;
+    }
+
+
+    private void sendContactUsMailToAdmin() {
+        // site name
+        String serverQName = getServerQName();
+
+        //mail template
+        String activateEmailTemplateFile = "contactUsMailTemplate.ftl";
+        //application name
+        String appName = appSetting.getPropValue(AppPropSettings.APPLICATION_NAME);
+        // prepare to send email.
+        String adminEmail = appSetting.getPropValue(AppPropSettings.SYSTEM_SERVICE_EMAIL);
+
+        Map<String, String> templateMap = new HashMap<String, String>();
+        templateMap.put("Subject", subject);
+        templateMap.put("UserName", contactName);
+        templateMap.put("UserEmail", contactEmail);
+        if (StringUtils.isBlank(contactPhone)) {
+            contactPhone = " ";
+        }
+        templateMap.put("UserPhone", contactPhone);
+        templateMap.put("Message", message);
+
+        templateMap.put("SiteName", serverQName);
+        templateMap.put("AppName", appName);
+
+        this.dmService.sendMail(contactEmail, adminEmail, subject, templateMap, activateEmailTemplateFile, true);
     }
 
     private void resetInputs() {

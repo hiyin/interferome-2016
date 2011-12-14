@@ -17,7 +17,13 @@
 	        <div class="blank_separator"></div>
 
 			<div class="data_outer_div">
-                 Help page
+                <div class="empty_div"></div>
+                Please download the PDF version : <a href="http://interferome.googlecode.com/files/Data%20Publication%20to%20Interferome%20User%20Guide25.pdf">User Guide</a>
+                <div class="empty_div"></div>
+                <div class="empty_div"></div>
+                <div class="empty_div"></div>
+                <div class="empty_div"></div>
+                <div class="empty_div"></div>
 			</div>
             <div class="blank_separator"></div>
 		</div>
