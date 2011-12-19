@@ -5,6 +5,15 @@
 <head>
     <title><@s.text name="experiment.search.action.title" /></title>
 <#include "../template/jquery_header.ftl"/>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#tooltip_link").easyTooltip({
+			tooltipId: "search_tips",
+			content: '<h4>Treatment Concentration International Unit</h4><p>Please use the following formula to convert the international unit to interferome unit.</p>'
+		});
+	});
+</script>
+
 </head>
 <body>
 <#include "../template/navsection.ftl"/>

@@ -22,6 +22,7 @@
 <script type="text/javascript" src="${base}/js/modal_loading.js"></script>
 <script type="text/javascript" src="${base}/js/expand.js"></script>
 <script type="text/javascript" src="${base}/js/jquery.form.js"></script>
+<script type="text/javascript" src="${base}/js/easyTooltip.js"></script>
 
 
 

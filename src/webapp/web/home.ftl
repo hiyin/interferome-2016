@@ -23,24 +23,24 @@
 	 	 		<div class="slidshow_frame_panel">
 	 	 			<div id="merc" name="merc">
 						<a href="#" >
-							<img src="${base}/slideshow/interferome1.jpg" alt="Monash Institute of medical research" />
+							<img src="${base}/slideshow/cy3_cy5.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								MIM picture 1
+								Cy3 and Cy5 combined
 							</span>
 						</a>
 						<a href="#" >
-							<img src="${base}/slideshow/interferome2.jpg" alt="Monash Institute of medical research" />
+							<img src="${base}/slideshow/cy3.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								MIM picture 2
+								Cy3
 							</span>
 						</a>
 						<a href="#" >
-							<img src="${base}/slideshow/interferome3.jpg" alt="Monash Institute of medical research" />
+							<img src="${base}/slideshow/one_color_array.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								MIM picture 3
+								One color array
 							</span>
 						</a>
 						<a href="#" >

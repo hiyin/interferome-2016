@@ -27,6 +27,7 @@
             </@s.else>
                 From: &nbsp;<@s.textfield name="searchBean.fromDose" cssClass="search_input"/>&nbsp;
                 &nbsp; To: &nbsp;<@s.textfield name="searchBean.toDose" cssClass="search_input"/>  &nbsp; &nbsp; <font color="#858585">(ng/ml)</font>
+                <img src="${base}/images/info.png" class="search_ctip_image" id="tooltip_link" />
             </div>
         </div>
         <div style="clear:both"></div>
