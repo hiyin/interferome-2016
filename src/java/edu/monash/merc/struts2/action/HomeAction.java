@@ -195,13 +195,13 @@ public class HomeAction extends BaseAction {
                     // avatar
                     Avatar adminAvatar = new Avatar();
                     String avatarFile = "avatar" + File.separator + "male.png";
-					if (StringUtils.equalsIgnoreCase(gender, "male")) {
-						avatarFile = "avatar" + File.separator + "male.png";
-					} else if (StringUtils.equalsIgnoreCase(gender, "female")) {
-						avatarFile = "avatar" + File.separator + "female.png";
-					} else {
-						avatarFile = "avatar" + File.separator + "male.png";
-					}
+                    if (StringUtils.equalsIgnoreCase(gender, "male")) {
+                        avatarFile = "avatar" + File.separator + "male.png";
+                    } else if (StringUtils.equalsIgnoreCase(gender, "female")) {
+                        avatarFile = "avatar" + File.separator + "female.png";
+                    } else {
+                        avatarFile = "avatar" + File.separator + "male.png";
+                    }
 
                     adminAvatar.setFileName(avatarFile);
                     adminAvatar.setFileType("png");

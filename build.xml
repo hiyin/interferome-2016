@@ -299,8 +299,8 @@
     <!-- =================================================================== -->
     <target name="utest_compile" depends="compile">
         <mkdir dir="${build.utest.classes.dir}"/>
-        <javac srcdir="${utest.java.dir}" destdir="${build.utest.classes.dir}" debug="${javac_debug}"
-               deprecation="${javac_deprecation}" optimize="${javac_optimize}">
+        <javac srcdir="${utest.java.dir}" destdir="${build.utest.classes.dir}" debug="debug"
+               deprecation="deprecation" optimize="optimize">
             <classpath refid="utest.classpath"/>
             <include name="**/*Test.java"/>
         </javac>
