@@ -597,6 +597,17 @@
                 <param name="root">ifnSubTypeMap</param>
             </result>
         </action>
+
+        <!-- export the dataset -->
+		<action name="exportCsvFile" class="search.searchAction" method="exportCsvFile">
+			<result name="input">/web/search/search.ftl</result>
+			<result name="success" type="stream">
+				<param name="contentType">${contentType}</param>
+				<param name="inputName">csvInputStream</param>
+				<param name="contentDisposition">${contentDisposition}</param>
+				<param name="bufferSize">${bufferSize}</param>
+			</result>
+		</action>
     </package>
 
     <!-- Search -->

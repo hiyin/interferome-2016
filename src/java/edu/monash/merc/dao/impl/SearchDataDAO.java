@@ -282,9 +282,9 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
         String genBanks = searchBean.getGenBanks();
         String ensembls = searchBean.getEnsembls();
 
-        String[] searchGenes = MercUtil.splitStrByDelim(genes, ",");
-        String[] searchGenBanks = MercUtil.splitStrByDelim(genBanks, ",");
-        String[] searchEnsembls = MercUtil.splitStrByDelim(ensembls, ",");
+        String[] searchGenes = MercUtil.splitByDelims(genes, ",", "\t", "\n");
+        String[] searchGenBanks = MercUtil.splitByDelims(genBanks, ",", "\t", "\n");
+        String[] searchEnsembls = MercUtil.splitByDelims(ensembls, ",", "\t", "\n");
 
         boolean foldChangeUpProvided = searchBean.isUpProvided();
         double upValue = searchBean.getUpValue();
@@ -542,9 +542,9 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
         String genBanks = searchBean.getGenBanks();
         String ensembls = searchBean.getEnsembls();
 
-        String[] searchGenes = MercUtil.splitStrByDelim(genes, ",");
-        String[] searchGenBanks = MercUtil.splitStrByDelim(genBanks, ",");
-        String[] searchEnsembls = MercUtil.splitStrByDelim(ensembls, ",");
+        String[] searchGenes = MercUtil.splitByDelims(genes, ",", "\t", "\n");
+        String[] searchGenBanks = MercUtil.splitByDelims(genBanks, ",", "\t", "\n");
+        String[] searchEnsembls = MercUtil.splitByDelims(ensembls, ",", "\t", "\n");
 
         boolean foldChangeUpProvided = searchBean.isUpProvided();
         double upValue = searchBean.getUpValue();

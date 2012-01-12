@@ -574,6 +574,7 @@ $(document).ready(function(){
         //only byrange selected
         if(checkedFoldRange == 'byrange') {
             var value_index = $("#selected_up_down").val();
+            // alert("selected value index: " + value_index);
             //if index -1, just return
             if(value_index == '-1'){
                 return;

@@ -134,30 +134,40 @@
                 <div class="updown_range" id="foldchange_down"></div>
             </@s.if>
             <@s.else>
-                <div class="updown_range" id="foldchange_up">
-                    <@s.if test="%{searchBean.upProvided == true}">
-                    <table>
-                        <tr>
-                            <td width="50">Up: <@s.hidden name="searchBean.upProvided" id="upProvided"/></td>
-                            <td><@s.textfield name="searchBean.upValue" id="upValue" cssClass="search_input"/></td>
-                            <td class="search_unit">(value >= 1.0)</td>
-                            <td><img src="${base}/images/delete.png" id="remove_up" class="remove_image" /></td>
-                        </tr>
-                    </table>
-                    </@s.if>
-                </div>
-                <div class="updown_range" id="foldchange_down">
-                    <@s.if test="%{searchBean.downProvided == true}">
-                    <table>
-                        <tr>
-                            <td width="50">Down: <@s.hidden name="searchBean.downProvided" id="downProvided" /></td>
-                            <td><@s.textfield name="searchBean.downValue" id="downValue" cssClass="search_input"/></td>
-                            <td class="search_unit">(value >= 1.0)</td>
-                            <td><img src="${base}/images/delete.png" id="remove_down" class="remove_image" /></td>
-                        </tr>
-                    </table>
-                    </@s.if>
-                </div>
+                <!-- up value -->
+                <@s.if test="%{searchBean.upProvided == true}">
+                    <div class="updown_range" id="foldchange_up">
+                        <table>
+                            <tr>
+                                <td width="50">Up: <@s.hidden name="searchBean.upProvided" id="upProvided"/></td>
+                                <td><@s.textfield name="searchBean.upValue" id="upValue" cssClass="search_input"/></td>
+                                <td class="search_unit">(value >= 1.0)</td>
+                                <td><img src="${base}/images/delete.png" id="remove_up" class="remove_image" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </@s.if>
+                <@s.else>
+                    <div class="updown_range" id="foldchange_up"></div>
+                </@s.else>
+
+                <!-- down value -->
+                <@s.if test="%{searchBean.downProvided == true}">
+                    <div class="updown_range" id="foldchange_down">
+                        <table>
+                            <tr>
+                                <td width="50">Down: <@s.hidden name="searchBean.downProvided" id="downProvided" /></td>
+                                <td><@s.textfield name="searchBean.downValue" id="downValue" cssClass="search_input"/></td>
+                                <td class="search_unit">(value >= 1.0)</td>
+                                <td><img src="${base}/images/delete.png" id="remove_down" class="remove_image" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </@s.if>
+                <@s.else>
+                    <div class="updown_range" id="foldchange_down"></div>
+                </@s.else>
+
             </@s.else>
             </div>
             <div style="clear:both"></div>
@@ -171,7 +181,7 @@
     <div class="search_field_row">
         <div class="search_field_title">Gene Symbol List:</div>
         <div class="search_field_list">
-            <@s.textarea  name="searchBean.genes" cols="80" rows="5" cssClass="input_textarea" />  &nbsp; &nbsp; (separated by comma)
+            <@s.textarea  name="searchBean.genes" cols="80" rows="5" cssClass="input_textarea" />  &nbsp; &nbsp; <br/>(Separated by Comma or Tab or NewLine)
         </div>
         <div style="clear:both"></div>
     </div>
@@ -183,7 +193,7 @@
     <div class="search_field_row">
         <div class="search_field_title">GenBank Accession List:</div>
         <div class="search_field_list">
-            <@s.textarea  name="searchBean.genBanks" cols="80" rows="5" cssClass="input_textarea" /> &nbsp; &nbsp; (separated by comma)
+            <@s.textarea  name="searchBean.genBanks" cols="80" rows="5" cssClass="input_textarea" /> &nbsp; &nbsp; <br/> (Separated by Comma or Tab or NewLine)
         </div>
         <div style="clear:both"></div>
     </div>
@@ -195,7 +205,7 @@
     <div class="search_field_row">
         <div class="search_field_title">Ensembl Id List:</div>
         <div class="search_field_list">
-            <@s.textarea  name="searchBean.ensembls" cols="80" rows="5" cssClass="input_textarea" /> &nbsp; &nbsp; (separated by comma)
+            <@s.textarea  name="searchBean.ensembls" cols="80" rows="5" cssClass="input_textarea" /> &nbsp; &nbsp; <br/>(Separated by Comma or Tab or NewLine)
         </div>
         <div style="clear:both"></div>
     </div>

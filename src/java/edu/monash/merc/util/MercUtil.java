@@ -256,6 +256,20 @@ public class MercUtil {
         return temps;
     }
 
+    public static String [] splitByDelims(String inputStr, String ...delims){
+        String delimiters = "[";
+        for(String delim: delims){
+            delimiters +=delim;
+        }
+        delimiters +="]";
+
+        String []temps = StringUtils.split(inputStr, delimiters);
+        for (int i = 0; i < temps.length; i++) {
+            temps[i] = temps[i].trim();
+        }
+        return temps;
+    }
+
     public static String replaceSpace(String spaceStr) {
         return StringUtils.remove(spaceStr, " ");
     }
@@ -269,5 +283,15 @@ public class MercUtil {
         String commasString = ",this,test3,,,,testqqq,testbac,";
         String[] splitedEls = MercUtil.splitStrByDelim(commasString, ",");
         System.out.println("====> total elements: " + splitedEls.length);
+
+
+        String testString = ",test,teststring, simon,,,Hello\tmerc\t\tMonash\n" +
+                "\n" +
+                "ITS service\tChinaaaatest" ;
+        String []testresults = MercUtil.splitByDelims(testString, ",", "\t", "\n");
+
+        for (String r: testresults){
+             System.out.println("====> elements: " + r);
+        }
     }
 }

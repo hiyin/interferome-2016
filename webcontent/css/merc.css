@@ -1486,6 +1486,20 @@ body {
 	margin:.25em 0;
 }
 
+#expcsv_tips{
+    padding:5px 10px;
+	color:#212121;
+	width:260px;
+	background:#F0F0F0;
+    border: 2px solid #918f8f;
+    border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+    text-align: justify;
+}
+#expcsv_tips h4, #expcsv_tips p{
+	margin:.25em 0;
+}
+
 .search_mul_select {
 	width: 120px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -1662,6 +1676,16 @@ body {
 .s_ds_link a:hover{
     text-decoration: underline;
 }
+
+.export_div{
+    color: #7d7d7d;
+    float: right;
+    display: block;
+}
+.export_div img{
+    vertical-align: bottom;
+}
+
 
 .citation_img {
 	display: inline;

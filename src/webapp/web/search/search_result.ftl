@@ -6,11 +6,15 @@
     </div>
     <div class="data_header_div">
         <span class="name_title">Found a total of <font color="green"> ${dataPagination.totalRecords} </font> Data</span>
+
+        <div class="export_div">
+         Save a CSV file <a href="${base}/search/exportCsvFile.jspx"> <img src="${base}/images/export.png" class="search_ctip_image" id="export_csv" /></a>
+        </div>
+        <div style="clear:both"></div>
         <!-- page sorting block -->
         <div class="msg_content">
             <a href="${base}/${pageLink}${pageSuffix}${dataPagination.pageNo}" class="page_url"></a>
         </div>
-
         <br/>
         <#include "../pagination/pagination_header.ftl"/>
     </div>

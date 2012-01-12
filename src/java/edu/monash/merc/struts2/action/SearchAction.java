@@ -28,22 +28,29 @@
 
 package edu.monash.merc.struts2.action;
 
+import au.com.bytecode.opencsv.CSVWriter;
 import edu.monash.merc.common.page.Pagination;
 import edu.monash.merc.config.AppPropSettings;
 import edu.monash.merc.domain.Data;
+import edu.monash.merc.domain.Dataset;
 import edu.monash.merc.domain.IFNType;
+import edu.monash.merc.domain.Reporter;
 import edu.monash.merc.dto.RangeCondition;
 import edu.monash.merc.dto.SearchBean;
 import edu.monash.merc.exception.DCConfigException;
+import edu.monash.merc.exception.DCException;
 import edu.monash.merc.service.SearchDataService;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.aspectj.weaver.patterns.ThisOrTargetAnnotationPointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.PostConstruct;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -160,6 +167,26 @@ public class SearchAction extends DMBaseAction {
      * ensembl link
      */
     private String ensemblLink;
+
+
+    // For searching result csv file exporting
+    private String contentType;
+
+    /**
+     * cvs file inputstream
+     */
+    private InputStream csvInputStream;
+
+    /**
+     * csv file content disposition
+     */
+    private String contentDisposition;
+
+    /**
+     * csv file exporting buffer size
+     */
+    private int bufferSize;
+
 
     /**
      * Logger
@@ -360,6 +387,42 @@ public class SearchAction extends DMBaseAction {
         return SUCCESS;
     }
 
+
+    public String exportCsvFile() {
+        try {
+            //get the logged in user if existed
+            user = getCurrentUser();
+            if (user != null) {
+                viewDsAct = ActionConts.VIEW_DATASET_ACTION;
+            } else {
+                viewDsAct = ActionConts.VIEW_PUB_DATASET_ACTION;
+            }
+            //validation failed
+            if (!validConds()) {
+                //sub type post process
+                subTypePostProcess();
+                return ERROR;
+            }
+            //query the data by pagination
+            dataPagination = this.searchDataService.search(searchBean, 1, 200000, "dataset", ActionConts.DESC_SORT_TYPE);
+            this.csvInputStream = createCSVFile(searchBean, dataPagination);
+            this.contentDisposition = "attachment;filename=\"" + "test.csv" + "\"";
+            this.bufferSize = 20480;
+            this.contentType = "application/octet-stream";
+
+            //set the searched flag as true
+            searched = true;
+            //sub type post process
+            subTypePostProcess();
+        } catch (Exception ex) {
+            logger.error(ex);
+            addActionError(getText("data.search.export.csv.file.failed"));
+            return ERROR;
+        }
+
+        return SUCCESS;
+    }
+
     private boolean validConds() {
         //check the searchBean first
         if (searchBean == null) {
@@ -412,11 +475,13 @@ public class SearchAction extends DMBaseAction {
         }
         if (searchBean.isUpProvided()) {
             double upValue = searchBean.getUpValue();
-            double downValue = searchBean.getDownValue();
             if (searchBean.isUpProvided() && upValue < 1) {
                 addFieldError("upValue", getText("data.search.invalid.foldchange.up.value"));
                 hasError = true;
             }
+        }
+        if (searchBean.isDownProvided()) {
+            double downValue = searchBean.getDownValue();
             if (searchBean.isDownProvided() && downValue < 1) {
                 addFieldError("downValue", getText("data.search.invalid.foldchange.down.value"));
                 hasError = true;
@@ -427,6 +492,49 @@ public class SearchAction extends DMBaseAction {
             return false;
         }
         return true;
+    }
+
+    private InputStream createCSVFile(SearchBean searchBean, Pagination<Data> dPagination) {
+        CSVWriter csvWriter = null;
+        try {
+            ByteArrayOutputStream csvOutputStream = new ByteArrayOutputStream();
+            csvWriter = new CSVWriter(new OutputStreamWriter(csvOutputStream), '\t', CSVWriter.NO_QUOTE_CHARACTER);
+            csvWriter.writeNext(new String[]{"Dataset ID", "Fold Change", "Inteferome Type", "Treatment Time", "Gene Symbol", "Gene Description", "GenBank Accession", "Ensembl ID", "Probe ID"});
+            List<Data> dataList = dPagination.getPageResults();
+            for (Data data : dataList) {
+                //get dataset
+                Dataset dataset = data.getDataset();
+                long datasetId = dataset.getId();
+                double foldChange = data.getValue();
+                String ifnType = dataset.getIfnType().getTypeName();
+                double treatmentTime = dataset.getTreatmentTime();
+
+                //report
+                Reporter reporter = data.getReporter();
+                String geneSymbol = reporter.getGeneSymbol();
+                String geneDesc = reporter.getGeneTitle();
+                String genBankId = reporter.getGenBankAccession();
+                String ensemblId = reporter.getEnsembl();
+                String probeId = reporter.getProbeId();
+                //write the csv into OutputStream
+                csvWriter.writeNext(new String[]{String.valueOf(datasetId), String.valueOf(foldChange), ifnType, String.valueOf(treatmentTime), geneSymbol, geneDesc, genBankId, ensemblId, probeId});
+            }
+            //flush out
+            csvWriter.flush();
+            this.csvInputStream = new ByteArrayInputStream(csvOutputStream.toByteArray());
+            return this.csvInputStream;
+        } catch (Exception ex) {
+            throw new DCException(ex);
+        } finally {
+            if (csvWriter != null) {
+                try {
+                    csvWriter.close();
+                } catch (Exception cex) {
+                    //ignore whatever
+                }
+            }
+        }
+
     }
 
     private void subTypePostProcess() {
@@ -655,5 +763,37 @@ public class SearchAction extends DMBaseAction {
 
     public void setEnsemblLink(String ensemblLink) {
         this.ensemblLink = ensemblLink;
+    }
+
+    public String getContentType() {
+        return contentType;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
+    public InputStream getCsvInputStream() {
+        return csvInputStream;
+    }
+
+    public void setCsvInputStream(InputStream csvInputStream) {
+        this.csvInputStream = csvInputStream;
+    }
+
+    public String getContentDisposition() {
+        return contentDisposition;
+    }
+
+    public void setContentDisposition(String contentDisposition) {
+        this.contentDisposition = contentDisposition;
+    }
+
+    public int getBufferSize() {
+        return bufferSize;
+    }
+
+    public void setBufferSize(int bufferSize) {
+        this.bufferSize = bufferSize;
     }
 }

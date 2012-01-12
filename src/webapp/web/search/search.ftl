@@ -12,6 +12,14 @@
 			content: '<h4>Treatment Concentration International Unit</h4><p>Please use the following formula to convert the international unit to interferome unit.</p>'
 		});
 	});
+
+
+    $(document).ready(function(){
+		$("#export_csv").easyTooltip({
+			tooltipId: "expcsv_tips",
+			content: '<h4>Save The Search Results To A CSV File</h4><p>Maximum records are up to 200,000</p>'
+		});
+	});
 </script>
 
 </head>
