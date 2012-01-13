@@ -14,14 +14,14 @@
 			<li><a href="${base}/data/listExperiments.jspx">Experiments</a></li>
 		</@s.if>
 		<li><a href="${base}/search/showSearch.jspx">Search</a></li>
-		<li><span class="disabled_link">Tissue Expression</span></li>
-		<li><span class="disabled_link">Regulatory Analysis</span></li>
+		<li><a href="http://vera093.its.monash.edu.au/interferome/expression.php" target="_blank">Tissue Expression</a></li>
+		<li><a href="http://vera093.its.monash.edu.au/interferome/tfbs.php" target="_blank">Regulatory Analysis</a></li>
 		<li><span class="disabled_link">Sequence Download</span></li>
 		<li><span class="disabled_link">Database Statistics</span></li>
 		<li><a href="${base}/site/showCitation.jspx">Citation</a></li>
 		<li><a href="${base}/site/showHelp.jspx">Help</a></li>
 		<li><a href="${base}/site/showContactUs.jspx">Contact Us</a></li>
-        <li><span class="disabled_link">Interferome V1.0</span></li>
+        <li><a href="http://vera093.its.monash.edu.au/interferome" target="_blank">Interferome V1.0</span></a></li>
 		<div style="clear:both"></div> 
 	</ul>
 	<div style="clear:both"></div> 	

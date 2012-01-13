@@ -601,6 +601,7 @@
         <!-- export the dataset -->
 		<action name="exportCsvFile" class="search.searchAction" method="exportCsvFile">
 			<result name="input">/web/search/search.ftl</result>
+            <result name="error">/web/search/search.ftl</result>
 			<result name="success" type="stream">
 				<param name="contentType">${contentType}</param>
 				<param name="inputName">csvInputStream</param>

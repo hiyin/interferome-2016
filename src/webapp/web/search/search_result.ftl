@@ -7,9 +7,11 @@
     <div class="data_header_div">
         <span class="name_title">Found a total of <font color="green"> ${dataPagination.totalRecords} </font> Data</span>
 
+        <@s.if test="%{dataPagination.totalRecords >0 }">
         <div class="export_div">
-         Save a CSV file <a href="${base}/search/exportCsvFile.jspx"> <img src="${base}/images/export.png" class="search_ctip_image" id="export_csv" /></a>
+         Save as a CSV file <a href='${base}/search/exportCsvFile.jspx?maxRecords=<@s.property value="dataPagination.totalRecords" />&orderBy=${orderBy}&orderByType=${orderByType}'> <img src="${base}/images/export.png" class="search_ctip_image" id="export_csv" /></a>
         </div>
+        </@s.if>
         <div style="clear:both"></div>
         <!-- page sorting block -->
         <div class="msg_content">

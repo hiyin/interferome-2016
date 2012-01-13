@@ -134,6 +134,9 @@ public class AppPropSettings {
     //  License
     public static String CCLICENSE_REST_WS_URL = "cclicense.ws.url";
 
+    //max search record limits to a csv file
+    public static String SEARCH_RESULT_TO_CSV_MAX_RECORD = "search.result.to.csv.max.record";
+
     //pub med citation url
     public static String PUBMED_CITATION_BASE_URL = "pubmed.citation.base.url";
 

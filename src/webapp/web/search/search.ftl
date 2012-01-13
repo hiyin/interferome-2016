@@ -17,7 +17,7 @@
     $(document).ready(function(){
 		$("#export_csv").easyTooltip({
 			tooltipId: "expcsv_tips",
-			content: '<h4>Save The Search Results To A CSV File</h4><p>Maximum records are up to 200,000</p>'
+			content: '<h4>Save The Search Results To A CSV File</h4><p>Maximum records are up to ${maxRecords}}</p>'
 		});
 	});
 </script>

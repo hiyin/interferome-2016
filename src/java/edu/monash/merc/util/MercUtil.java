@@ -256,18 +256,37 @@ public class MercUtil {
         return temps;
     }
 
-    public static String [] splitByDelims(String inputStr, String ...delims){
+    public static String[] splitByDelims(String inputStr, String... delims) {
         String delimiters = "[";
-        for(String delim: delims){
-            delimiters +=delim;
+        for (String delim : delims) {
+            delimiters += delim;
         }
-        delimiters +="]";
+        delimiters += "]";
 
-        String []temps = StringUtils.split(inputStr, delimiters);
+        String[] temps = StringUtils.split(inputStr, delimiters);
+        List<String> finalStr = new ArrayList<String>();
         for (int i = 0; i < temps.length; i++) {
-            temps[i] = temps[i].trim();
+            if (StringUtils.isNotBlank(temps[i])) {
+                finalStr.add(temps[i].trim());
+            }
         }
-        return temps;
+        return finalStr.toArray(new String[finalStr.size()]);
+    }
+
+    public static String replaceAllDelimsByNewDelim(String inputStr, String newDelim, String[] oldDelims) {
+        String[] delimRemovedStr = splitByDelims(inputStr, oldDelims);
+        int i = 0;
+        String temp = "";
+        for (String strElement : delimRemovedStr) {
+            if (StringUtils.isNotBlank(strElement)) {
+                temp += strElement;
+                if (i < delimRemovedStr.length - 1) {
+                    temp += newDelim;
+                }
+            }
+            i++;
+        }
+        return temp.trim();
     }
 
     public static String replaceSpace(String spaceStr) {
@@ -285,13 +304,21 @@ public class MercUtil {
         System.out.println("====> total elements: " + splitedEls.length);
 
 
-        String testString = ",test,teststring, simon,,,Hello\tmerc\t\tMonash\n" +
+        String testString = ",test,teststring, simon,,,Hello \n\nmercMonash\n" +
                 "\n" +
-                "ITS service\tChinaaaatest" ;
-        String []testresults = MercUtil.splitByDelims(testString, ",", "\t", "\n");
+                "ITS service\tChinaaaatest";
+        String[] testresults = MercUtil.splitByDelims(testString, ";", "\t", "\n");
 
-        for (String r: testresults){
-             System.out.println("====> elements: " + r);
+        for (String r : testresults) {
+            System.out.println("====> elements: " + r);
         }
+        String test2 = "Rragc,\n" +
+                "Vps35\n" +
+                "Casp6\n" +
+                "Tnfaip2,\n" +
+                "Atp2a2";
+        System.out.println("replace all delimiters by new delim: " + MercUtil.replaceAllDelimsByNewDelim(testString, ";", new String[]{",", "\t", "\n"}));
+
+        System.out.println("replace all delimiters by new delim test2: " + MercUtil.replaceAllDelimsByNewDelim(test2, ";", new String[]{",", "\t", "\n"}));
     }
 }
