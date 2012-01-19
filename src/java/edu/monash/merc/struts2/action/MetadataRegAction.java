@@ -511,6 +511,7 @@ public class MetadataRegAction extends DMBaseAction {
         MDRegistrationBean mdRegBean = new MDRegistrationBean();
         mdRegBean.setPartyList(partyList);
         mdRegBean.setActivityList(projectList);
+        mdRegBean.setNamePrefix(this.namePrefix);
         mdRegBean.setExperiment(experiment);
         mdRegBean.setLicence(licence);
         mdRegBean.setAccessRights(accessRights);
@@ -544,7 +545,7 @@ public class MetadataRegAction extends DMBaseAction {
         }
         setNavAndTitleForMdReg();
         // set action successful message
-        setSuccessActMsg(getText("experiment.metadata.reg.success.message", new String[]{experiment.getName()}));
+        setSuccessActMsg(getText("experiment.metadata.reg.success.message", new String[]{this.namePrefix + experiment.getId()}));
         return SUCCESS;
     }
 
@@ -573,7 +574,7 @@ public class MetadataRegAction extends DMBaseAction {
     private void recordMDRegAuditEvent(Experiment exp, User operator) {
         AuditEvent ev = new AuditEvent();
         ev.setCreatedTime(GregorianCalendar.getInstance().getTime());
-        ev.setEvent(getText("experiment.metadata.reg.audit.info", new String[]{exp.getName()}));
+        ev.setEvent(getText("experiment.metadata.reg.audit.info", new String[]{this.namePrefix + exp.getId()}));
         ev.setEventOwner(exp.getOwner());
         ev.setOperator(operator);
         recordActionAuditEvent(ev);
@@ -645,7 +646,7 @@ public class MetadataRegAction extends DMBaseAction {
     // for metadata registration action title and navigation bar
     private void setNavAndTitleForMdReg() {
         setPageTitle(getText("experiment.metadata.reg.action.title"));
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = null;
         if (fromMyExp) {
             secondNavLink = "data/viewMyExperiment.jspx?experiment.id=" + experiment.getId();

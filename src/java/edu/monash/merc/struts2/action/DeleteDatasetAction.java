@@ -212,7 +212,7 @@ public class DeleteDatasetAction extends DMBaseAction {
 
     private void setNavAndTitleForDs() {
         setPageTitle(getText("experiment.view.all.datasets.action.title"));
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = null;
         if (fromMyExp) {
             secondNavLink = "data/viewMyExperiment.jspx?experiment.id=" + experiment.getId();

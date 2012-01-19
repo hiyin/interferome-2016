@@ -116,7 +116,7 @@ public class PermissionRequestAction extends DMBaseAction {
                 this.dmService.savePermissionRequest(permReq);
             }
 
-            setSuccessActMsg(getText("apply.for.perm.success.msg", new String[]{experiment.getName()}));
+            setSuccessActMsg(getText("apply.for.perm.success.msg", new String[]{this.namePrefix + experiment.getId()}));
             setNavAfterSuccess();
         } catch (Exception e) {
             logger.error(e);

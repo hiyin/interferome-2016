@@ -28,7 +28,7 @@ function doAfterImport(success) {
 
         <div class="data_outer_div">
             <div class="each_field_row">
-                <div class="exp_name_title"><@s.property value="experiment.name" /></div>
+                <div class="exp_name_title">IFM<@s.property value="experiment.id" /></div>
             </div>
             <div class="each_field_row">
                 <div class="exp_desc_div"><@s.property value="experiment.description" /></div>

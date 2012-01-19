@@ -86,7 +86,7 @@ public class PermissionApproveAction extends DMBaseAction {
             //get all request perms again
             permRequests = this.dmService.getPermissionRequestsByOwner(user.getId());
             //set the succeed message
-            setSuccessActMsg(getText("approve.perm.grant.user.requested.perms.success.msg", new String[]{exp.getName()}));
+            setSuccessActMsg(getText("approve.perm.grant.user.requested.perms.success.msg", new String[]{this.namePrefix + exp.getId()}));
         } catch (Exception ex) {
             logger.error(ex);
             addActionError(getText("approve.perm.failed.to.grant.user.requested.permissions"));
@@ -103,7 +103,7 @@ public class PermissionApproveAction extends DMBaseAction {
             //get all request perms again
             permRequests = this.dmService.getPermissionRequestsByOwner(user.getId());
             //set the success message
-            setSuccessActMsg(getText("approve.perm.reject.user.requested.perms.success.msg", new String[]{permRequest.getExperiment().getName()}));
+            setSuccessActMsg(getText("approve.perm.reject.user.requested.perms.success.msg", new String[]{this.namePrefix + permRequest.getExperiment().getId()}));
         } catch (Exception e) {
             logger.error(e);
             addActionError(getText("approve.perm.failed.to.reject.user.requested.permissions"));

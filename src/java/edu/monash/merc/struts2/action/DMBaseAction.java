@@ -28,25 +28,23 @@
 
 package edu.monash.merc.struts2.action;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import edu.monash.merc.common.page.Pagination;
 import edu.monash.merc.common.service.pid.IdentifierService;
+import edu.monash.merc.config.AppPropSettings;
 import edu.monash.merc.domain.*;
 import edu.monash.merc.dto.DatasetFactorBean;
 import edu.monash.merc.dto.NameValueBean;
+import edu.monash.merc.dto.PermissionBean;
+import edu.monash.merc.service.DMService;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.monash.merc.common.page.Pagination;
-import edu.monash.merc.config.AppPropSettings;
-import edu.monash.merc.dto.PermissionBean;
-import edu.monash.merc.service.DMService;
-
-import javax.print.attribute.DocAttributeSet;
+import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * DMBaseAction Action class is a data management base action class
@@ -78,6 +76,8 @@ public class DMBaseAction extends BaseAction {
 
     protected String redNamespace;
 
+    protected String namePrefix;
+
     private Logger logger = Logger.getLogger(this.getClass().getName());
 
     public void setDmService(DMService dmService) {
@@ -89,6 +89,11 @@ public class DMBaseAction extends BaseAction {
      */
     public void setPidService(IdentifierService pidService) {
         this.pidService = pidService;
+    }
+
+    @PostConstruct
+    public void initNamePrefix() {
+        this.namePrefix = appSetting.getPropValue(AppPropSettings.EXPERIMENT_NAME_PREFIX);
     }
 
     protected void sendApprovalAccountEmail(String userFullName, String userEmail, String organization) {
@@ -403,5 +408,13 @@ public class DMBaseAction extends BaseAction {
      */
     public void setRedNamespace(String redNamespace) {
         this.redNamespace = redNamespace;
+    }
+
+    public String getNamePrefix() {
+        return namePrefix;
+    }
+
+    public void setNamePrefix(String namePrefix) {
+        this.namePrefix = namePrefix;
     }
 }

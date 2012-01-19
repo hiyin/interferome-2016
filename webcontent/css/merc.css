@@ -1747,6 +1747,36 @@ body {
     color: #003766;
 }
 
+.contactus_data_title {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #003766;
+    font-weight: bold;
+}
+
+.contactus_data_div {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #212121;
+}
+.contactus_data_textarea {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: justify;
+    color: #212121;
+}
+
+.contactus_data_div a{
+    color: #858585;;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contactus_data_div a:hover{
+    color: #003766;
+    text-decoration: underline;
+}
+
 /** pagination **/
 .page_style {
     margin: 5px auto;

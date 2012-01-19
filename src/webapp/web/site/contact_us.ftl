@@ -29,26 +29,22 @@ function refresh()
             <div class="data_outer_div">
 
                 <br/>
-                <div class="data_label_div">
-                    &nbsp;
-                </div>
-                <div class="data_value_div">
+                <div class="contactus_data_title">
                     Professor Paul Hertzog
+                </div>
+
+                <div class="contactus_data_textarea">
+                    Is the Director of the Centre for Innate Immunity & Infectious Disease and a Senior Principal Research
+                    Fellow of the National Health and Medical Research Council of Australia. He has 25 years experience in the field of Interferon signalling.
                 </div>
                 <div class="blank_separator"></div>
 
-                <div class="data_label_div">
-                    E-mail:
-                </div>
-                <div class="data_value_div">
+                <div class="contactus_data_div">
                     Paul.Hertzog@monash.edu
                 </div>
                 <div class="blank_separator"></div>
 
-                <div class="data_label_div">
-                    Web Site:
-                </div>
-                <div class="data_value_div">
+                <div class="contactus_data_div">
                     <a href="http://www.monashinstitute.org/staff/ciiid-paul-hertzog.html" target="_blank">Home Page</a>
                 </div>
 

@@ -104,7 +104,7 @@ public class RIFCSServiceImpl implements RIFCSService {
 
         rifcsBuilder.append("<name type=\"primary\">");
         rifcsBuilder.append(lineSeparator);
-        rifcsBuilder.append("<namePart>" + experiment.getName() + "</namePart>");
+        rifcsBuilder.append("<namePart>" + mdRegistrationBean.getNamePrefix() + experiment.getId() + "</namePart>");
         rifcsBuilder.append(lineSeparator);
         rifcsBuilder.append("</name>");
         rifcsBuilder.append(lineSeparator);

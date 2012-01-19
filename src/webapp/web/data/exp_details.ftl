@@ -23,9 +23,16 @@
 			<div class="data_outer_div">
 				<div class="each_field_row">
 					<div class="data_field_div">Name:</div>
-					<div class="data_field_title"><@s.property value="experiment.name" /></div>
+					<div class="data_field_title">IFM<@s.property value="experiment.id" /></div>
 					<div style="clear:both"></div> 
 				</div>
+
+                <div class="each_field_row">
+					<div class="data_field_div">Reference:</div>
+					<div class="data_field_title"><@s.property value="experiment.name" /></div>
+					<div style="clear:both"></div>
+				</div>
+
 				<div class="each_field_row">
 					<div class="data_field_div">Base Registered Date:</div>
 					<div class="data_field_date"><@s.date name="experiment.entryDate"  format="yyyy-MM-dd" /> </div>

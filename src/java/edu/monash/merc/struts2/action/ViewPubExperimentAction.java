@@ -93,7 +93,7 @@ public class ViewPubExperimentAction extends DMBaseAction {
         // String thirdNav = experiment.getName();
         //String thirdNavLink = "pubdata/viewExperiment.jspx?experiment.id=" + experiment.getId();
 
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = "pubdata/viewExperiment.jspx?experiment.id=" + experiment.getId();
         navBar = createNavBar("Experiment", null, secondNav, secondNavLink, null, null);
     }

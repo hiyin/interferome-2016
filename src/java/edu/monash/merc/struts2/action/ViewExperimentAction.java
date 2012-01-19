@@ -136,7 +136,7 @@ public class ViewExperimentAction extends DMBaseAction {
         setPageTitle(getText("experiment.view.experiment.details.action.title"));
         String secondNav = getText("experiment.list.my.all.experiments.action.title");
         String secondNavLink = "data/listMyExperiments.jspx";
-        String thirdNav = experiment.getName();
+        String thirdNav = this.namePrefix + experiment.getId();
         String thirdNavLink = "data/viewMyExperiment.jspx?experiment.id=" + experiment.getId();
         navBar = createNavBar("Experiment", null, secondNav, secondNavLink, thirdNav, thirdNavLink);
     }
@@ -155,7 +155,7 @@ public class ViewExperimentAction extends DMBaseAction {
         setPageTitle(getText("experiment.view.experiment.details.action.title"));
         String secondNav = getText("experiment.list.all.experiments.action.title");
         String secondNavLink = "data/listExperiments.jspx";
-        String thirdNav = experiment.getName();
+        String thirdNav = this.namePrefix + experiment.getId();
         String thirdNavLink = "data/viewExperiment.jspx?experiment.id=" + experiment.getId();
         navBar = createNavBar("Experiment", null, secondNav, secondNavLink, thirdNav, thirdNavLink);
     }

@@ -132,7 +132,7 @@ public class ImportExperimentAction extends DMBaseAction {
             // record the auditing event
             recordAuditEventForImport(experiment, user);
             // set the success message.
-            setSuccessActMsg(getText("experiment.import.new.experiment.success.message", new String[]{experiment.getName()}));
+            setSuccessActMsg(getText("experiment.import.new.experiment.success.message", new String[]{this.namePrefix + experiment.getId()}));
             // set full permissions for owner
             setupFullPermissions();
             // set the delete experiment action name
@@ -176,7 +176,7 @@ public class ImportExperimentAction extends DMBaseAction {
         setPageTitle(getText("experiment.list.my.all.experiments.action.title"));
         String secondNav = getText("experiment.list.my.all.experiments.action.title");
         String secondNavLink = "data/listMyExperiments.jspx";
-        String thirdNav = experiment.getName();
+        String thirdNav = this.namePrefix + experiment.getId();
         String thirdNavLink = "data/viewExperiment.jspx?experiment.id=" + experiment.getId();
         navBar = createNavBar("Experiment", null, secondNav, secondNavLink, thirdNav, thirdNavLink);
     }
@@ -185,7 +185,7 @@ public class ImportExperimentAction extends DMBaseAction {
     private void recordAuditEventForImport(Experiment exp, User operator) {
         AuditEvent ev = new AuditEvent();
         ev.setCreatedTime(GregorianCalendar.getInstance().getTime());
-        ev.setEvent(getText("experiment.import.new.experiment.success.message", new String[]{exp.getName()}));
+        ev.setEvent(getText("experiment.import.new.experiment.success.message", new String[]{this.namePrefix + exp.getId()}));
         ev.setEventOwner(exp.getOwner());
         ev.setOperator(operator);
         recordActionAuditEvent(ev);

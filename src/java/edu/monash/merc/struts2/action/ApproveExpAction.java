@@ -87,7 +87,7 @@ public class ApproveExpAction extends DMBaseAction {
     // for experiment  title and navigation bar
     private void setNavAndTitleForAppExp() {
         setPageTitle(getText("experiment.approve.exp.action.title"));
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = null;
         if (fromMyExp) {
             secondNavLink = "data/viewMyExperiment.jspx?experiment.id=" + experiment.getId();
@@ -146,7 +146,7 @@ public class ApproveExpAction extends DMBaseAction {
             }
 
             // set action successful message
-            setSuccessActMsg(getText("experiment.approve.exp.success.message", new String[]{experiment.getName()}));
+            setSuccessActMsg(getText("experiment.approve.exp.success.message", new String[]{this.namePrefix + experiment.getId()}));
             //set the navigation and title
             setNavAndTitleForAppExp();
         } catch (Exception e) {

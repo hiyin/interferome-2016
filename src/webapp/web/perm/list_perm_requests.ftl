@@ -50,12 +50,12 @@
                     <@s.form action="approvePermReq.jspx" id="approve_req_perm" namespace="/perm" method="post" >
                         <table>
                             <tr>
-                                 <td colspan="4" align="center"><span class="perm_req_right_title">Applied Permissions for the ${pRequest.experiment.name} experiment</span></td>
+                                 <td colspan="4" align="center"><span class="perm_req_right_title">Applied Permissions for the IFM${pRequest.experiment.id} experiment</span></td>
                             </tr>
                             <tr>
                                  <td colspan="4">
                                     <@s.hidden name="permRequest.id" value="%{#pRequest.id}" />
-                                    <@s.hidden name="permRequest.experiment.name" value="%{#pRequest.experiment.name}" />
+                                    <@s.hidden name="permRequest.experiment.id" value="%{#pRequest.experiment.id}" />
                                 </td>
                             </tr>
                             <tr>
@@ -85,7 +85,7 @@
                                     <@s.submit value="Grant" cssClass="input_button3" />
                                  </td>
                                  <td>
-                                   <a href="${base}/perm/rejectPermReq.jspx?permRequest.id=${pRequest.id}&permRequest.experiment.name=${pRequest.experiment.name}" class="linkbutton">&nbsp; Reject &nbsp; </a>
+                                   <a href="${base}/perm/rejectPermReq.jspx?permRequest.id=${pRequest.id}&permRequest.experiment.id=${pRequest.experiment.id}" class="linkbutton">&nbsp; Reject &nbsp; </a>
                                  </td>
                                  <td></td>
                             </tr>

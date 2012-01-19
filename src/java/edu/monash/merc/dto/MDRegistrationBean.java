@@ -46,6 +46,8 @@ public class MDRegistrationBean implements Serializable {
 
     private List<ProjectBean> activityList;
 
+    private String namePrefix;
+
     private Experiment experiment;
 
     private Licence licence;
@@ -82,6 +84,14 @@ public class MDRegistrationBean implements Serializable {
 
     public void setActivityList(List<ProjectBean> activityList) {
         this.activityList = activityList;
+    }
+
+    public String getNamePrefix() {
+        return namePrefix;
+    }
+
+    public void setNamePrefix(String namePrefix) {
+        this.namePrefix = namePrefix;
     }
 
     public Experiment getExperiment() {

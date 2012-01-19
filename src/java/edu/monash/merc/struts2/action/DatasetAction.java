@@ -174,7 +174,7 @@ public class DatasetAction extends DMBaseAction {
 
     private void setNavAndTitleForViewDs() {
         setPageTitle(getText("experiment.view.dataset.action.title"));
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = null;
         if (fromMyExp) {
             secondNavLink = "data/viewMyExperiment.jspx?experiment.id=" + experiment.getId();
@@ -256,7 +256,7 @@ public class DatasetAction extends DMBaseAction {
 
     private void setNavAndTitleForViewPubDs() {
         setPageTitle(getText("experiment.view.dataset.action.title"));
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = "pubdata/viewExperiment.jspx?experiment.id=" + experiment.getId();
         String thirdNav = getText("experiment.view.dataset.action.title");
         String thirdNavLink = "pubdata/viewDataset.jspx?experiment.id=" + experiment.getId() + "&dataset.id=" + dataset.getId();

@@ -41,7 +41,7 @@
 			<@s.iterator status="expStat" value="exPagination.pageResults" id="expResult" >
 			<div class="data_outer_div">
 				<div class="each_field_row">
-					<div class="exp_name_title"><a href="${base}/pubdata/viewExperiment.jspx?experiment.id=${expResult.id}"><@s.property value="#expResult.name" /></a></div>
+					<div class="exp_name_title"><a href="${base}/pubdata/viewExperiment.jspx?experiment.id=${expResult.id}">IFM<@s.property value="#expResult.id" /></a></div>
 				</div>
 				 
 				<div class="each_field_row">

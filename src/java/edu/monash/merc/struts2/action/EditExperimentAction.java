@@ -140,7 +140,7 @@ public class EditExperimentAction extends DMBaseAction {
             // record the updating auditing info
             recordAuditEventForUpdating(experiment, user);
             // set action successful message
-            setSuccessActMsg(getText("experiment.edit.exp.update.success.message", new String[]{exp.getName()}));
+            setSuccessActMsg(getText("experiment.edit.exp.update.success.message", new String[]{this.namePrefix + exp.getId()}));
             setNavTitleForExpDetails();
         } catch (Exception e) {
             logger.error(e);
@@ -205,7 +205,7 @@ public class EditExperimentAction extends DMBaseAction {
     // for experiment  title and navigation bar
     private void setNavAndTitleForExp() {
         setPageTitle(getText("experiment.edit.exp.action.title"));
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = null;
         if (fromMyExp) {
             secondNavLink = "data/viewMyExperiment.jspx?experiment.id=" + experiment.getId();
@@ -237,7 +237,7 @@ public class EditExperimentAction extends DMBaseAction {
         setPageTitle(getText("experiment.edit.exp.action.title"));
         String secondNav = null;
         String secondNavLink = null;
-        String thirdNav = experiment.getName();
+        String thirdNav = this.namePrefix + experiment.getId();
         String thirdNavLink = null;
         if (fromMyExp) {
             secondNav = getText("experiment.list.my.all.experiments.action.title");
@@ -255,7 +255,7 @@ public class EditExperimentAction extends DMBaseAction {
     private void recordAuditEventForUpdating(Experiment exp, User operator) {
         AuditEvent ev = new AuditEvent();
         ev.setCreatedTime(GregorianCalendar.getInstance().getTime());
-        ev.setEvent(getText("experiment.edit.exp.update.success.message", new String[]{exp.getName()}));
+        ev.setEvent(getText("experiment.edit.exp.update.success.message", new String[]{this.namePrefix + exp.getId()}));
         ev.setEventOwner(exp.getOwner());
         ev.setOperator(operator);
         recordActionAuditEvent(ev);

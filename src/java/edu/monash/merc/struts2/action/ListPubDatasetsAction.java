@@ -97,7 +97,7 @@ public class ListPubDatasetsAction extends DMBaseAction {
 
     private void setNavAndTitleForViewDs() {
         setPageTitle(getText("experiment.view.all.datasets.action.title"));
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = "pubdata/viewExperiment.jspx?experiment.id=" + experiment.getId();
         String thirdNav = getText("experiment.view.all.datasets.action.title");
         String thirdNavLink = "pubdata/listDatasets.jspx?experiment.id=" + experiment.getId();

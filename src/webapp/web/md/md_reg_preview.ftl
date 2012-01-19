@@ -26,7 +26,7 @@
                 </td>
                 <td>
                     <div class="exp_name_title">
-                        <@s.property value="experiment.name" />
+                        IFM<@s.property value="experiment.id" />
 			        </div>
 
                 </td>

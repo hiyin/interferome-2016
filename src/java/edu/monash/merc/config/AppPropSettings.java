@@ -48,6 +48,8 @@ public class AppPropSettings {
 
     public static String EXPERIMENT_PHYSICAL_LOCATION = "experiment.physical.location";
 
+    public static String EXPERIMENT_NAME_PREFIX = "experiment.name.prefix";
+
     public static String EXPERIMENT_UUID_PREFIX = "experiment.uuid.prefix";
 
     public static String SYSTEM_ADMIN_EMAIL = "admin.user.email";

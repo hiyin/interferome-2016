@@ -16,7 +16,7 @@
 		<li><a href="${base}/search/showSearch.jspx">Search</a></li>
 		<li><a href="http://vera093.its.monash.edu.au/interferome/expression.php" target="_blank">Tissue Expression</a></li>
 		<li><a href="http://vera093.its.monash.edu.au/interferome/tfbs.php" target="_blank">Regulatory Analysis</a></li>
-		<li><span class="disabled_link">Sequence Download</span></li>
+		<li><a href="http://vera093.its.monash.edu.au/interferome/download.php" target="_blank">Sequence Download</a></li>
 		<li><span class="disabled_link">Database Statistics</span></li>
 		<li><a href="${base}/site/showCitation.jspx">Citation</a></li>
 		<li><a href="${base}/site/showHelp.jspx">Help</a></li>

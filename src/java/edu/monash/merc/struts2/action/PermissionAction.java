@@ -156,7 +156,7 @@ public class PermissionAction extends DMBaseAction {
     // for experiemnt permission title and navigation bar
     private void setNavAndTitleForPerm() {
         setPageTitle(getText("experiment.change.perms.action.title"));
-        String secondNav = experiment.getName();
+        String secondNav = this.namePrefix + experiment.getId();
         String secondNavLink = null;
         if (fromMyExp) {
             secondNavLink = "data/viewMyExperiment.jspx?experiment.id=" + experiment.getId();
