@@ -11,7 +11,14 @@
 </script>
 </head>
 <body>
-	<#include "template/navsection.ftl"/>
+
+    <#include "template/navsection.ftl"/>
+    <!-- temp -->
+    <div class="trans_temp">
+       Interferome is currently in transition please select <a href="http://vera093.its.monash.edu.au/interferome" target="_blank">Interferome V1.0</a> to access previous version whilst this site is under development.
+	</div>
+
+    <!-- end of temp -->
 	<!-- nav title -->
 	<div class="nav_namebar_div nav_title_gray">
 		Home
@@ -23,7 +30,7 @@
 	 	 		<div class="slidshow_frame_panel">
 	 	 			<div id="merc" name="merc">
 						<a href="#" >
-							<img src="${base}/slideshow/cy3_cy5.png" alt="Monash Institute of medical research" />
+							<img src="${base}/slideshow/ifn_wordle.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
 								Cy3 and Cy5 combined
@@ -44,10 +51,10 @@
 							</span>
 						</a>
 						<a href="#" >
-							<img src="${base}/slideshow/interferome4.jpg" alt="Monash Institute of medical research" />
+                            <img src="${base}/slideshow/cy3_cy5.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								MIM picture 4
+								Interferome
 							</span>
 						</a>
 						<a href="#" >

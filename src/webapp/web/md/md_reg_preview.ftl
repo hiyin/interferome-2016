@@ -26,7 +26,7 @@
                 </td>
                 <td>
                     <div class="exp_name_title">
-                        IFM<@s.property value="experiment.id" />
+                        ${namePrefix}<@s.property value="experiment.id" />
 			        </div>
 
                 </td>

@@ -1,4 +1,7 @@
 <div class="logo_section">
+    <div class="logo_section_left">
+       <@s.text name="app.version" />
+    </div>
 	<div class="logo_section_right">
 	 <@s.if test="%{#session.authentication_flag == null}">
 		 <a href="${base}/user/showLogin.jspx">Login</a> <a href="${base}/user/register_options">Register</a> 
@@ -21,7 +24,7 @@
 		<li><a href="${base}/site/showCitation.jspx">Citation</a></li>
 		<li><a href="${base}/site/showHelp.jspx">Help</a></li>
 		<li><a href="${base}/site/showContactUs.jspx">Contact Us</a></li>
-        <li><a href="http://vera093.its.monash.edu.au/interferome" target="_blank">Interferome V1.0</span></a></li>
+        <li><a href="http://vera093.its.monash.edu.au/interferome" target="_blank">Interferome V1.0</a></li>
 		<div style="clear:both"></div> 
 	</ul>
 	<div style="clear:both"></div> 	
