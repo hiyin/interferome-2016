@@ -33,7 +33,7 @@
 							<img src="${base}/slideshow/ifn_wordle.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								Cy3 and Cy5 combined
+								Interferome
 							</span>
 						</a>
 						<a href="#" >
@@ -50,18 +50,25 @@
 								One color array
 							</span>
 						</a>
+                        <a href="#" >
+							<img src="${base}/slideshow/IFNa1.png" alt="Monash Institute of medical research" />
+							<span>
+								<b>Monash Institute of medical research</b><br />
+								Type I, II, III
+							</span>
+						</a>
 						<a href="#" >
                             <img src="${base}/slideshow/cy3_cy5.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								Interferome
+								CY3 and CY5
 							</span>
 						</a>
 						<a href="#" >
-							<img src="${base}/slideshow/interferome5.jpg" alt="Monash Institute of medical research" />
+							<img src="${base}/slideshow/typei_ii_iii.jpg" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								MIM picture 5
+								Type I, II, III
 							</span>
 						</a>
 					</div>
