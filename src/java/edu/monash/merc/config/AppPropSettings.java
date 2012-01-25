@@ -27,12 +27,12 @@
  */
 package edu.monash.merc.config;
 
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import java.util.Map;
 
 /**
  * AppPropSettings class
@@ -146,6 +146,10 @@ public class AppPropSettings {
 
     public static String GENBANK_SUMMARY_LINK = "genbank.summary.link";
 
+    //experiment reference links
+    public static String REFERENCE_EBI_LINK = "reference.ebi.arrayexpress.link";
+
+    public static String REFERENCE_NCBI_LINK = "reference.ncbi.geo.link";
 
     @Autowired
     @Qualifier("appPropConfigurer")

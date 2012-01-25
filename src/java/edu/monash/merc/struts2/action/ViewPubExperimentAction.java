@@ -70,6 +70,9 @@ public class ViewPubExperimentAction extends DMBaseAction {
             }
             //count all datasets if any
             totalDatasetNum = countTotalDatasetsNumber(experiment.getId());
+
+            //set the experiment reference link
+            setExperimentReferenceLink(experiment);
         } catch (Exception e) {
             logger.error(e);
             addActionError(getText("experiment.view.experiment.details.failed"));

@@ -28,16 +28,15 @@
 
 package edu.monash.merc.struts2.action;
 
-import java.util.GregorianCalendar;
-
+import edu.monash.merc.domain.AuditEvent;
+import edu.monash.merc.domain.Experiment;
+import edu.monash.merc.domain.User;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import edu.monash.merc.domain.AuditEvent;
-import edu.monash.merc.domain.Experiment;
-import edu.monash.merc.domain.User;
+import java.util.GregorianCalendar;
 
 /**
  * EditExperimentAction Action class
@@ -67,6 +66,9 @@ public class EditExperimentAction extends DMBaseAction {
                 setNavAndTitleForExpExc();
                 return ERROR;
             }
+
+            //set the experiment reference link
+            setExperimentReferenceLink(experiment);
             setNavAndTitleForExp();
         } catch (Exception e) {
             logger.error(e);
@@ -142,6 +144,8 @@ public class EditExperimentAction extends DMBaseAction {
             // set action successful message
             setSuccessActMsg(getText("experiment.edit.exp.update.success.message", new String[]{this.namePrefix + exp.getId()}));
             setNavTitleForExpDetails();
+            //set the experiment reference link
+            setExperimentReferenceLink(experiment);
         } catch (Exception e) {
             logger.error(e);
             addActionError("experiment.edit.exp.update.experiment.failed");

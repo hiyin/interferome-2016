@@ -66,6 +66,9 @@ public class ViewExperimentAction extends DMBaseAction {
 
             //count all datasets if any
             totalDatasetNum = countTotalDatasetsNumber(experiment.getId());
+
+            //set the experiment reference link
+            setExperimentReferenceLink(experiment);
         } catch (Exception e) {
             logger.error(e);
             addActionError(getText("experiment.view.my.experiment.details.failed"));
@@ -111,6 +114,9 @@ public class ViewExperimentAction extends DMBaseAction {
             deleteExpActName = ActionConts.DELETE_EXP_ACTION;
             //count all datasets if any
             totalDatasetNum = countTotalDatasetsNumber(experiment.getId());
+
+            //set the experiment reference link
+            setExperimentReferenceLink(experiment);
         } catch (Exception e) {
             logger.error(e);
             addActionError(getText("experiment.view.experiment.details.failed"));

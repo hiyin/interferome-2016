@@ -51,10 +51,10 @@
 							</span>
 						</a>
                         <a href="#" >
-							<img src="${base}/slideshow/IFNa1.png" alt="Monash Institute of medical research" />
+							<img src="${base}/slideshow/heatmap.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								Type I, II, III
+								HeatMap
 							</span>
 						</a>
 						<a href="#" >
@@ -65,7 +65,7 @@
 							</span>
 						</a>
 						<a href="#" >
-							<img src="${base}/slideshow/typei_ii_iii.jpg" alt="Monash Institute of medical research" />
+							<img src="${base}/slideshow/typei_ii_iii.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
 								Type I, II, III

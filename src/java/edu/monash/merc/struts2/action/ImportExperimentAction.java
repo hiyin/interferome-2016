@@ -137,6 +137,9 @@ public class ImportExperimentAction extends DMBaseAction {
             setupFullPermissions();
             // set the delete experiment action name
             deleteExpActName = ActionConts.DELETE_MY_EXP_ACTION;
+
+            //set the experiment reference link
+            setExperimentReferenceLink(experiment);
             // set navigation bar and page title.
             setNavAndTitleForMyExp();
         } catch (Exception e) {

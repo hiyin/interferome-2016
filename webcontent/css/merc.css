@@ -62,7 +62,7 @@ body {
     height: 98px;
 }
 
-.logo_section_left{
+.logo_section_left {
     float: left;
     font-size: 20px;
     text-align: right;
@@ -71,7 +71,8 @@ body {
     margin-top: 60px;
     color: #666666;
 }
-.trans_temp{
+
+.trans_temp {
     color: #00B1E9;
     font-size: 14px;
     margin-top: 5px;
@@ -81,6 +82,7 @@ body {
     border: solid 1px #fae7e0;
 
 }
+
 .trans_temp a {
     color: #0092bf;
     font-weight: bold;
@@ -502,7 +504,7 @@ body {
 .use_policy {
     display: block;
     text-align: justify;
-    font-size: 11px;
+    font-size: 12px;
     color: #858585;
 }
 
@@ -1005,6 +1007,11 @@ body {
 .data_field_title a {
     color: #003766;
     text-decoration: none;
+}
+
+.data_field_title a:hover {
+    color: #003766;
+    text-decoration: underline;
 }
 
 .data_field_desc {
@@ -1784,6 +1791,7 @@ body {
     padding-bottom: 2px;
     color: #212121;
 }
+
 .contactus_data_textarea {
     padding-top: 4px;
     padding-bottom: 4px;
@@ -1791,17 +1799,18 @@ body {
     color: #212121;
 }
 
-.contactus_data_div a{
+.contactus_data_div a {
     color: #0092bf;;
     font-weight: bold;
     text-decoration: none;
 }
 
-.contactus_data_div a:hover{
+.contactus_data_div a:hover {
     color: #003766;
     text-decoration: underline;
 }
-.help_bg{
+
+.help_bg {
     color: #003766;
     font-weight: bold;
     background-image: url('../images/help_bg.png');

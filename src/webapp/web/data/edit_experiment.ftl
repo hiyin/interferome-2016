@@ -39,7 +39,14 @@
 				</div>
                 <div class="each_field_row">
 					<div class="data_field_div">Reference:</div>
-					<div class="data_field_title"><@s.property value="experiment.name" /></div>
+					<div class="data_field_title">
+                        <@s.if test="%{referenceLink != null }">
+                            <a href="${referenceLink}${experiment.name}" target="_blank" ><@s.property value="experiment.name" /> </a>
+                        </@s.if>
+                        <@s.else>
+                            <@s.property value="experiment.name" />
+                        </@s.else>
+                    </div>
 					<div style="clear:both"></div>
 				</div>
 				<div class="each_field_row">

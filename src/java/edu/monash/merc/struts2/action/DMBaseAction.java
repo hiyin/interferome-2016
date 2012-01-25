@@ -78,6 +78,8 @@ public class DMBaseAction extends BaseAction {
 
     protected String namePrefix;
 
+    protected String referenceLink;
+
     private Logger logger = Logger.getLogger(this.getClass().getName());
 
     public void setDmService(DMService dmService) {
@@ -313,6 +315,19 @@ public class DMBaseAction extends BaseAction {
         return this.dmService.getTotalDatasetsNumber(expId);
     }
 
+    protected void setExperimentReferenceLink(Experiment experiment) {
+        if (experiment != null) {
+            String expName = experiment.getName();
+
+            if (StringUtils.startsWithIgnoreCase(expName, "E")) {
+                referenceLink = appSetting.getPropValue(AppPropSettings.REFERENCE_EBI_LINK);
+            }
+            if (StringUtils.startsWithIgnoreCase(expName, "G")) {
+                referenceLink = appSetting.getPropValue(AppPropSettings.REFERENCE_NCBI_LINK);
+            }
+        }
+    }
+
     /**
      * @return the permissionBean
      */
@@ -416,5 +431,13 @@ public class DMBaseAction extends BaseAction {
 
     public void setNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
+    }
+
+    public String getReferenceLink() {
+        return referenceLink;
+    }
+
+    public void setReferenceLink(String referenceLink) {
+        this.referenceLink = referenceLink;
     }
 }
