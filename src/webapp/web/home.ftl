@@ -44,10 +44,10 @@
 							</span>
 						</a>
 						<a href="#" >
-							<img src="${base}/slideshow/one_color_array.png" alt="Monash Institute of medical research" />
+							<img src="${base}/slideshow/ifnar_ternary_model.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
-								One color array
+								IFNAR Ternary Model
 							</span>
 						</a>
                         <a href="#" >
