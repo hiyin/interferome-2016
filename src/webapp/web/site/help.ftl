@@ -17,9 +17,30 @@
             <div class="blank_separator"></div>
 			<div class="data_outer_div help_bg" >
                 <div class="blank_separator"></div>
+                <div class="parag_title_div">
+                    User Guide:
+                </div>
                 <div class="empty_div"></div>
-                Please download the PDF version : <a href="http://interferome.googlecode.com/files/Data%20Publication%20to%20Interferome%20User%20Guide25.pdf">User Guide</a>
+                <div class="help_row_div">
+                  Please download the PDF version : <a href="http://interferome.googlecode.com/files/Data%20Publication%20to%20Interferome%20User%20Guide25.pdf">User Guide</a>
+                </div>
                 <div class="empty_div"></div>
+                <div class="parag_title_div">
+                    FAQ:
+                </div>
+                <!-- FAQ -->
+                <div class="help_row_div">
+                    <div class="help_faq">
+                        How to convert Treatment Concentration International Unit?
+                    </div>
+                    <div class="citation_img"><img src="${base}/images/dot_grey.png" align="top" border="0" /></div>
+                    <div class="help_faq_ans">
+                        How to convert Treatment Concentration International Unit ANS
+                    </div>
+                    <div style="clear:both"></div>
+			    </div>
+                <!-- End of FAQ -->
+
                 <div class="empty_div"></div>
                 <div class="empty_div"></div>
                 <div class="empty_div"></div>

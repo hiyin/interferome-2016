@@ -9,8 +9,9 @@
 	$(document).ready(function(){
 		$("#tooltip_link").easyTooltip({
 			tooltipId: "search_tips",
+            clickRemove: true,
 			content: '<h4>Treatment Concentration International Unit</h4><p>Please use the following formula to convert the international unit to interferome unit.</p>'
-		});
+        });
 	});
 
 

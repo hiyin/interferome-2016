@@ -423,6 +423,19 @@ body {
     background: #F0F0F0;
 }
 
+.normal_title_div {
+    color: #858585;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
 .result_title_div {
     color: #858585;
     border: 1px solid #E9E9E9;
@@ -1665,6 +1678,9 @@ body {
     display: inline;
     color: #858585;
 }
+.dose_range_div a{
+    text-decoration: none;
+}
 
 .time_range_div {
     position: relative;
@@ -1779,6 +1795,59 @@ body {
     color: #003766;
 }
 
+.db_stat_ref_title {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.help_faq{
+
+}
+
+.help_faq_ans {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 12px;
+    text-align: justify;
+    color: #212121;
+}
+
+.db_stat_div {
+    color: #212121;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.db_stat_div p{
+    text-align: justify;
+}
+
+.db_stat_ref_row {
+    margin: 3px;
+    padding: 3px;
+    color: #3A4C66;
+    font-size: 11px;
+}
+
+
 .contactus_data_title {
     padding-top: 2px;
     padding-bottom: 2px;
@@ -1800,21 +1869,31 @@ body {
 }
 
 .contactus_data_div a {
-    color: #0092bf;;
+    color: #003766;
     font-weight: bold;
     text-decoration: none;
 }
 
 .contactus_data_div a:hover {
-    color: #003766;
+    color: #0092bf;
     text-decoration: underline;
 }
 
 .help_bg {
     color: #003766;
     font-weight: bold;
-    background-image: url('../images/help_bg.png');
+    /** background-image: url('../images/help_bg.png'); **/
     background-repeat: repeat;
+}
+.help_row_div {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /** pagination **/

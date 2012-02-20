@@ -3,7 +3,6 @@
 <div style="clear:both"></div>
 <br/>
 <div class="sponsor">
-    <a href="http://www.monash.edu" target="_blank" ><img src="${base}/images/logo/logo_monash.png"  alt="Monash University"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="http://www.monash.edu/eresearch" target="_blank"><img src="${base}/images/logo/logo_merc.png" alt="Monash MeRC"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="http://www.monashinstitute.org/" target="_blank"><img src="${base}/images/logo/logo_mimr.png" alt="Monash Institute of Medical Research"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="http://www.microbialgenomics.net/" target="_blank"><img src="${base}/images/logo/logo_arc.png" alt="Australian Research Council (ARC)"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

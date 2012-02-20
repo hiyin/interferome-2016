@@ -624,6 +624,12 @@
             <result name="success">/web/site/citation.ftl</result>
         </action>
 
+        <!-- show database statistics action -->
+        <action name="dbStat" class="site.dbStatAction" method="dbStat">
+            <result name="error">/web/common/action_error.ftl</result>
+            <result name="success">/web/site/db_statistics.ftl</result>
+        </action>
+
         <!-- show help -->
         <action name="showHelp" class="site.helpAction" method="showHelp">
             <result name="error">/web/common/action_error.ftl</result>

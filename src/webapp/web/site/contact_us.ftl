@@ -40,11 +40,6 @@ function refresh()
                 <div class="blank_separator"></div>
 
                 <div class="contactus_data_div">
-                    Paul.Hertzog@monash.edu
-                </div>
-                <div class="blank_separator"></div>
-
-                <div class="contactus_data_div">
                     <a href="http://www.monashinstitute.org/staff/ciiid-paul-hertzog.html" target="_blank">Home Page</a>
                 </div>
 

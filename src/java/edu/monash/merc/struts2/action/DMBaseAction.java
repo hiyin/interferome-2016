@@ -165,7 +165,8 @@ public class DMBaseAction extends BaseAction {
         pageSizeMap.put(40, 40);
         pageSizeMap.put(50, 50);
         // orderby values
-        orderByMap.put("name", "name");
+        //map the id as a name, due to we use IFM plus id as name. so sorting the name is actually sorted by id
+        orderByMap.put("id", "name");
         orderByMap.put("createdTime", "imported date");
         orderByMap.put("modifiedTime", "modified date");
         orderByMap.put("approved", "approval status");
@@ -176,7 +177,7 @@ public class DMBaseAction extends BaseAction {
 
     protected void setExpDefaultPageParams() {
         if (StringUtils.isBlank(orderBy)) {
-            orderBy = "name";
+            orderBy = "id";
         }
         if (StringUtils.isBlank(orderByType)) {
             orderByType = ActionConts.DEFAULT_ORDERBY_TYPE;

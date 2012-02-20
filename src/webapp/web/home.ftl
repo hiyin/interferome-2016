@@ -37,13 +37,6 @@
 							</span>
 						</a>
 						<a href="#" >
-							<img src="${base}/slideshow/cy3.png" alt="Monash Institute of medical research" />
-							<span>
-								<b>Monash Institute of medical research</b><br />
-								Cy3
-							</span>
-						</a>
-						<a href="#" >
 							<img src="${base}/slideshow/ifnar_ternary_model.png" alt="Monash Institute of medical research" />
 							<span>
 								<b>Monash Institute of medical research</b><br />
