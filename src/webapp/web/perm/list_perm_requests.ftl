@@ -85,7 +85,7 @@
                                     <@s.submit value="Grant" cssClass="input_button3" />
                                  </td>
                                  <td>
-                                   <a href="${base}/perm/rejectPermReq.jspx?permRequest.id=${pRequest.id}&permRequest.experiment.id=${pRequest.experiment.id}" class="linkbutton">&nbsp; Reject &nbsp; </a>
+                                   <a href="${base}/perm/rejectPermReq.jspx?permRequest.id=<@s.property value='#pRequest.id' />&permRequest.experiment.id=<@s.property value='#pRequest.experiment.id' />" class="linkbutton">&nbsp; Reject &nbsp; </a>
                                  </td>
                                  <td></td>
                             </tr>

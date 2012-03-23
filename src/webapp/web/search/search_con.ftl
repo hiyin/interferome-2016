@@ -26,7 +26,7 @@
             <div class="dose_range_div">
             </@s.else>
                 From: &nbsp;<@s.textfield name="searchBean.fromDose" cssClass="search_input"/>&nbsp;
-                &nbsp; To: &nbsp;<@s.textfield name="searchBean.toDose" cssClass="search_input"/>  &nbsp; <font color="#858585">(ng/ml)</font>
+                &nbsp; To: &nbsp;<@s.textfield name="searchBean.toDose" cssClass="search_input"/>  &nbsp; <font color="#858585">(IU/ml)</font>
                <a href="${base}/site/showHelp.jspx" target="_blank" id="tooltip_link"> &nbsp; &nbsp; <img src="${base}/images/info.png" class="search_ctip_image" /> &nbsp; &nbsp; </a>
             </div>
         </div>

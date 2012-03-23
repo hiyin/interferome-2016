@@ -131,7 +131,7 @@ public class RIFCSServiceImpl implements RIFCSService {
             rifcsBuilder.append(lineSeparator);
             rifcsBuilder.append("<address>");
             rifcsBuilder.append(lineSeparator);
-            rifcsBuilder.append("<physical type=\"address\">");
+            rifcsBuilder.append("<physical type=\"postalAddress\">");
             rifcsBuilder.append(lineSeparator);
             rifcsBuilder.append("<addressPart type=\"text\">" + mdRegistrationBean.getPhysicalAddress() + "</addressPart>");
             rifcsBuilder.append(lineSeparator);
@@ -345,7 +345,7 @@ public class RIFCSServiceImpl implements RIFCSService {
         rifcsBuilder.append(lineSeparator);
         rifcsBuilder.append("</electronic>");
         rifcsBuilder.append(lineSeparator);
-        rifcsBuilder.append("<physical type=\"streetAddress\">");
+        rifcsBuilder.append("<physical type=\"postalAddress\">");
         rifcsBuilder.append(lineSeparator);
         rifcsBuilder.append("<addressPart type=\"text\">" + pb.getAddress() + "</addressPart>");
         rifcsBuilder.append(lineSeparator);

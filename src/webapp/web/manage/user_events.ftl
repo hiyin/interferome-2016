@@ -47,7 +47,7 @@
 					 		<@s.property value="#eventResult.event" />, by <@s.property value="#eventResult.operator.displayName" />
 					 	</div>
 					 	<div class="data_link_small">
-					 		<a href="${base}/manage/deleteUserEvent.jspx?auditEvent.id=${eventResult.id}" id="delete_event">Delete</a>
+					 		<a href="${base}/manage/deleteUserEvent.jspx?auditEvent.id=<@s.property value='#eventResult.id' />" id="delete_event">Delete</a>
 					 	</div>
 					 	<div style="clear:both"></div>  
 					</div>

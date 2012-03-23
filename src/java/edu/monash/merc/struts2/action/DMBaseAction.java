@@ -300,10 +300,21 @@ public class DMBaseAction extends BaseAction {
         for (Dataset ds : dsList) {
             long dsId = ds.getId();
             List<NameValueBean> nameValueBeans = this.dmService.getFactorValuesBeanByDatasetId(dsId);
+            String sampleChars = ds.getSampleChars();
             DatasetFactorBean dsFactorBean = new DatasetFactorBean(ds, nameValueBeans);
             datasetFactorBeans.add(dsFactorBean);
         }
         return datasetFactorBeans;
+    }
+
+    private String insertNewLineStr(String str){
+        if(StringUtils.isNotBlank(str)){
+            int length = str.length();
+            if(length >= 300){
+
+            }
+        }
+        return null;
     }
 
     /**

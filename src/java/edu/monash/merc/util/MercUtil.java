@@ -289,6 +289,23 @@ public class MercUtil {
         return temp.trim();
     }
 
+    public static String insertNewLine(String str, int maxLenPerLine) {
+
+        if (StringUtils.isNotBlank(str)) {
+            int length = str.length();
+            System.out.println("total length: " + length);
+            int start = 0;
+            if (length > maxLenPerLine) {
+                int loop = length / maxLenPerLine;
+                 System.out.println(" loop : " + loop);
+                String substr = StringUtils.substring(str, start, maxLenPerLine);
+
+            }
+        }
+        return null;
+
+    }
+
     public static String replaceSpace(String spaceStr) {
         return StringUtils.remove(spaceStr, " ");
     }
@@ -320,5 +337,7 @@ public class MercUtil {
         System.out.println("replace all delimiters by new delim: " + MercUtil.replaceAllDelimsByNewDelim(testString, ";", new String[]{",", "\t", "\n"}));
 
         System.out.println("replace all delimiters by new delim test2: " + MercUtil.replaceAllDelimsByNewDelim(test2, ";", new String[]{",", "\t", "\n"}));
+
+        MercUtil.insertNewLine("GSM528681_plate1_B01.CEL,GSM528682_plate1_B02.CEL,GSM528739_plate1_A07.CEL,GSM528740_plate1_A08.CEL ", 28);
     }
 }
