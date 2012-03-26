@@ -10,7 +10,7 @@
 	<div class="nav_namebar_div nav_title_gray">
 		User
 		<img border="0" src="${base}/images/grayarrow.png">
-		<a href="${base}/admin/showUserDetails.jspx?regUser.id=${regUser.id}"><@s.text name="admin.manage.view.user.details..action.title" /></a>
+		<a href="${base}/admin/showUserDetails.jspx?regUser.id=<@s.property value='regUser.id' />"><@s.text name="admin.manage.view.user.details..action.title" /></a>
 	</div>
 	<div style="clear:both"></div>
  	<div class="main_container">
@@ -33,7 +33,7 @@
 					<tr>
 						<td width="100" rowspan="5">
 							<div class="user_avatar">
-								<img src="${base}/user/viewAvatar.jspx?avatarUserId=${regUser.id}">
+								<img src="${base}/user/viewAvatar.jspx?avatarUserId=<@s.property value='regUser.id' />">
 							</div>
 						</td>
 					</tr>

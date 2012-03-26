@@ -19,7 +19,7 @@
 				<span class="name_title">A total of <font color="green"> ${exPagination.totalRecords} </font> experiments</span>
 				<div class="blank_separator"></div>
 				<div class="url_contect">
-					<a href="${base}/${pageLink}${pageSuffix}${exPagination.pageNo}" class="page_url"></a>
+					<a href="${base}/${pageLink}${pageSuffix}<@s.property value='exPaginationt.pageNo' />" class="page_url"></a>
 				</div>
 				<#include "../pagination/pagination_header.ftl"/>
 			</div>
@@ -41,7 +41,7 @@
 			<@s.iterator status="expStat" value="exPagination.pageResults" id="expResult" >
 			<div class="data_outer_div">
 				<div class="each_field_row">
-					<div class="exp_name_title"><a href="${base}/pubdata/viewExperiment.jspx?experiment.id=${expResult.id}">${namePrefix}<@s.property value="#expResult.id" /></a></div>
+					<div class="exp_name_title"><a href="${base}/pubdata/viewExperiment.jspx?experiment.id=<@s.property value='#expResult.id' />">${namePrefix}<@s.property value="#expResult.id" /></a></div>
 				</div>
 				 
 				<div class="each_field_row">
@@ -56,7 +56,7 @@
 					</div>
 				</div>
 			 	<div class="data_link">
-			 		<a href="${base}/pubdata/viewExperiment.jspx?experiment.id=${expResult.id}">View Details</a>
+			 		<a href="${base}/pubdata/viewExperiment.jspx?experiment.id=<@s.property value='#expResult.id' />">View Details</a>
 			 	</div>
 			 	<div style="clear:both"></div>  
 			</div>

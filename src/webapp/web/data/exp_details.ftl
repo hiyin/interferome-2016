@@ -143,21 +143,21 @@
 			<div class="data_outer_noborder_div">
 				<@s.if test="%{permissionBean.viewAllowed == false}">
 			 	<div class="data_link_big">
-			 		<a href="${base}/perm/showApplyForPerms.jspx?experiment.id=${experiment.id}">Apply For Permissions</a>
+			 		<a href="${base}/perm/showApplyForPerms.jspx?experiment.id=<@s.property value='experiment.id' />">Apply For Permissions</a>
 			 	</div>
 			 	</@s.if>
 
                 <@s.if test="%{experiment.approved == false}">
                     <@s.if test="%{user.userType == 1 || user.userType ==2}">
                     <div class="data_link">
-                        <a href='${base}/data/showApproveExp.jspx?experiment.id=${experiment.id}&fromMyExp=<@s.property value="fromMyExp" />'>Approve</a>
+                        <a href='${base}/data/showApproveExp.jspx?experiment.id=<@s.property value='experiment.id' />&fromMyExp=<@s.property value="fromMyExp" />'>Approve</a>
                     </div>
                     </@s.if>
 			 	</@s.if>
                 <@s.else>
                     <@s.if test="%{experiment.owner.id == user.id || user.userType == 1 || user.userType ==2}">
                     <div class="data_link_big">
-                        <a href='${base}/data/showMdReg.jspx?experiment.id=${experiment.id}&fromMyExp=<@s.property value="fromMyExp" />' id='wait_modal' name='wait_modal'>Public Registration</a>
+                        <a href='${base}/data/showMdReg.jspx?experiment.id=<@s.property value='experiment.id' />&fromMyExp=<@s.property value="fromMyExp" />' id='wait_modal' name='wait_modal'>Public Registration</a>
                     </div>
                     <div id='mask'></div>
                     <div id='modal_window' >
@@ -167,7 +167,7 @@
                 </@s.else>
 			 	<@s.if test="%{permissionBean.changePermAllowed}"> 
 			 	<div class="data_link">
-			 		<a href='${base}/perm/showChangeExpPerms.jspx?experiment.id=${experiment.id}&fromMyExp=<@s.property value="fromMyExp" />'>Permissions</a>
+			 		<a href='${base}/perm/showChangeExpPerms.jspx?experiment.id=<@s.property value='experiment.id' />&fromMyExp=<@s.property value="fromMyExp" />'>Permissions</a>
 			 	</div>
 			 	</@s.if>
 			 	<@s.if test="%{permissionBean.deleteAllowed == true}">
@@ -182,13 +182,13 @@
 								<div class='yes'>Yes</div>
 							</div>
 						</div>
-						<a href="${base}/${deleteExpActName}?experiment.id=${experiment.id}" class="confirm" >Delete</a>
+						<a href="${base}/${deleteExpActName}?experiment.id=<@s.property value='experiment.id' />" class="confirm" >Delete</a>
 					</div>
 				</div>
 			 	</@s.if>
 			 	<@s.if test="%{permissionBean.updateAllowed == true}">
 			 	<div class="data_link">
-			 		<a href='${base}/data/showEditExp.jspx?experiment.id=${experiment.id}&fromMyExp=<@s.property value="fromMyExp" />'>Update</a>
+			 		<a href='${base}/data/showEditExp.jspx?experiment.id=<@s.property value='experiment.id' />&fromMyExp=<@s.property value="fromMyExp" />'>Update</a>
 			 	</div>
 			 	</@s.if>
 			 	<div style="clear:both"></div>  
@@ -208,7 +208,7 @@
                          <td>
                             <div class="data_link">
                                 <@s.if test="%{permissionBean.viewAllowed == true}">
-                                    <a href='${base}/data/listDatasets.jspx?experiment.id=${experiment.id}&fromMyExp=<@s.property value="fromMyExp" />'>
+                                    <a href='${base}/data/listDatasets.jspx?experiment.id=<@s.property value='experiment.id' />&fromMyExp=<@s.property value="fromMyExp" />'>
                                     <@s.if test="%{totalDatasetNum == 0}">
                                         <@s.if test="%{permissionBean.importAllowed == true}">
                                             Add Dataset

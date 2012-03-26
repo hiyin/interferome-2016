@@ -31,7 +31,7 @@
             </div>
 
             <div class="data_link">
-                <a href="${base}/pubdata/viewExperiment.jspx?experiment.id=${experiment.id}">View Details</a>
+                <a href="${base}/pubdata/viewExperiment.jspx?experiment.id=<@s.property value='experiment.id' />">View Details</a>
             </div>
             <div style="clear:both"></div>
         </div>
@@ -65,7 +65,7 @@
                 <tbody>
                     <@s.iterator status="dsState" value="datasetFactorBeans" id="dsfvbean" >
                     <tr>
-                        <td align="left"><div class="ds_link"><a href="${base}/pubdata/viewDataset?experiment.id=${experiment.id}&dataset.id=${dsfvbean.dataset.id}"><@s.property value="%{#dsfvbean.dataset.name}" /></a></div></td>
+                        <td align="left"><div class="ds_link"><a href="${base}/pubdata/viewDataset?experiment.id=<@s.property value='experiment.id' />&dataset.id=<@s.property value='#dsfvbean.dataset.id' />"><@s.property value="%{#dsfvbean.dataset.name}" /></a></div></td>
                         <td align="left">
                             <div class="ds_data_label"> Interferon Type </div><div class="ds_data_value"><@s.property value="%{#dsfvbean.dataset.ifnType.typeName}" /></div>
                             <div class="ds_data_label"> Interferon SubType </div><div class="ds_data_value"><@s.property value="%{#dsfvbean.dataset.ifnType.subTypeName}" /></div>
@@ -100,7 +100,7 @@
                                 <@s.property value="%{#dsfvbean.dataset.ifnVar.value}" />
                             </div>
                             </@s.if>
-                            <div class="ds_data_label"> Treatment Concentration </div><div class="ds_data_value"><@s.property value="%{#dsfvbean.dataset.treatmentCon}" /> (ng/ml)</div>
+                            <div class="ds_data_label"> Treatment Concentration </div><div class="ds_data_value"><@s.property value="%{#dsfvbean.dataset.treatmentCon}" /> (IU/ml)</div>
                             <div class="ds_data_label"> Treatment Time </div><div class="ds_data_value"><@s.property value="%{#dsfvbean.dataset.treatmentTime}" /> (hr)</div>
                             <@s.iterator status="fv" value="%{#dsfvbean.nameValueBeans}" id="nvb" >
                                 <div class="ds_data_label"> <@s.property value="%{#nvb.name}" /> </div><div class="ds_data_value"><@s.property value="%{#nvb.value}" /> </div>

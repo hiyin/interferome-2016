@@ -147,7 +147,7 @@
                             <div class="data_link">
                                 <@s.if test="%{permissionBean.viewAllowed == true}">
                                      <@s.if test="%{totalDatasetNum > 0}">
-                                        <a href='${base}/pubdata/listDatasets.jspx?experiment.id=${experiment.id}'>View Datasets</a>
+                                        <a href="${base}/pubdata/listDatasets.jspx?experiment.id=<@s.property value='experiment.id' />">View Datasets</a>
                                      </@s.if>
                                 </@s.if>
                             </div>

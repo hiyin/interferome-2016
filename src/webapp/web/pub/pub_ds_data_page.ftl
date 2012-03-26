@@ -3,7 +3,7 @@
         <span class="name_title">A total of <font color="green"> ${dataPagination.totalRecords} </font> Data</span>
         <!-- page sorting block -->
         <div class="msg_content">
-            <a href="${base}/${pageLink}${pageSuffix}${dataPagination.pageNo}&experiment.id=${experiment.id}&dataset.id=${dataset.id}" class="page_url"></a>
+            <a href="${base}/${pageLink}${pageSuffix}<@s.property value='dataPagination.pageNo' />&experiment.id=<@s.property value='experiment.id' />&dataset.id=<@s.property value='dataset.id' />" class="page_url"></a>
         </div>
 
         <br/>

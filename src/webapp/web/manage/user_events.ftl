@@ -19,7 +19,7 @@
 				<span class="name_title">A total of <font color="green"> ${eventPagination.totalRecords} </font> events</span>
 				<div class="blank_separator"></div>
 				<div class="url_contect">
-					<a href="${base}/${pageLink}${pageSuffix}${eventPagination.pageNo}" class="page_url"></a>
+					<a href="${base}/${pageLink}${pageSuffix}<@s.property value='eventPagination.pageNo' />" class="page_url"></a>
 				</div>
 				<#include "../pagination/pagination_header.ftl"/>
 			</div>

@@ -9,13 +9,13 @@
 
         <@s.if test="%{dataPagination.totalRecords >0 }">
         <div class="export_div">
-         Save as a CSV file <a href='${base}/search/exportCsvFile.jspx?maxRecords=<@s.property value="dataPagination.totalRecords" />&orderBy=${orderBy}&orderByType=${orderByType}'> <img src="${base}/images/export.png" class="search_ctip_image" id="export_csv" /></a>
+         Save as a CSV file <a href="${base}/search/exportCsvFile.jspx?maxRecords=<@s.property value='dataPagination.totalRecords' />&orderBy=${orderBy}&orderByType=${orderByType}"> <img src="${base}/images/export.png" class="search_ctip_image" id="export_csv" /></a>
         </div>
         </@s.if>
         <div style="clear:both"></div>
         <!-- page sorting block -->
         <div class="msg_content">
-            <a href="${base}/${pageLink}${pageSuffix}${dataPagination.pageNo}" class="page_url"></a>
+            <a href="${base}/${pageLink}${pageSuffix}<@s.property value='dataPagination.pageNo' />" class="page_url"></a>
         </div>
         <br/>
         <#include "../pagination/pagination_header.ftl"/>
@@ -39,7 +39,7 @@
             <tbody>
                 <@s.iterator status="dataStat" value="dataPagination.pageResults" id="dataResult" >
                 <tr>
-                    <td align="center"><div class="s_ds_link"><a href="${base}/${viewDsAct}?experiment.id=${dataResult.dataset.experiment.id}&dataset.id=${dataResult.dataset.id}"><@s.property value="#dataResult.dataset.id" /></a></div></td>
+                    <td align="center"><div class="s_ds_link"><a href="${base}/${viewDsAct}?experiment.id=<@s.property value='#dataResult.dataset.experiment.id' />&dataset.id=<@s.property value='#dataResult.dataset.id' />"><@s.property value="#dataResult.dataset.id" /></a></div></td>
                     <td><@s.property value="#dataResult.value" /></td>
                     <td align="center"><@s.property value="#dataResult.dataset.ifnType.typeName" /></td>
                     <td align="center"><@s.property value="#dataResult.dataset.treatmentTime" /></td>

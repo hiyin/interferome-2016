@@ -34,7 +34,7 @@
 					</div>
 				</div>
 				<div class="data_link">
-			 		<a href="${base}/${viewExpActName}?experiment.id=${experiment.id}">View Details</a>
+			 		<a href="${base}/${viewExpActName}?experiment.id=<@s.property value='experiment.id' />">View Details</a>
 			 	</div>
 			 	<div style="clear:both"></div>  
 			</div>

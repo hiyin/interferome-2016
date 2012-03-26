@@ -50,7 +50,7 @@
                     <@s.form action="approvePermReq.jspx" id="approve_req_perm" namespace="/perm" method="post" >
                         <table>
                             <tr>
-                                 <td colspan="4" align="center"><span class="perm_req_right_title">Applied Permissions for the IFM${pRequest.experiment.id} experiment</span></td>
+                                 <td colspan="4" align="center"><span class="perm_req_right_title">Applied Permissions for the IFM<@s.property value='#pRequest.experiment.id' /> experiment</span></td>
                             </tr>
                             <tr>
                                  <td colspan="4">

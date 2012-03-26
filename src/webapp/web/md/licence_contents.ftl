@@ -43,7 +43,7 @@
         <@s.hidden name="licence.licenceContents" id="plicence_cont" />
 
         <div class="each_field_row">
-            <input type="button" value=" Back " class="input_button" onclick="window.location = '${base}/data/selectLicence.jspx?experiment.id=${experiment.id}&licence.licenceType=${licence.licenceType}&licence.commericial=${licence.commercial}&licence.derivatives=${licence.derivatives}&licence.jurisdiction=${licence.jurisdiction}';">
+            <input type="button" value=" Back " class="input_button" onclick="window.location = '${base}/data/selectLicence.jspx?experiment.id=<@s.property value='experiment.id' />&licence.licenceType=${licence.licenceType}&licence.commericial=${licence.commercial}&licence.derivatives=${licence.derivatives}&licence.jurisdiction=${licence.jurisdiction}';">
             <input type="button"  value=" Cancel " class="input_button" id="cancelLicence" /> &nbsp;&nbsp; <input type="button"  value=" Save " id="saveLicence" class="input_button" />
         </div>
     </div>

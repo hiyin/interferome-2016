@@ -19,7 +19,7 @@
 				<span class="name_title">A total of <font color="green"> ${userPagination.totalRecords} </font> users</span>
 				<div class="blank_separator"></div>
 				<div class="url_contect">
-					<a href="${base}/${pageLink}${pageSuffix}${userPagination.pageNo}" class="page_url"></a>
+					<a href="${base}/${pageLink}${pageSuffix}<@s.property value='userPagination.pageNo' />" class="page_url"></a>
 				</div>
 				<#include "../pagination/pagination_header.ftl"/>
 			</div>
@@ -68,10 +68,10 @@
 							<div class="data_link_small">
 						 		<center>
 						 			<@s.if test="%{(user.userType == 1 || user.userType == 2) && (#session.authen_user_id != #userResult.id) && (#userResult.userType !=1)}">
-						 				<a href="${base}/admin/showUserDetails.jspx?regUser.id=${userResult.id}">Manage</a>
+						 				<a href="${base}/admin/showUserDetails.jspx?regUser.id=<@s.property value='#userResult.id' />">Manage</a>
 						 			</@s.if>
 						 			<@s.else>
-						 				<a href="${base}/admin/showUserDetails.jspx?regUser.id=${userResult.id}">View</a>
+						 				<a href="${base}/admin/showUserDetails.jspx?regUser.id=<@s.property value='#userResult.id'/>">View</a>
 						 			</@s.else>
 						 		</center>
 							</div>

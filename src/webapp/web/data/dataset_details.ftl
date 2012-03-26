@@ -21,7 +21,7 @@
 
         <div class="data_outer_div">
             <div class="each_field_row">
-                <div class="exp_name_title">${namePrefix}<@s.property value="experiment.id" /></div>
+                <div class="exp_name_title">${namePrefix}<@s.property value='experiment.id' /></div>
             </div>
             <div class="each_field_row">
                 <div class="exp_desc_div"><@s.property value="experiment.description" /></div>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="data_link">
-                <a href="${base}/${viewExpActName}?experiment.id=${experiment.id}">View Details</a>
+                <a href="${base}/${viewExpActName}?experiment.id=<@s.property value='experiment.id' />">View Details</a>
             </div>
             <div style="clear:both"></div>
         </div>
@@ -93,7 +93,7 @@
                                 <@s.property value="%{dataset.ifnVar.value}" />
                             </div>
                             </@s.if>
-                            <div class="ds_data_label"> Treatment Concentration </div><div class="ds_data_value"><@s.property value="%{dataset.treatmentCon}" /> (ng/ml)</div>
+                            <div class="ds_data_label"> Treatment Concentration </div><div class="ds_data_value"><@s.property value="%{dataset.treatmentCon}" /> (IU/ml)</div>
                             <div class="ds_data_label"> Treatment Time </div><div class="ds_data_value"><@s.property value="%{dataset.treatmentTime}" /> (hr)</div>
                             <@s.iterator status="fv" value="nameValueBeans" id="nvb" >
                                 <div class="ds_data_label"> <@s.property value="%{#nvb.name}" /> </div><div class="ds_data_value"><@s.property value="%{#nvb.value}" /> </div>

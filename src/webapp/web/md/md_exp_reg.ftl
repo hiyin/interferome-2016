@@ -239,7 +239,7 @@
                 </td>
                 <td>
                     <div class="para_norm_div">
-                         <a href="${base}/data/licenceOptions.jspx?experiment.id=${experiment.id}" title="Select License" id="selectLicence">Select License</a>
+                         <a href="${base}/data/licenceOptions.jspx?experiment.id=<@s.property value='experiment.id' />" title="Select License" id="selectLicence">Select License</a>
 			        </div>
                     <div style="clear:both"></div>
                 </td>
