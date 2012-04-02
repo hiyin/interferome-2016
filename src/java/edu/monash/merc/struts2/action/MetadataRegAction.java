@@ -422,7 +422,10 @@ public class MetadataRegAction extends DMBaseAction {
 
 
     public String mdReg() {
-
+        String rifcsStoreLocation = appSetting.getPropValue(AppPropSettings.ANDS_RIFCS_STORE_LOCATION);
+        anzSrcCode = appSetting.getPropValue(AppPropSettings.ANDS_RIFCS_REG_ANZSRC_CODE);
+        physicalAddress = appSetting.getPropValue(AppPropSettings.EXPERIMENT_PHYSICAL_LOCATION);
+        String groupName = appSetting.getPropValue(AppPropSettings.ANDS_RIFCS_REG_GROUP_NAME);
         // set the view experiment details action name
         if (fromMyExp) {
             viewExpActName = ActionConts.VIEW_MY_EXP_DETAILS_ACTION;
@@ -516,10 +519,7 @@ public class MetadataRegAction extends DMBaseAction {
         mdRegBean.setLicence(licence);
         mdRegBean.setAccessRights(accessRights);
 
-        String rifcsStoreLocation = appSetting.getPropValue(AppPropSettings.ANDS_RIFCS_STORE_LOCATION);
-        anzSrcCode = appSetting.getPropValue(AppPropSettings.ANDS_RIFCS_REG_ANZSRC_CODE);
-        physicalAddress = appSetting.getPropValue(AppPropSettings.EXPERIMENT_PHYSICAL_LOCATION);
-        String groupName = appSetting.getPropValue(AppPropSettings.ANDS_RIFCS_REG_GROUP_NAME);
+
         mdRegBean.setRifcsStoreLocation(rifcsStoreLocation);
         mdRegBean.setAnzsrcCode(anzSrcCode);
         mdRegBean.setPhysicalAddress(physicalAddress);
@@ -557,11 +557,22 @@ public class MetadataRegAction extends DMBaseAction {
             relatedInfo.setType(ActionConts.RELATEDINFO_DEFAULT_TYPE);
             relatedInfo.setIdentifierType(ActionConts.RELATEDINFO_IDENT_DEFAULT_TYPE);
 
-            if (StringUtils.contains(pubmedId, ActionConts.PUBMED_ID_DELIM)) {
-                String pmId = StringUtils.substringAfter(pubmedId, ActionConts.PUBMED_ID_DELIM);
-                relatedInfo.setIdentifier(pubmedBaseUrl + "?term=" + pmId);
-            } else {
+//            if (StringUtils.contains(pubmedId, ActionConts.PUBMED_ID_DELIM)) {
+//                String pmId = StringUtils.substringAfter(pubmedId, ActionConts.PUBMED_ID_DELIM);
+//                relatedInfo.setIdentifier(pubmedBaseUrl + "?term=" + pmId);
+//            } else {
+//                relatedInfo.setIdentifier(pubmedId);
+//            }
+
+            if (StringUtils.contains(pubmedId, ActionConts.HTTP_SCHEME)) {
                 relatedInfo.setIdentifier(pubmedId);
+            } else {
+                if (StringUtils.containsIgnoreCase(pubmedId, ActionConts.PUBMED_ID_DELIM)) {
+                    String pmId = StringUtils.substringAfter(pubmedId, ActionConts.PUBMED_ID_DELIM);
+                    relatedInfo.setIdentifier(pubmedBaseUrl + "?term=" + pmId);
+                } else {
+                    relatedInfo.setIdentifier(pubmedBaseUrl + "?term=" + pubmedId);
+                }
             }
             relatedInfo.setTitle(experiment.getPubTitle());
             relatedInfo.setNotes(experiment.getAbstraction() + " " + experiment.getAuthors() + ", " + experiment.getPublicationDate());

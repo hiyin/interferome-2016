@@ -62,6 +62,12 @@
 					<div class="data_field_app"><@s.property value="experiment.approved" /></div>
 					<div style="clear:both"></div> 
 				</div>
+
+                <div class="each_field_row">
+					<div class="data_field_div">Metadata Registered:</div>
+					<div class="data_field_app"><@s.property value="experiment.mdPublished" /></div>
+					<div style="clear:both"></div>
+				</div>
 				
 				<div class="each_field_row">
 					<div class="data_field_div">Imported By:</div>
