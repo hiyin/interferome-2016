@@ -219,9 +219,12 @@ public class RIFCSServiceImpl implements RIFCSService {
             rifcsBuilder.append(relatedInfo.getTitle());
             rifcsBuilder.append("</title>");
             rifcsBuilder.append(lineSeparator);
-            rifcsBuilder.append("<notes>");
-            rifcsBuilder.append(relatedInfo.getNotes());
-            rifcsBuilder.append("</notes>");
+            String notes = relatedInfo.getNotes();
+            if (StringUtils.isNotBlank(notes)) {
+                rifcsBuilder.append("<notes>");
+                rifcsBuilder.append(notes);
+                rifcsBuilder.append("</notes>");
+            }
             rifcsBuilder.append(lineSeparator);
             rifcsBuilder.append("</relatedInfo>");
             rifcsBuilder.append(lineSeparator);

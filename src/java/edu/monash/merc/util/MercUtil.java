@@ -289,21 +289,12 @@ public class MercUtil {
         return temp.trim();
     }
 
-    public static String insertNewLine(String str, int maxLenPerLine) {
-
-        if (StringUtils.isNotBlank(str)) {
-            int length = str.length();
-            System.out.println("total length: " + length);
-            int start = 0;
-            if (length > maxLenPerLine) {
-                int loop = length / maxLenPerLine;
-                 System.out.println(" loop : " + loop);
-                String substr = StringUtils.substring(str, start, maxLenPerLine);
-
-            }
+    public static String subStringByFixedLength(String inputStr, int maxLength) {
+        int inputstrLen = StringUtils.length(inputStr);
+        if (inputstrLen <= maxLength) {
+            return inputStr;
         }
-        return null;
-
+        return StringUtils.substring(inputStr, 0, maxLength) + " ...";
     }
 
     public static String replaceSpace(String spaceStr) {
@@ -338,6 +329,10 @@ public class MercUtil {
 
         System.out.println("replace all delimiters by new delim test2: " + MercUtil.replaceAllDelimsByNewDelim(test2, ";", new String[]{",", "\t", "\n"}));
 
-        MercUtil.insertNewLine("GSM528681_plate1_B01.CEL,GSM528682_plate1_B02.CEL,GSM528739_plate1_A07.CEL,GSM528740_plate1_A08.CEL ", 28);
+        String notes = "Influenza virus infection-induced gene expression changes of regional B cells are mediated at least in part through type I Interferon:\n" +
+                "Our objective is to determine whether the influenza virus-infection induced gene expression changes in regional lymph node B cells are facilitated at least in part through type I interferon. Our specific aim is to compare the gene expression profile of highly FACS-purified B cells in the regional lymph nodes of wildtype and IFNR-/- mice prior to and 48h following infection with influenza virus infection and to contrast this expression profile with that of FACS-purified wildtype B cells activated in vitro with IFN-beta +/- anti-CD86 for 12h. Coro ES, Chang WL, Doucett VP, Xiao Y, Erle DJ, Baumgarth N, 2006-08-26";
+
+        System.out.println(" fixed length string : " + MercUtil.subStringByFixedLength(notes, 500));
+
     }
 }
