@@ -224,8 +224,8 @@ public class RIFCSServiceImpl implements RIFCSService {
                 rifcsBuilder.append("<notes>");
                 rifcsBuilder.append(notes);
                 rifcsBuilder.append("</notes>");
+                rifcsBuilder.append(lineSeparator);
             }
-            rifcsBuilder.append(lineSeparator);
             rifcsBuilder.append("</relatedInfo>");
             rifcsBuilder.append(lineSeparator);
         }

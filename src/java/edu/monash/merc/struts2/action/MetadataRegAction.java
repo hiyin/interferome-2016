@@ -575,7 +575,7 @@ public class MetadataRegAction extends DMBaseAction {
                 }
             }
             relatedInfo.setTitle(experiment.getPubTitle());
-            relatedInfo.setNotes(experiment.getAbstraction() + " " + experiment.getAuthors() + ", " + experiment.getPublicationDate());
+            //relatedInfo.setNotes(experiment.getAbstraction() + " " + experiment.getAuthors() + ", " + experiment.getPublicationDate());
             return relatedInfo;
         } else {
             return null;

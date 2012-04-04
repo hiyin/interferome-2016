@@ -28,9 +28,6 @@
 
 package edu.monash.merc.dto;
 
-import edu.monash.merc.util.MercUtil;
-import org.apache.commons.lang.StringUtils;
-
 import java.io.Serializable;
 
 /**
@@ -88,9 +85,9 @@ public class RelatedInfo implements Serializable {
     }
 
     public void setNotes(String notes) {
-        //this.notes = notes;
-        if (StringUtils.isNotBlank(notes)) {
-            this.notes = MercUtil.subStringByFixedLength(notes, 500);
-        }
+        this.notes = notes;
+//        if (StringUtils.isNotBlank(notes)) {
+//            this.notes = MercUtil.subStringByFixedLength(notes, 500);
+//        }
     }
 }
