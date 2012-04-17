@@ -10,17 +10,17 @@
 	<#if dataPagination.totalPages gt dataPagination.pageNo+4>
 		<#list dataPagination.pageNo-5..dataPagination.pageNo+4 as i>
 			<#if i == dataPagination.pageNo>
-				<span class="current">${i}</span>
+				<span class="current">${i?c}</span>
 			<#else>
-				<a href="${base}/${pageLink}${pageSuffix}<#if i gt 0>${i}&pageSize=<@s.property value='pageSize' />&orderBy=${orderBy}&orderByType=${orderByType}</#if>">${i}</a>
+				<a href="${base}/${pageLink}${pageSuffix}<#if i gt 0>${i?c}&pageSize=<@s.property value='pageSize' />&orderBy=${orderBy}&orderByType=${orderByType}</#if>">${i?c}</a>
 			</#if>
 		</#list>
 	<#else>
 		<#list dataPagination.totalPages-9..dataPagination.totalPages as i>
 			<#if i == dataPagination.pageNo>
-				<span class="current">${i}</span>
+				<span class="current">${i?c}</span>
 			<#else>
-				<a href="${base}/${pageLink}${pageSuffix}<#if i gt 0>${i}&pageSize=<@s.property value='pageSize' />&orderBy=${orderBy}&orderByType=${orderByType}</#if>">${i}</a>
+				<a href="${base}/${pageLink}${pageSuffix}<#if i gt 0>${i?c}&pageSize=<@s.property value='pageSize' />&orderBy=${orderBy}&orderByType=${orderByType}</#if>">${i?c}</a>
 			</#if>
 		</#list>
 	</#if>
@@ -28,17 +28,17 @@
 	<#if dataPagination.totalPages gt 10>
 		<#list 1..10 as i>
 			<#if i == dataPagination.pageNo>
-				<span class="current">${i}</span>
+				<span class="current">${i?c}</span>
 			<#else>
-				<a href="${base}/${pageLink}${pageSuffix}<#if i gt 0>${i}&pageSize=<@s.property value='pageSize' />&orderBy=${orderBy}&orderByType=${orderByType}</#if>">${i}</a>
+				<a href="${base}/${pageLink}${pageSuffix}<#if i gt 0>${i?c}&pageSize=<@s.property value='pageSize' />&orderBy=${orderBy}&orderByType=${orderByType}</#if>">${i?c}</a>
 			</#if>
 		</#list>
 	<#else>
 		<#list 1..dataPagination.totalPages as i>
 			<#if i == dataPagination.pageNo>
-				<span class="current">${i}</span>
+				<span class="current">${i?c}</span>
 			<#else>
-				<a href="${base}/${pageLink}${pageSuffix}<#if i gt 0>${i}&pageSize=<@s.property value='pageSize' />&orderBy=${orderBy}&orderByType=${orderByType}</#if>">${i}</a>
+				<a href="${base}/${pageLink}${pageSuffix}<#if i gt 0>${i?c}&pageSize=<@s.property value='pageSize' />&orderBy=${orderBy}&orderByType=${orderByType}</#if>">${i?c}</a>
 			</#if>
 		</#list>
 	</#if>
