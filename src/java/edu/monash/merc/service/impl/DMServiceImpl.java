@@ -1716,7 +1716,7 @@ public class DMServiceImpl implements DMService {
                     Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
                     if (foundPromoter != null) {
                         // promoter.setId(promoter.getId());
-                        this.updatePromoter(promoter);
+                        // this.updatePromoter(promoter);
                     } else {
                         // Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
                         this.savePromoter(promoter);
