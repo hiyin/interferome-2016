@@ -63,7 +63,7 @@ public interface SearchDataService {
 
     List<List<Object[]>> searchOntology(SearchBean searchBean, int startPageNo, int recordPerPage, String orderBy, String sortBy);
 
-    List<Object[]> searchTFSite(SearchBean searchBean, int startPageNo, int recordPerPage, String orderBy, String sortBy);
+    List<Object[]> searchTFSite(SearchBean searchBean, int startPageNo, int recordPerPage, String orderBy, String sortBy, String userTempId);
 
     //T1, T2, T3, T1T2, T1T3, T2T3, T1T2T3
     Object[] searchSubtypes(SearchBean searchBean, int startPageNo, int recordPerPage, String orderBy, String sortBy);

@@ -117,6 +117,10 @@ public class Gene extends Domain {
     @ManyToMany(mappedBy = "genes")
     private List<Probe> probe;
 
+    // Try some mapping between species and gene here 160113
+
+
+
     public long getId() {
         return id;
     }
@@ -236,6 +240,9 @@ public class Gene extends Domain {
     public void setProbe(List<Probe> probe) {
         this.probe = probe;
     }
+
+    // Try some mapping here 160113
+
 
     @Override
     public boolean equals(Object o) {

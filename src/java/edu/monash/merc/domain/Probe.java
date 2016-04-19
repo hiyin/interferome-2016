@@ -80,6 +80,7 @@ public class Probe extends Domain {
     @ManyToMany(targetEntity = Gene.class)
     @JoinTable(name = "probe_gene", joinColumns = {@JoinColumn(name = "probe_id", referencedColumnName = "id")}, inverseJoinColumns = {@JoinColumn(name = "gene_id", referencedColumnName = "id")}, uniqueConstraints = {@UniqueConstraint(columnNames = {
             "probe_id", "gene_id"})})
+
     @LazyCollection(LazyCollectionOption.TRUE)
     private List<Gene> genes;
 

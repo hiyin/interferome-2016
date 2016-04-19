@@ -116,15 +116,10 @@ public class GeneServiceImpl implements GeneService {
         return this.geneDao.getGenesByEnsgAccession(ensgAccession);
     }
 
-   @Override
+    @Override
     public List<Gene> getGenesByProbeId(String probeId) {
         return this.geneDao.getGenesByProbeId(probeId);
    }
-
- //   @Override
-//    public Gene getGenesByProbeId(String probeId) {
-//         return this.geneDao.getGenesByProbeId(probeId);
-//    }
 
     @Override
     public Pagination<Gene> getGenes(int startPageNo, int recordsPerPage, OrderBy[] orderBys) {

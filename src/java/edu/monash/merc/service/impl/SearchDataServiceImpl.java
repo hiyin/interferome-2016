@@ -94,8 +94,8 @@ public class SearchDataServiceImpl implements SearchDataService {
 
 
     @Override
-    public List<Object[]> searchTFSite(SearchBean searchBean, int startPageNo, int recordPerPage, String orderBy, String sortBy) {
-        return this.searchDataDao.searchTFSite(searchBean, startPageNo, recordPerPage, orderBy, sortBy);
+    public List<Object[]> searchTFSite(SearchBean searchBean, int startPageNo, int recordPerPage, String orderBy, String sortBy, String userCiiiDERId) {
+        return this.searchDataDao.searchTFSite(searchBean, startPageNo, recordPerPage, orderBy, sortBy, userCiiiDERId);
     }
 
     @Override

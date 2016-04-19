@@ -21,6 +21,24 @@
 <br/>
 <br>
 <br/>
+<div class="export_div">
+    Save as a Pen file (Mouse) <a
+    href="file:///home/mimr/dyin/enrich/Outputs/Mm/MmProject_2500.pen">
+    <img src="${base}/images/export.png" class="search_ctip_image" id="export_pic"/></a>
+</div>
+<br>
+<br/>
+<br>
+<br/>
+<div class="export_div">
+    Save as a Pen file (Human) <a
+    href="file:///home/mimr/dyin/enrich/Outputs/Hs/HsProject.pen">
+    <img src="${base}/images/export.png" class="search_ctip_image" id="export_pic"/></a>
+</div>
+<br>
+<br/>
+<br>
+<br/>
 <div id="saveimage" class="export_pic"></div>
 <br>
 <br/>

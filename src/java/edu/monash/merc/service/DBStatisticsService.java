@@ -39,6 +39,8 @@ import edu.monash.merc.common.results.DBStats;
  */
 public interface DBStatisticsService {
 
-    public DBStats getDBStatistics();
+    DBStats getDBStatistics();
+
+
 
 }

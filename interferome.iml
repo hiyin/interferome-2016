@@ -102,7 +102,7 @@
       <sourceFolder url="file://$MODULE_DIR$/utest/java" isTestSource="true" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
       <library name="core libs">
         <CLASSES>

@@ -141,6 +141,10 @@ public class DMServiceImpl implements DMService {
     @Autowired
     private GeneService geneService;
 
+    // Promoter Date: 160113
+    @Autowired
+    private PromoterService promoterService;
+
     @Autowired
     private EvidenceCodeService evidenceCodeService;
 
@@ -245,6 +249,8 @@ public class DMServiceImpl implements DMService {
     public void setGeneService(GeneService geneService) {
         this.geneService = geneService;
     }
+
+    public void setPromoterService(PromoterService promoterService) { this.promoterService = promoterService; }
 
     public void setEvidenceCodeService(EvidenceCodeService evidenceCodeService) {
         this.evidenceCodeService = evidenceCodeService;
@@ -1665,6 +1671,12 @@ public class DMServiceImpl implements DMService {
         return this.geneService.getGenesByProbeId(probeId);
     }
 
+    // @Override
+    /* public List<Gene> getGenesBySpecies(String speciesId) {
+        return this.geneService.getGenesBySpecies(speciesId);
+    }
+    */
+
     @Override
     public void importGenes(List<Gene> genes, Date importedTime) {
         if (genes != null) {
@@ -1680,6 +1692,59 @@ public class DMServiceImpl implements DMService {
             }
         }
     }
+
+    // Promoters
+    @Override
+    public void savePromoter(Promoter promoter) { this.promoterService.savePromoter(promoter); }
+
+    @Override
+    public void mergePromoter(Promoter promoter) { this.promoterService.mergePromoter(promoter); }
+
+    @Override
+    public void updatePromoter(Promoter promoter) { this.promoterService.updatePromoter(promoter); }
+
+    @Override
+    public void deletePromoter(Promoter promoter) { this.promoterService.deletePromoter(promoter); }
+
+    @Override
+    public Promoter getPromoterByEnsgAccession(String ensgAccession) { return this.promoterService.getPromoterByEnsgAccession(ensgAccession); }
+
+    @Override
+    public void importPromoter(List<Promoter> promoters) {
+        if (promoters != null) {
+            for (Promoter promoter: promoters) {
+                    Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
+                    if (foundPromoter != null) {
+                        // promoter.setId(promoter.getId());
+                        this.updatePromoter(promoter);
+                    } else {
+                        // Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
+                        this.savePromoter(promoter);
+
+
+            }
+        }
+
+    }
+    }
+
+/*    public void importPromoter(List<Promoter> promoters) {
+        if (promoters != null) {
+            for (Promoter promoter: promoters) {
+                Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
+                if (foundPromoter != null) {
+                    promoter.setId(promoter.getId());
+                    this.mergePromoter(promoter);
+                } else {
+                    this.savePromoter(promoter);
+                }
+
+            }
+        }
+
+    }*/
+
+
 
     //EvidenceCode
     @Override

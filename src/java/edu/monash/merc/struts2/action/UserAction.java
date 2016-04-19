@@ -29,11 +29,13 @@
 package edu.monash.merc.struts2.action;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
 import edu.monash.merc.common.service.ldap.LDAPService;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -372,9 +374,10 @@ public class UserAction extends DMBaseAction {
 	}
 
 	public String logout() {
-		cleanupSession();
-		return SUCCESS;
-	}
+        cleanupSession();
+        return SUCCESS;
+
+    }
 
 	private void cleanupSession() {
 		removeFromSession(ActionConts.SESS_AUTHENTICATION_FLAG);

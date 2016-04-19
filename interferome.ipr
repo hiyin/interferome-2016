@@ -75,7 +75,9 @@
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
@@ -89,97 +91,6 @@
     </autodetection-disabled>
   </component>
   <component name="IdProvider" IDEtalkID="EB73C7B2F2FF7B26E64D55E3F76E68E5" />
-  <component name="InspectionProjectProfileManager">
-    <profiles>
-      <profile version="1.0" is_locked="false">
-        <option name="myName" value="Project Default" />
-        <option name="myLocal" value="false" />
-        <inspection_tool class="Annotation" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="AnnotationClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="AssertAsName" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="AssertStatement" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="AutoBoxing" enabled="false" level="ERROR" enabled_by_default="false">
-          <option name="ignoreAddedToCollection" value="false" />
-        </inspection_tool>
-        <inspection_tool class="AutoUnboxing" enabled="false" level="ERROR" enabled_by_default="false" />
-        <inspection_tool class="CastToConcreteClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="ClassReferencesSubclass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="DeclareCollectionAsInterface" enabled="true" level="WARNING" enabled_by_default="true">
-          <option name="ignoreLocalVariables" value="false" />
-          <option name="ignorePrivateMethodsAndFields" value="false" />
-        </inspection_tool>
-        <inspection_tool class="EnumAsName" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="EnumClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="EqualsAndHashcode" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="FeatureEnvy" enabled="true" level="WARNING" enabled_by_default="true">
-          <option name="ignoreTestCases" value="false" />
-        </inspection_tool>
-        <inspection_tool class="ForeachStatement" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="InstanceVariableOfConcreteClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="InstanceofChain" enabled="true" level="WARNING" enabled_by_default="true">
-          <option name="ignoreInstanceofOnLibraryClasses" value="false" />
-        </inspection_tool>
-        <inspection_tool class="InstanceofInterfaces" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="InstanceofThis" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="JpaDataSourceORMDomInspection" enabled="false" level="ERROR" enabled_by_default="false" />
-        <inspection_tool class="JpaDataSourceORMInspection" enabled="false" level="ERROR" enabled_by_default="false" />
-        <inspection_tool class="JpaQlInspection" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="LocalVariableOfConcreteClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="MagicNumber" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="MethodOnlyUsedFromInnerClass" enabled="true" level="WARNING" enabled_by_default="true">
-          <option name="ignoreMethodsAccessedFromAnonymousClass" value="false" />
-          <option name="ignoreStaticMethodsFromNonStaticInnerClass" value="false" />
-          <option name="onlyReportStaticMethods" value="false" />
-        </inspection_tool>
-        <inspection_tool class="MethodReturnOfConcreteClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="MissingDeprecatedAnnotation" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="MissingOverrideAnnotation" enabled="true" level="ERROR" enabled_by_default="true">
-          <option name="ignoreObjectMethods" value="true" />
-          <option name="ignoreAnonymousClassMethods" value="false" />
-        </inspection_tool>
-        <inspection_tool class="ObsoleteCollection" enabled="true" level="WARNING" enabled_by_default="true">
-          <option name="ignoreRequiredObsoleteCollectionTypes" value="false" />
-        </inspection_tool>
-        <inspection_tool class="OverlyStrongTypeCast" enabled="true" level="ERROR" enabled_by_default="true">
-          <option name="ignoreInMatchingInstanceof" value="false" />
-        </inspection_tool>
-        <inspection_tool class="ParameterOfConcreteClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="PublicMethodNotExposedInInterface" enabled="true" level="WARNING" enabled_by_default="true">
-          <option name="ignorableAnnotations">
-            <value />
-          </option>
-          <option name="onlyWarnIfContainingClassImplementsAnInterface" value="false" />
-        </inspection_tool>
-        <inspection_tool class="RedundantSuppression" enabled="false" level="ERROR" enabled_by_default="false" />
-        <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="SingleClassImport" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="SpellCheckingInspection" enabled="true" level="TYPO" enabled_by_default="true">
-          <option name="processCode" value="false" />
-          <option name="processLiterals" value="true" />
-          <option name="processComments" value="true" />
-        </inspection_tool>
-        <inspection_tool class="StaticMethodOnlyUsedInOneClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="StaticVariableOfConcreteClass" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="SuppressionAnnotation" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="SystemOutErr" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="TestOnlyProblems" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="ThreadDumpStack" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="ThrowablePrintStackTrace" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="TodoComment" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="TypeMayBeWeakened" enabled="true" level="WARNING" enabled_by_default="true">
-          <option name="useRighthandTypeAsWeakestTypeInAssignments" value="true" />
-          <option name="useParameterizedTypeForCollectionMethods" value="true" />
-          <option name="doNotWeakenToJavaLangObject" value="true" />
-          <option name="onlyWeakentoInterface" value="true" />
-        </inspection_tool>
-        <inspection_tool class="UNCHECKED_WARNING" enabled="true" level="ERROR" enabled_by_default="true" />
-        <inspection_tool class="VarargParameter" enabled="true" level="WARNING" enabled_by_default="true" />
-      </profile>
-    </profiles>
-    <option name="PROJECT_PROFILE" value="Project Default" />
-    <option name="USE_PROJECT_PROFILE" value="true" />
-    <version value="1.0" />
-  </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
     <option name="OPTION_SCOPE" value="protected" />
@@ -351,7 +262,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="SvnBranchConfigurationManager">

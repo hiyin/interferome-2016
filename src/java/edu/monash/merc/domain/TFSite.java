@@ -44,8 +44,8 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "tf_site")
-@org.hibernate.annotations.Table(appliesTo = "tf_site",
+@Table(name = "tf_site_ciiider")
+@org.hibernate.annotations.Table(appliesTo = "tf_site_ciiider",
         indexes = {@Index(name = "idx_factor", columnNames = {"factor"})
         })
 public class TFSite extends Domain {

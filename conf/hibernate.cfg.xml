@@ -28,6 +28,7 @@
         <mapping class="edu.monash.merc.domain.EvidenceCode"/>
         <mapping class="edu.monash.merc.domain.GoDomain"/>
         <mapping class="edu.monash.merc.domain.Probe"/>
+        <mapping class="edu.monash.merc.domain.Promoter"/>
         <mapping class="edu.monash.merc.domain.TFSite"/>
         <mapping class="edu.monash.merc.domain.Tissue"/>
         <mapping class="edu.monash.merc.domain.TissueExpression"/>

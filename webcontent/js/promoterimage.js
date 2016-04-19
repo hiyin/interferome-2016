@@ -52,10 +52,10 @@ function PromoterImage(){
 
     var xPos = 30;//100;
     var yPos=90;
-    var legCount=10; //var to limit legend to 10 per line
+    var legCount=4; //var to limit legend to 10 per line
     for(var j = 0; j < tfLegendSiteList.length; j++){
         if(j==legCount){
-            legCount=legCount+10;
+            legCount=legCount+4;
             yPos=yPos+20;
             xPos=30;//100;
         }
@@ -66,14 +66,14 @@ function PromoterImage(){
                 //var site = paper.rect(xPos, (25*rowCount)+90, 10, 10);
                 var site = paper.rect(xPos, (25*rowCount)+yPos, 10, 10);
                 site.attr({fill: color, stroke: color, title: tfLegendSiteList[j]});
-                xPos = xPos + 30;
+                xPos = xPos + 65; // Default 15
                 //var lbl = paper.text(xPos, (25*rowCount)+95, tfLegendSiteList[j]);
                 var lbl = paper.text(xPos, (25*rowCount)+yPos+5, tfLegendSiteList[j]);
                 lbl.attr({'text-anchor': 'start'});
                 //yPos = yPos + (tfLegendSiteList[j].toString().length*2);
                 var len = tfLegendSiteList[j].toString().length*10;
                 //var len = tfLegendSiteList[colVar].toString().length*10;
-                xPos = xPos + len;
+                xPos = xPos + 130; // Default len
             }
         }
 

@@ -110,4 +110,5 @@ public class GeneDAO extends HibernateGenericDAO<Gene> implements IGeneRepositor
         geneCrit.add(Restrictions.eq("probes.probeId", probeId));
         return criteria.list();
     }
+
 }

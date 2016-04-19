@@ -28,22 +28,66 @@
 
 package edu.monash.merc.system.scheduling.impl;
 
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import com.thoughtworks.xstream.mapper.AnnotationConfiguration;
+import edu.monash.merc.common.results.DBStats;
 import edu.monash.merc.config.AppPropSettings;
+import edu.monash.merc.dao.HibernateGenericDAO;
+import edu.monash.merc.dao.impl.GeneDAO;
+import edu.monash.merc.dao.impl.SearchDataDAO;
+import edu.monash.merc.domain.Data;
 import edu.monash.merc.domain.Gene;
 import edu.monash.merc.domain.Probe;
+import edu.monash.merc.domain.Promoter;
 import edu.monash.merc.dto.GeneOntologyBean;
+
 import edu.monash.merc.dto.ProbeGeneBean;
+import edu.monash.merc.service.DBStatisticsService;
+import edu.monash.merc.service.GeneService;
 import edu.monash.merc.system.scheduling.DataProcessor;
 import edu.monash.merc.service.DMService;
 import edu.monash.merc.wsclient.biomart.BioMartClient;
+import edu.monash.merc.wsclient.biomart.CSVGeneCreator;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
+import org.hibernate.*;
+
+import org.hibernate.cache.ehcache.internal.util.HibernateUtil;
+import org.hibernate.cfg.Configuration;
+
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.service.ServiceRegistryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.jdbc.SQLWarningException;
+import org.springframework.stereotype.Repository;
+
+import java.io.*;
+import java.lang.reflect.ParameterizedType;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.swing.*;
 import java.util.*;
+
+// SearchDAO impl
+
+
+import java.util.ArrayList;
+
+import java.util.List;
+import java.util.logging.Level;
+
 
 /**
  * @author Simon Yu
@@ -56,7 +100,7 @@ import java.util.*;
  */
 @Service
 @Qualifier("infDataProcessor")
-public class INFDataProcessor implements DataProcessor {
+public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataProcessor {
 
     @Autowired
     protected DMService dmService;
@@ -64,6 +108,7 @@ public class INFDataProcessor implements DataProcessor {
     @Autowired
     protected AppPropSettings appSetting;
 
+    public static String CIIIDER_HOME = SearchDataDAO.CIIIDER_HOME;
 
     private static String MOUSE = "mmusculus_gene_ensembl";
 
@@ -83,6 +128,10 @@ public class INFDataProcessor implements DataProcessor {
         this.appSetting = appSetting;
     }
 
+    @Autowired
+    private DBStatisticsService dbStatisticsService;
+    private DBStats stats;
+
     @Override
     public void process() {
         long startTime = System.currentTimeMillis();
@@ -91,18 +140,33 @@ public class INFDataProcessor implements DataProcessor {
         Date importedTime = GregorianCalendar.getInstance().getTime();
 
         //Gene for HUMAN
-        importEnsemblGenes(HUMAN, importedTime);
+        //importEnsemblGenes(HUMAN, importedTime);
+
+        // 9/9/15 Update promoter sequence code goes here (Hibernate read in file)
 
         //Gene for MOUSE
-       importEnsemblGenes(MOUSE, importedTime);
+        //importEnsemblGenes(MOUSE, importedTime);
         long endTime = System.currentTimeMillis();
 
+
+        importCiiiDERPromoter(PROBE_HUMAN_TYPE);
+        importCiiiDERPromoter(PROBE_MOUSE_TYPE);
+
+
+        //importCiiiDERPromoter(SPECIES_MOUSE_ID);
+
+
+        System.out.println("I am updating the CiiiDER data ...");
+
+        // importTFSite
+
+
         //import human and mouse probes
-        importProbes();
+        //importProbes();
 
         //GeneOntology for HUMAN
         long goStartTime = System.currentTimeMillis();
-        importGeneOntology(HUMAN);
+        //importGeneOntology(HUMAN);
 
         //import the geneontology for mouse
         importGeneOntology(MOUSE);
@@ -113,6 +177,49 @@ public class INFDataProcessor implements DataProcessor {
         logger.info("=====> The total process time for GeneOntology: " + (goEndTime - goStartTime) / 1000 + "seconds");
 
         logger.info("=====> The total process time for gene and genontology: " + (goEndTime - startTime) / 1000 + "seconds");
+    }
+
+
+
+
+    private void importCiiiDERPromoter(String species)  {
+        try {
+            String runCiiiDER = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + CIIIDER_HOME + "FindPromoter/IFNGene/" + species + "ConfigFindPromoterIFN.ini";
+            Process processCiiiDER = Runtime.getRuntime().exec(runCiiiDER);
+            processCiiiDER.waitFor();
+
+            //File promoterFile = new File(path + "findPromoter/" + speciesName + "Promoter.fa");
+            // Scanner promoterScanner = new Scanner(promoterFile);
+
+            // List<Promoter> promoters = new ArrayList<Promoter>();
+            List<Promoter> promoters = new ArrayList<Promoter>();
+            Promoter promoter = new Promoter();
+
+            BufferedReader brGeneEnsgs = new BufferedReader(new FileReader(new File(CIIIDER_HOME + "Output/FindPromoter/IFNGene/" + species + "IFNGenePromoter.fa")));
+
+            String line = null;
+            while ((line = brGeneEnsgs.readLine()) != null) {
+                if (line.startsWith(">")) {
+                    String[] identifier = line.split("\\|");
+                    String geneName = identifier[0].replaceFirst(">","");
+                    String ensgAccession = identifier[1];
+                    promoter = new Promoter();
+                    promoter.setGeneName(geneName);
+                    promoter.setEnsgAccession(ensgAccession);
+                } else if (!line.equals("")) {
+                    promoter.setSequence(line);
+                    if(!promoters.contains(promoter)) promoters.add(promoter);
+                }
+            }
+            this.dmService.importPromoter(promoters);
+
+        } catch (IOException e) {
+                e.printStackTrace();
+        } catch (HibernateException ex) {
+            ex.getCause();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void importEnsemblGenes(String species, Date importedTime) {

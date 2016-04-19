@@ -344,7 +344,24 @@ public interface DMService {
 
     public List<Gene> getGenesByProbeId(String probeId);
 
+    // public List<Gene> getGenesBySpecies(String speciesId);
+
     void importGenes(List<Gene> genes, Date importedTime);
+
+    // Promoters Date: 160111
+    public void savePromoter(Promoter promoter);
+
+    public void mergePromoter(Promoter promoter);
+
+    public void updatePromoter(Promoter promoter);
+
+    public void deletePromoter(Promoter promoter);
+
+    public Promoter getPromoterByEnsgAccession(String ensgAccession);
+
+    public void importPromoter(List<Promoter> promoters);
+
+
 
     //Evidence Code
 
