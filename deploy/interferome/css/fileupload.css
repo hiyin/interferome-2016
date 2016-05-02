@@ -1,0 +1,72 @@
+#uploadFilename{
+	color: #808080;
+	margin-bottom: 3px;
+}
+#fileuploadForm {
+   display: block;
+   margin: 0 auto;
+}
+
+#fileuploadProgress {
+    display: none; 
+    margin-left: auto;
+	margin-top: 5px;
+	margin-right: auto; 
+	margin-bottom: 5px;
+}
+
+#progress-bar {
+	margin: 0 auto;
+    border: 1px  solid #E1E8F0;
+    width: 450px;
+    height: 8px;
+    background-color: #FFFFFF;
+}
+    
+#progress-bgrd {
+    width: 0px;
+    height: 8px;
+    padding: 0;
+    background-color: #E1E8F0;
+}
+    
+#progress-text {
+    width: 450px;
+    height: 30px;
+    margin-top: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    color: #808080;
+}
+
+.file_success_msg_div{
+	display: none;
+	width: 80%;
+	background: #f4f7fb;
+	position: relative;
+	margin: 0 auto;
+	border: solid 1px #c0c7d5;
+}
+
+.file_success_msg_div .hidden_msg {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.file_error_msg_div {
+	display: none;
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #E1E8F0;
+    margin: 10px auto;
+    text-align: center;
+    width: 500px;
+}
+.error_msg_item_div {
+    border-collapse: collapse;
+    color: #B24F3C;
+    font-weight: normal;
+    margin: 2px auto;
+    text-align: left;
+}

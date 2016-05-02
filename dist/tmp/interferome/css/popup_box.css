@@ -1,0 +1,58 @@
+#pw_overlay {
+   
+  background-color:#eee; cursor:wait;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width:  100%;
+  height: 100%;
+  opacity: 0.5;
+}
+* html #pw_overlay { 
+  background-color: transparent;
+  background-color:#eee; cursor:wait; 
+}
+
+#pw_window {
+  top: 20%;
+  left: 0px;
+  position:fixed;
+  background: #fff; 
+  border-left:1px solid #365e81;
+  border-right:1px solid #365e81;
+  border-bottom:1px solid #365e81;
+  overflow: auto;
+  width: 730px;
+  height: 400px;
+  z-index: 1001;
+}
+
+#pw_frame {
+  border: 0;
+  overflow: auto;
+  width: 100%;
+  height: 378px;
+}
+ 
+
+#pw_caption {
+  font: 12px bold helvetica, verdana, sans-serif;
+  color: #fff;
+  background: #365e81;
+  padding: 2px 0 2px 5px;
+  margin: 0;
+  text-align: left;
+  height: 20px;
+}
+
+#pw_window img {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  bottom:1px;
+  cursor: pointer;
+  cursor: hand;
+}
+
