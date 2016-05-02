@@ -75,7 +75,7 @@ public class Promoter extends Domain {
     private String ensgAccession;
 
     @Basic
-    @Column(name = "sequence")
+    @Column(name = "sequence", columnDefinition = "text")
     private String sequence;
 
 
