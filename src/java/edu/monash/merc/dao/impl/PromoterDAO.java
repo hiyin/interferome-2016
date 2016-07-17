@@ -42,10 +42,11 @@ import org.springframework.stereotype.Repository;
 @Scope("prototype")
 @Repository
 public class PromoterDAO extends HibernateGenericDAO<Promoter> implements IPromoterRepository {
+    @SuppressWarnings("unchecked")
     @Override
     public Promoter getPromoterByEnsgAccession(String ensgAccession) {
-        Criteria pCriteria = this.session().createCriteria(this.persistClass);
-        pCriteria.add(Restrictions.eq("ensgAccession", ensgAccession).ignoreCase());
-        return (Promoter) pCriteria.uniqueResult();
+        Criteria Criteria = this.session().createCriteria(this.persistClass);
+        Criteria.add(Restrictions.eq("gene.ensgAccession", ensgAccession).ignoreCase());
+        return (Promoter) Criteria.uniqueResult();
     }
 }

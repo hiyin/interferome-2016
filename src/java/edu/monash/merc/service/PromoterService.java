@@ -76,4 +76,5 @@ public interface PromoterService {
      */
     public Promoter getPromoterByEnsgAccession(String ensgAccession);
 
+
 }

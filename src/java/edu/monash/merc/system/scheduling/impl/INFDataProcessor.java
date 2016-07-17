@@ -30,6 +30,7 @@ package edu.monash.merc.system.scheduling.impl;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
+import com.sun.xml.internal.fastinfoset.util.StringArray;
 import com.thoughtworks.xstream.mapper.AnnotationConfiguration;
 import edu.monash.merc.common.results.DBStats;
 import edu.monash.merc.config.AppPropSettings;
@@ -140,7 +141,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         Date importedTime = GregorianCalendar.getInstance().getTime();
 
         //Gene for HUMAN
-        //importEnsemblGenes(HUMAN, importedTime);
+        importEnsemblGenes(HUMAN, importedTime);
 
         // 9/9/15 Update promoter sequence code goes here (Hibernate read in file)
 
@@ -184,7 +185,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
     private void importCiiiDERPromoter(String species)  {
         try {
-            String runCiiiDER = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + CIIIDER_HOME + "FindPromoter/IFNGene/" + species + "ConfigFindPromoterIFN.ini";
+            String runCiiiDER = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + CIIIDER_HOME + "Config/FindPromoter/IFNGene/" + species + "ConfigFindPromoterIFN.ini";
             Process processCiiiDER = Runtime.getRuntime().exec(runCiiiDER);
             processCiiiDER.waitFor();
 
@@ -195,6 +196,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             List<Promoter> promoters = new ArrayList<Promoter>();
             Promoter promoter = new Promoter();
 
+
             BufferedReader brGeneEnsgs = new BufferedReader(new FileReader(new File(CIIIDER_HOME + "Output/FindPromoter/IFNGene/" + species + "IFNGenePromoter.fa")));
 
             String line = null;
@@ -204,8 +206,14 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
                     String geneName = identifier[0].replaceFirst(">","");
                     String ensgAccession = identifier[1];
                     promoter = new Promoter();
+                    Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
+
+                    promoter.setGene(gene);
+                    // String linked_gene_ensgAccession = promoter.getGene().getEnsgAccession();
+                    // System.out.println(linked_gene_ensgAccession);
                     promoter.setGeneName(geneName);
-                    promoter.setEnsgAccession(ensgAccession);
+                    // promoter.setEnsgAccession(ensgAccession);
+                    // promoter.setEnsgAccession(gene.getEnsgAccession());
                 } else if (!line.equals("")) {
                     promoter.setSequence(line);
                     if(!promoters.contains(promoter)) promoters.add(promoter);

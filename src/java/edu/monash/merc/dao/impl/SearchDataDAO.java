@@ -691,6 +691,11 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
         return coeff;
     }
 
+    /**
+     * InCiiiDER: searchTFSite method which direct sent-back search results to CiiiDER for TF analysis
+     * @author: Danqing (Angela) Yin - angela.yin@hudson.org.au
+     * @version 2.02
+     */
 
     // public static String path = "/home/mimr/InCiiiDER/CiiiDER/"; // enclosed with slash / at the end for all path
 

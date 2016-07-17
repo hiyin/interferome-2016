@@ -1,20 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" line="584" />
+    <bookmark url="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" line="590" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61b110dd-75e9-429a-8da3-757de140a9d5" name="Default" comment="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root &#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)">
+    <list default="true" id="61b110dd-75e9-429a-8da3-757de140a9d5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/service/impl/DMServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/service/impl/DMServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/service/impl/DMServiceImpl.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/service/impl/DMServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/service/impl/DMServiceImpl.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/service/impl/DMServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/Gene.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/Gene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/Gene.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/Gene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/Gene.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/Gene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/Promoter.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/Promoter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/Promoter.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/Promoter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/Promoter.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/Promoter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/dao/impl/PromoterDAO.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/dao/impl/PromoterDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/PromoterDAO.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/PromoterDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/PromoterDAO.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/PromoterDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/struts2/action/SearchAction.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/struts2/action/SearchAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/struts2/action/SearchAction.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/struts2/action/SearchAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/struts2/action/SearchAction.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/struts2/action/SearchAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/applicationContext.xml" afterPath="$PROJECT_DIR$/conf/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interferome.iws" afterPath="$PROJECT_DIR$/interferome.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/jdbc.properties" afterPath="$PROJECT_DIR$/conf/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/jdbc.properties" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/jdbc.properties" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/css/merc.css" afterPath="$PROJECT_DIR$/deploy/interferome/css/merc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/css/merc.css" afterPath="$PROJECT_DIR$/dist/tmp/interferome/css/merc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webcontent/css/merc.css" afterPath="$PROJECT_DIR$/webcontent/css/merc.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/merc.properties" afterPath="$PROJECT_DIR$/conf/merc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/merc.properties" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/merc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/merc.properties" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/merc.properties" />
     </list>
     <ignored path="interferome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,71 +68,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SearchDataServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/SearchDataServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Promoter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="55" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
-              <folding />
+              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ldap.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/ldap.properties">
+      <file leaf-file-name="TFSite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/conf/jdbc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49342105">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/log4j.properties">
+      <file leaf-file-name="DMServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="1715" column="32" selection-start-line="1715" selection-start-column="32" selection-end-line="1715" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="INFDataProcessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#14157#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="92" column="74" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="merc.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webcontent/css/merc.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.12311015">
+              <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -112,27 +128,17 @@
         <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java">
+      <file leaf-file-name="Gene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="584" column="65" selection-start-line="584" selection-start-column="65" selection-end-line="584" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchDataService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/SearchDataService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+              <caret line="60" column="37" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -169,8 +175,6 @@
         <option value="$PROJECT_DIR$/src/webapp/web/search/search_tfsite_result.ftl" />
         <option value="$PROJECT_DIR$/conf/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/PromoterService.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dto/PromoterBean.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/repository/IGeneRepository.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/GeneService.java" />
@@ -181,24 +185,28 @@
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/GeneServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DBStatisticsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/DBStatisticsService.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/GeneDAO.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Probe.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/SearchDataService.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/SearchDataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dto/PromoterGeneBean.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/repository/IPromoterRepository.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/DMService.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/PromoterServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java" />
         <option value="$PROJECT_DIR$/webcontent/css/merc.css" />
         <option value="$PROJECT_DIR$/conf/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java" />
+        <option value="$PROJECT_DIR$/conf/merc.properties" />
+        <option value="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/merc.properties" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/GeneDAO.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java" />
         <option value="$PROJECT_DIR$/conf/applicationContext.xml" />
       </list>
     </option>
@@ -226,10 +234,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
+    <option name="x" value="12" />
     <option name="y" value="23" />
-    <option name="width" value="1380" />
-    <option name="height" value="823" />
+    <option name="width" value="1394" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -268,7 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,247 +286,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcontent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcontent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcontent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcontent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imageUpload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcontent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcontent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webcontent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="avatar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -526,36 +294,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interferome-master-2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.98849255" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/deploy/interferome" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../interferome-master-2016/interferome.ipr" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
@@ -976,7 +730,19 @@
       <workItem from="1461824200507" duration="529000" />
       <workItem from="1462164750100" duration="4051000" />
       <workItem from="1463391221500" duration="1245000" />
-      <workItem from="1463570051002" duration="376000" />
+      <workItem from="1463570051002" duration="734000" />
+      <workItem from="1463615457286" duration="2027000" />
+      <workItem from="1466267804119" duration="39000" />
+      <workItem from="1466329544885" duration="1406000" />
+      <workItem from="1466494971799" duration="1392000" />
+      <workItem from="1467001650500" duration="2373000" />
+      <workItem from="1467011181043" duration="372000" />
+      <workItem from="1467011695694" duration="906000" />
+      <workItem from="1467742257837" duration="3189000" />
+      <workItem from="1468301227827" duration="455000" />
+      <workItem from="1468556267566" duration="21245000" />
+      <workItem from="1468743096503" duration="1136000" />
+      <workItem from="1468748668740" duration="1551000" />
     </task>
     <task id="LOCAL-00001" summary="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)">
       <created>1461074977399</created>
@@ -990,71 +756,77 @@
       <option name="project" value="LOCAL" />
       <updated>1461076690480</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="# Repush (solved mysql issue: column restriction on sequence when importing promoter)&#10;# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root &#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)">
+      <created>1463570519752</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1463570519752</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241435000" />
+    <option name="totallyTimeSpent" value="277884000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="23" width="1380" height="823" extended-state="0" />
+    <frame x="12" y="23" width="1394" height="873" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3378933" sideWeight="0.497543" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33674777" sideWeight="0.497543" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.83928573" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45326504" sideWeight="0.83928573" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49603173" sideWeight="0.51014495" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31878307" sideWeight="0.4904762" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3162612" sideWeight="0.4904762" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923833" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24738416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45690835" sideWeight="0.48985508" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24408284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4199744" sideWeight="0.48985508" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4074074" sideWeight="0.46781883" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42637643" sideWeight="0.46781883" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17797695" sideWeight="0.16071428" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49603173" sideWeight="0.51014495" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923833" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1898017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3148148" sideWeight="0.49284863" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24408284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4199744" sideWeight="0.48985508" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.497543" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3378933" sideWeight="0.497543" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4074074" sideWeight="0.46781883" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.83928573" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42637643" sideWeight="0.46781883" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45326504" sideWeight="0.83928573" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31878307" sideWeight="0.4904762" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3162612" sideWeight="0.4904762" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1073,44 +845,58 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
     <MESSAGE value="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
-    <option name="LAST_COMMIT_MESSAGE" value="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
+    <MESSAGE value="# Repush (solved mysql issue: column restriction on sequence when importing promoter)&#10;# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root &#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
+    <option name="LAST_COMMIT_MESSAGE" value="# Repush (solved mysql issue: column restriction on sequence when importing promoter)&#10;# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root &#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java</url>
-          <line>681</line>
+          <line>687</line>
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java</url>
-          <line>702</line>
+          <line>708</line>
           <properties />
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java</url>
-          <line>1714</line>
+          <line>1716</line>
           <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java</url>
-          <line>213</line>
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java</url>
+          <line>1719</line>
           <properties />
-          <option name="timeStamp" value="99" />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java</url>
+          <line>1710</line>
+          <properties />
+          <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="100" />
+      <option name="time" value="103" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-        <watch expression="genes.get(0).getGeneName()" language="JAVA" custom="" />
-        <watch expression="genes.get(0).getClass()" language="JAVA" custom="" />
-        <watch expression="&quot;cat&quot;.startsWith(&quot;&quot;)" language="JAVA" custom="" />
-        <watch expression="&quot;cat&quot;.equals(&quot;&quot;)" language="JAVA" custom="" />
+        <watch expression="this.getEnsgAccession()" language="JAVA" custom="" />
+        <watch expression="this.gene" language="JAVA" custom="" />
+        <watch expression="this.gene.getEnsgAccession()" language="JAVA" custom="" />
+        <watch expression="this.getPromoterByEnsgAccession(promoter.getGene().getEnsgAccession())" language="JAVA" custom="" />
+        <watch expression="promoter.getGene()" language="JAVA" custom="" />
+        <watch expression="promoter.getGene().getEnsgAccession()" language="JAVA" custom="" />
+        <watch expression="geneService.getGeneByEnsgAccession(promoter.getGene().getEnsgAccession())" language="JAVA" custom="" />
+        <watch expression="this.promoterService.getPromoterByEnsgAccession(promoter.getGene().getEnsgAccession())" language="JAVA" custom="" />
+        <watch expression="this.getGeneByEnsgAccession(promoter.getGene().getEnsgAccession())" language="JAVA" custom="" />
+        <watch expression="gene" language="JAVA" custom="" />
+        <watch expression="promoters" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -1141,143 +927,70 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/config/ApplicationPropertyConfigurater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/config/package.html">
+    <entry file="file://$PROJECT_DIR$/conf/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/config/AppPropSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/PermissionBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4033613">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/ProfileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="32" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Probe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="37" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webcontent/js/promoterimage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/repository/IPromoterRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/package.html">
+    <entry file="file://$PROJECT_DIR$/conf/ldap.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/SearchDataServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state vertical-scroll-proportion="-0.57894737">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/PromoterServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="81" selection-start-line="58" selection-start-column="81" selection-end-line="58" selection-end-column="81" />
+          <caret line="694" column="37" selection-start-line="694" selection-start-column="37" selection-end-line="694" selection-end-column="37" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/SearchDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08534851">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/DatasetDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.045519203">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/TfSiteDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29871976">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webcontent/imageUpload/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/validators.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="693" column="49" selection-start-line="693" selection-start-column="49" selection-end-line="693" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/PromoterGeneBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/country.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/GeneService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="11" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Avatar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,421 +1001,484 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/UserHomeAction.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/GeneOntology.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+          <caret line="54" column="7" selection-start-line="53" selection-start-column="0" selection-end-line="56" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/RangeCondition.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Species.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/messageResource.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/ProjectBean.java">
+    <entry file="file://$PROJECT_DIR$/conf/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/merc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.574124">
+          <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/exception/WSException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/config/AppPropSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="152" column="55" selection-start-line="152" selection-start-column="55" selection-end-line="152" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#7663#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7099#7100#0" expanded="false" />
+            <element signature="e#7141#7142#0" expanded="false" />
+            <element signature="e#7593#7594#0" expanded="false" />
+            <element signature="e#7659#7660#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33682635">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/merc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.222222">
+          <caret line="1124" column="17" selection-start-line="1124" selection-start-column="17" selection-end-line="1124" selection-end-column="17" />
+          <folding>
+            <element signature="e#12111#12141#0" expanded="false" />
+            <element signature="e#13081#13111#0" expanded="false" />
+            <element signature="e#14307#14337#0" expanded="false" />
+            <element signature="e#15537#15567#0" expanded="false" />
+            <element signature="e#16846#16876#0" expanded="false" />
+            <element signature="e#26326#26356#0" expanded="false" />
+            <element signature="e#27518#27548#0" expanded="false" />
+            <element signature="e#30732#30762#0" expanded="false" />
+            <element signature="e#97061#97069#0" expanded="false" />
+            <element signature="e#98362#98370#0" expanded="false" />
+            <element signature="e#117159#117167#0" expanded="false" />
+            <element signature="e#117989#117997#0" expanded="false" />
+            <element signature="e#119149#119157#0" expanded="false" />
+            <element signature="e#119967#119975#0" expanded="false" />
+            <element signature="e#124879#124880#0" expanded="false" />
+            <element signature="e#124912#124913#0" expanded="false" />
+            <element signature="e#124977#124978#0" expanded="false" />
+            <element signature="e#125021#125022#0" expanded="false" />
+            <element signature="e#125074#125075#0" expanded="false" />
+            <element signature="e#125110#125111#0" expanded="false" />
+            <element signature="e#125181#125182#0" expanded="false" />
+            <element signature="e#125231#125232#0" expanded="false" />
+            <element signature="e#125283#125284#0" expanded="false" />
+            <element signature="e#125318#125319#0" expanded="false" />
+            <element signature="e#125387#125388#0" expanded="false" />
+            <element signature="e#125435#125436#0" expanded="false" />
+            <element signature="e#125485#125486#0" expanded="false" />
+            <element signature="e#125518#125519#0" expanded="false" />
+            <element signature="e#125583#125584#0" expanded="false" />
+            <element signature="e#125627#125628#0" expanded="false" />
+            <element signature="e#125676#125677#0" expanded="false" />
+            <element signature="e#125708#125709#0" expanded="false" />
+            <element signature="e#125771#125772#0" expanded="false" />
+            <element signature="e#125813#125814#0" expanded="false" />
+            <element signature="e#125861#125862#0" expanded="false" />
+            <element signature="e#125892#125893#0" expanded="false" />
+            <element signature="e#125953#125954#0" expanded="false" />
+            <element signature="e#125993#125994#0" expanded="false" />
+            <element signature="e#126040#126041#0" expanded="false" />
+            <element signature="e#126070#126071#0" expanded="false" />
+            <element signature="e#126129#126130#0" expanded="false" />
+            <element signature="e#126167#126168#0" expanded="false" />
+            <element signature="e#126218#126219#0" expanded="false" />
+            <element signature="e#126252#126253#0" expanded="false" />
+            <element signature="e#126319#126320#0" expanded="false" />
+            <element signature="e#126365#126366#0" expanded="false" />
+            <element signature="e#126416#126417#0" expanded="false" />
+            <element signature="e#126450#126451#0" expanded="false" />
+            <element signature="e#126517#126518#0" expanded="false" />
+            <element signature="e#126563#126564#0" expanded="false" />
+            <element signature="e#126609#126610#0" expanded="false" />
+            <element signature="e#126638#126639#0" expanded="false" />
+            <element signature="e#126695#126696#0" expanded="false" />
+            <element signature="e#126731#126732#0" expanded="false" />
+            <element signature="e#126783#126784#0" expanded="false" />
+            <element signature="e#126818#126819#0" expanded="false" />
+            <element signature="e#126887#126888#0" expanded="false" />
+            <element signature="e#126935#126936#0" expanded="false" />
+            <element signature="e#126986#126987#0" expanded="false" />
+            <element signature="e#127020#127021#0" expanded="false" />
+            <element signature="e#127087#127088#0" expanded="false" />
+            <element signature="e#127133#127134#0" expanded="false" />
+            <element signature="e#127174#127175#0" expanded="false" />
+            <element signature="e#127207#127208#0" expanded="false" />
+            <element signature="e#127263#127264#0" expanded="false" />
+            <element signature="e#127307#127308#0" expanded="false" />
+            <element signature="e#127342#127343#0" expanded="false" />
+            <element signature="e#127373#127374#0" expanded="false" />
+            <element signature="e#127422#127423#0" expanded="false" />
+            <element signature="e#127462#127463#0" expanded="false" />
+            <element signature="e#127524#127525#0" expanded="false" />
+            <element signature="e#127561#127562#0" expanded="false" />
+            <element signature="e#127642#127643#0" expanded="false" />
+            <element signature="e#127694#127695#0" expanded="false" />
+            <element signature="e#127730#127731#0" expanded="false" />
+            <element signature="e#127762#127763#0" expanded="false" />
+            <element signature="e#127812#127813#0" expanded="false" />
+            <element signature="e#127854#127855#0" expanded="false" />
+            <element signature="e#127896#127897#0" expanded="false" />
+            <element signature="e#127934#127935#0" expanded="false" />
+            <element signature="e#127997#127998#0" expanded="false" />
+            <element signature="e#128051#128052#0" expanded="false" />
+            <element signature="e#128090#128091#0" expanded="false" />
+            <element signature="e#128125#128126#0" expanded="false" />
+            <element signature="e#128181#128182#0" expanded="false" />
+            <element signature="e#128229#128230#0" expanded="false" />
+            <element signature="e#128267#128268#0" expanded="false" />
+            <element signature="e#128301#128302#0" expanded="false" />
+            <element signature="e#128355#128356#0" expanded="false" />
+            <element signature="e#128401#128402#0" expanded="false" />
+            <element signature="e#128440#128441#0" expanded="false" />
+            <element signature="e#128475#128476#0" expanded="false" />
+            <element signature="e#128531#128532#0" expanded="false" />
+            <element signature="e#128579#128580#0" expanded="false" />
+            <element signature="e#128618#128619#0" expanded="false" />
+            <element signature="e#128653#128654#0" expanded="false" />
+            <element signature="e#128709#128710#0" expanded="false" />
+            <element signature="e#128757#128758#0" expanded="false" />
+            <element signature="e#128790#128791#0" expanded="false" />
+            <element signature="e#128819#128820#0" expanded="false" />
+            <element signature="e#128863#128864#0" expanded="false" />
+            <element signature="e#128899#128900#0" expanded="false" />
+            <element signature="e#128937#128938#0" expanded="false" />
+            <element signature="e#128971#128972#0" expanded="false" />
+            <element signature="e#129025#129026#0" expanded="false" />
+            <element signature="e#129071#129072#0" expanded="false" />
+            <element signature="e#129117#129118#0" expanded="false" />
+            <element signature="e#129154#129155#0" expanded="false" />
+            <element signature="e#129219#129220#0" expanded="false" />
+            <element signature="e#129271#129272#0" expanded="false" />
+            <element signature="e#129314#129315#0" expanded="false" />
+            <element signature="e#129348#129349#0" expanded="false" />
+            <element signature="e#129407#129408#0" expanded="false" />
+            <element signature="e#129453#129454#0" expanded="false" />
+            <element signature="e#129498#129499#0" expanded="false" />
+            <element signature="e#129539#129540#0" expanded="false" />
+            <element signature="e#129607#129608#0" expanded="false" />
+            <element signature="e#129667#129668#0" expanded="false" />
+            <element signature="e#129701#129702#0" expanded="false" />
+            <element signature="e#129734#129735#0" expanded="false" />
+            <element signature="e#129783#129784#0" expanded="false" />
+            <element signature="e#129827#129828#0" expanded="false" />
+            <element signature="e#129861#129862#0" expanded="false" />
+            <element signature="e#129894#129895#0" expanded="false" />
+            <element signature="e#129943#129944#0" expanded="false" />
+            <element signature="e#129987#129988#0" expanded="false" />
+            <element signature="e#130024#130025#0" expanded="false" />
+            <element signature="e#130057#130058#0" expanded="false" />
+            <element signature="e#130109#130110#0" expanded="false" />
+            <element signature="e#130153#130154#0" expanded="false" />
+            <element signature="e#130207#130208#0" expanded="false" />
+            <element signature="e#130244#130245#0" expanded="false" />
+            <element signature="e#130317#130318#0" expanded="false" />
+            <element signature="e#130369#130370#0" expanded="false" />
+            <element signature="e#130422#130423#0" expanded="false" />
+            <element signature="e#130460#130461#0" expanded="false" />
+            <element signature="e#130533#130534#0" expanded="false" />
+            <element signature="e#130587#130588#0" expanded="false" />
+            <element signature="e#130638#130639#0" expanded="false" />
+            <element signature="e#130675#130676#0" expanded="false" />
+            <element signature="e#130745#130746#0" expanded="false" />
+            <element signature="e#130797#130798#0" expanded="false" />
+            <element signature="e#130850#130851#0" expanded="false" />
+            <element signature="e#130885#130886#0" expanded="false" />
+            <element signature="e#130955#130956#0" expanded="false" />
+            <element signature="e#131003#131004#0" expanded="false" />
+            <element signature="e#131063#131064#0" expanded="false" />
+            <element signature="e#131096#131097#0" expanded="false" />
+            <element signature="e#131171#131172#0" expanded="false" />
+            <element signature="e#131215#131216#0" expanded="false" />
+            <element signature="e#131265#131266#0" expanded="false" />
+            <element signature="e#131302#131303#0" expanded="false" />
+            <element signature="e#131370#131371#0" expanded="false" />
+            <element signature="e#131422#131423#0" expanded="false" />
+            <element signature="e#131471#131472#0" expanded="false" />
+            <element signature="e#131512#131513#0" expanded="false" />
+            <element signature="e#131584#131585#0" expanded="false" />
+            <element signature="e#131644#131645#0" expanded="false" />
+            <element signature="e#131684#131685#0" expanded="false" />
+            <element signature="e#131718#131719#0" expanded="false" />
+            <element signature="e#131774#131775#0" expanded="false" />
+            <element signature="e#131820#131821#0" expanded="false" />
+            <element signature="e#131890#131891#0" expanded="false" />
+            <element signature="e#131936#131937#0" expanded="false" />
+            <element signature="e#132006#132007#0" expanded="false" />
+            <element signature="e#132052#132053#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6970297">
+          <caret line="156" column="34" selection-start-line="156" selection-start-column="34" selection-end-line="156" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utest/java/edu/monash/merc/utest/interferome/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.91058826">
+          <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.core-3.1.1.RELEASE.jar!/org/springframework/util/ReflectionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.740741">
+          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/target/SingletonTargetSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0740743">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/DefaultAdvisorChainFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.740741">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/AdvisedSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33261803">
+          <caret line="366" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/UserType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26977688">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/GeneService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/DMService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="242" column="34" selection-start-line="242" selection-start-column="34" selection-end-line="242" selection-end-column="34" />
+          <caret line="342" column="61" selection-start-line="342" selection-start-column="61" selection-end-line="342" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/repository/IPromoterRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="268" column="21" selection-start-line="268" selection-start-column="21" selection-end-line="268" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/ProbeGeneBean.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/GeneServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/ProbeGeneBeanCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/repository/IGeneRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/GeneDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="251" column="63" selection-start-line="251" selection-start-column="63" selection-end-line="251" selection-end-column="63" />
+          <caret line="99" column="42" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/TfSiteCounter.java">
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state vertical-scroll-proportion="-5.888889">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/ImportTFSiteAction.java">
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.transaction-3.1.1.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
+        <state vertical-scroll-proportion="-4.5925927">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java">
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/interceptor/ExposeInvocationInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1152" column="28" selection-start-line="1152" selection-start-column="28" selection-end-line="1152" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#73947#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#5302#5303#0" expanded="false" />
-            <element signature="e#5354#5355#0" expanded="false" />
-            <element signature="e#5419#5420#0" expanded="false" />
-            <element signature="e#5469#5470#0" expanded="false" />
-            <element signature="e#5663#5664#0" expanded="false" />
-            <element signature="e#5709#5710#0" expanded="false" />
-            <element signature="e#5839#5840#0" expanded="false" />
-            <element signature="e#5885#5886#0" expanded="false" />
-            <element signature="e#6517#6518#0" expanded="false" />
-            <element signature="e#6565#6566#0" expanded="false" />
-            <element signature="e#6636#6637#0" expanded="false" />
-            <element signature="e#6690#6691#0" expanded="false" />
-            <element signature="e#6758#6759#0" expanded="false" />
-            <element signature="e#6810#6811#0" expanded="false" />
-            <element signature="e#6872#6873#0" expanded="false" />
-            <element signature="e#6920#6921#0" expanded="false" />
-            <element signature="e#6991#6992#0" expanded="false" />
-            <element signature="e#7045#7046#0" expanded="false" />
-            <element signature="e#7110#7111#0" expanded="false" />
-            <element signature="e#7160#7161#0" expanded="false" />
-            <element signature="e#7368#7369#0" expanded="false" />
-            <element signature="e#7420#7421#0" expanded="false" />
-            <element signature="e#7479#7480#0" expanded="false" />
-            <element signature="e#7525#7526#0" expanded="false" />
-            <element signature="e#7738#7739#0" expanded="false" />
-            <element signature="e#7790#7791#0" expanded="false" />
-            <element signature="e#7849#7850#0" expanded="false" />
-            <element signature="e#7895#7896#0" expanded="false" />
-            <element signature="e#8369#8370#0" expanded="false" />
-            <element signature="e#8423#8424#0" expanded="false" />
-            <element signature="e#8494#8495#0" expanded="false" />
-            <element signature="e#8548#8549#0" expanded="false" />
-            <element signature="e#8610#8611#0" expanded="false" />
-            <element signature="e#8658#8659#0" expanded="false" />
-            <element signature="e#8722#8723#0" expanded="false" />
-            <element signature="e#8780#8781#0" expanded="false" />
-            <element signature="e#8963#8964#0" expanded="false" />
-            <element signature="e#9026#9027#0" expanded="false" />
-            <element signature="e#9087#9088#0" expanded="false" />
-            <element signature="e#9142#9143#0" expanded="false" />
-            <element signature="e#9208#9209#0" expanded="false" />
-            <element signature="e#9268#9269#0" expanded="false" />
-            <element signature="e#9494#9495#0" expanded="false" />
-            <element signature="e#9562#9563#0" expanded="false" />
-            <element signature="e#10554#10555#0" expanded="false" />
-            <element signature="e#10619#10620#0" expanded="false" />
-            <element signature="e#12072#12073#0" expanded="false" />
-            <element signature="e#12139#12140#0" expanded="false" />
-            <element signature="e#13545#13546#0" expanded="false" />
-            <element signature="e#13612#13613#0" expanded="false" />
-            <element signature="e#14714#14715#0" expanded="false" />
-            <element signature="e#14785#14786#0" expanded="false" />
-            <element signature="e#14979#14980#0" expanded="false" />
-            <element signature="e#15050#15051#0" expanded="false" />
-            <element signature="e#15543#15544#0" expanded="false" />
-            <element signature="e#15608#15609#0" expanded="false" />
-            <element signature="e#15828#15829#0" expanded="false" />
-            <element signature="e#15895#15896#0" expanded="false" />
-            <element signature="e#16115#16116#0" expanded="false" />
-            <element signature="e#16182#16183#0" expanded="false" />
-            <element signature="e#16371#16372#0" expanded="false" />
-            <element signature="e#16436#16437#0" expanded="false" />
-            <element signature="e#16630#16631#0" expanded="false" />
-            <element signature="e#16697#16698#0" expanded="false" />
-            <element signature="e#20335#20336#0" expanded="false" />
-            <element signature="e#20411#20412#0" expanded="false" />
-            <element signature="e#29465#29466#0" expanded="false" />
-            <element signature="e#29530#29531#0" expanded="false" />
-            <element signature="e#29600#29601#0" expanded="false" />
-            <element signature="e#29669#29670#0" expanded="false" />
-            <element signature="e#29928#29929#0" expanded="false" />
-            <element signature="e#29978#29979#0" expanded="false" />
-            <element signature="e#30036#30037#0" expanded="false" />
-            <element signature="e#30088#30089#0" expanded="false" />
-            <element signature="e#30164#30165#0" expanded="false" />
-            <element signature="e#30235#30236#0" expanded="false" />
-            <element signature="e#30453#30454#0" expanded="false" />
-            <element signature="e#30512#30513#0" expanded="false" />
-            <element signature="e#30574#30575#0" expanded="false" />
-            <element signature="e#30630#30631#0" expanded="false" />
-            <element signature="e#30694#30695#0" expanded="false" />
-            <element signature="e#30752#30753#0" expanded="false" />
-            <element signature="e#30818#30819#0" expanded="false" />
-            <element signature="e#30885#30886#0" expanded="false" />
-            <element signature="e#30946#30947#0" expanded="false" />
-            <element signature="e#31008#31009#0" expanded="false" />
-            <element signature="e#34345#34346#0" expanded="false" />
-            <element signature="e#34404#34405#0" expanded="false" />
-            <element signature="e#34470#34471#0" expanded="false" />
-            <element signature="e#34530#34531#0" expanded="false" />
-            <element signature="e#34597#34598#0" expanded="false" />
-            <element signature="e#34658#34659#0" expanded="false" />
-            <element signature="e#34947#34948#0" expanded="false" />
-            <element signature="e#35020#35021#0" expanded="false" />
-            <element signature="e#36357#36358#0" expanded="false" />
-            <element signature="e#36407#36408#0" expanded="false" />
-            <element signature="e#36464#36465#0" expanded="false" />
-            <element signature="e#36515#36516#0" expanded="false" />
-            <element signature="e#36573#36574#0" expanded="false" />
-            <element signature="e#36625#36626#0" expanded="false" />
-            <element signature="e#36896#36897#0" expanded="false" />
-            <element signature="e#36963#36964#0" expanded="false" />
-            <element signature="e#40230#40231#0" expanded="false" />
-            <element signature="e#40265#40266#0" expanded="false" />
-            <element signature="e#40335#40336#0" expanded="false" />
-            <element signature="e#40377#40378#0" expanded="false" />
-            <element signature="e#40757#40758#0" expanded="false" />
-            <element signature="e#40814#40815#0" expanded="false" />
-            <element signature="e#41200#41201#0" expanded="false" />
-            <element signature="e#41266#41267#0" expanded="false" />
-            <element signature="e#43069#43070#0" expanded="false" />
-            <element signature="e#43122#43123#0" expanded="false" />
-            <element signature="e#43182#43183#0" expanded="false" />
-            <element signature="e#43236#43237#0" expanded="false" />
-            <element signature="e#43297#43298#0" expanded="false" />
-            <element signature="e#43352#43353#0" expanded="false" />
-            <element signature="e#43412#43413#0" expanded="false" />
-            <element signature="e#43471#43472#0" expanded="false" />
-            <element signature="e#45126#45127#0" expanded="false" />
-            <element signature="e#45193#45194#0" expanded="false" />
-            <element signature="e#47957#47958#0" expanded="false" />
-            <element signature="e#48018#48019#0" expanded="false" />
-            <element signature="e#48081#48082#0" expanded="false" />
-            <element signature="e#48137#48138#0" expanded="false" />
-            <element signature="e#48200#48201#0" expanded="false" />
-            <element signature="e#48257#48258#0" expanded="false" />
-            <element signature="e#48321#48322#0" expanded="false" />
-            <element signature="e#48379#48380#0" expanded="false" />
-            <element signature="e#48660#48661#0" expanded="false" />
-            <element signature="e#48732#48733#0" expanded="false" />
-            <element signature="e#48809#48810#0" expanded="false" />
-            <element signature="e#48865#48866#0" expanded="false" />
-            <element signature="e#48923#48924#0" expanded="false" />
-            <element signature="e#48986#48987#0" expanded="false" />
-            <element signature="e#49050#49051#0" expanded="false" />
-            <element signature="e#49108#49109#0" expanded="false" />
-            <element signature="e#49175#49176#0" expanded="false" />
-            <element signature="e#49239#49240#0" expanded="false" />
-            <element signature="e#49502#49503#0" expanded="false" />
-            <element signature="e#49570#49571#0" expanded="false" />
-            <element signature="e#49637#49638#0" expanded="false" />
-            <element signature="e#49709#49710#0" expanded="false" />
-            <element signature="e#55480#55481#0" expanded="false" />
-            <element signature="e#55537#55538#0" expanded="false" />
-            <element signature="e#56274#56275#0" expanded="false" />
-            <element signature="e#56330#56331#0" expanded="false" />
-            <element signature="e#56559#56560#0" expanded="false" />
-            <element signature="e#56623#56624#0" expanded="false" />
-            <element signature="e#56873#56874#0" expanded="false" />
-            <element signature="e#56944#56945#0" expanded="false" />
-            <element signature="e#57006#57007#0" expanded="false" />
-            <element signature="e#57074#57075#0" expanded="false" />
-            <element signature="e#57140#57141#0" expanded="false" />
-            <element signature="e#57195#57196#0" expanded="false" />
-            <element signature="e#57248#57249#0" expanded="false" />
-            <element signature="e#57295#57296#0" expanded="false" />
-            <element signature="e#57349#57350#0" expanded="false" />
-            <element signature="e#57397#57398#0" expanded="false" />
-            <element signature="e#57452#57453#0" expanded="false" />
-            <element signature="e#57501#57502#0" expanded="false" />
-            <element signature="e#57556#57557#0" expanded="false" />
-            <element signature="e#57605#57606#0" expanded="false" />
-            <element signature="e#57833#57834#0" expanded="false" />
-            <element signature="e#57899#57900#0" expanded="false" />
-            <element signature="e#60552#60553#0" expanded="false" />
-            <element signature="e#60623#60624#0" expanded="false" />
-            <element signature="e#60700#60701#0" expanded="false" />
-            <element signature="e#60771#60772#0" expanded="false" />
-            <element signature="e#61466#61467#0" expanded="false" />
-            <element signature="e#61537#61538#0" expanded="false" />
-            <element signature="e#61614#61615#0" expanded="false" />
-            <element signature="e#61685#61686#0" expanded="false" />
-            <element signature="e#62448#62449#0" expanded="false" />
-            <element signature="e#62511#62512#0" expanded="false" />
-            <element signature="e#62576#62577#0" expanded="false" />
-            <element signature="e#62635#62636#0" expanded="false" />
-            <element signature="e#62701#62702#0" expanded="false" />
-            <element signature="e#62761#62762#0" expanded="false" />
-            <element signature="e#62828#62829#0" expanded="false" />
-            <element signature="e#62889#62890#0" expanded="false" />
-            <element signature="e#62956#62957#0" expanded="false" />
-            <element signature="e#63017#63018#0" expanded="false" />
-            <element signature="e#63250#63251#0" expanded="false" />
-            <element signature="e#63313#63314#0" expanded="false" />
-            <element signature="e#63378#63379#0" expanded="false" />
-            <element signature="e#63437#63438#0" expanded="false" />
-            <element signature="e#63503#63504#0" expanded="false" />
-            <element signature="e#63563#63564#0" expanded="false" />
-            <element signature="e#63630#63631#0" expanded="false" />
-            <element signature="e#63691#63692#0" expanded="false" />
-            <element signature="e#63758#63759#0" expanded="false" />
-            <element signature="e#63819#63820#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-6.5555553">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/ImportProbeAction.java">
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="173" column="8" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+        <state vertical-scroll-proportion="-4.5925927">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/ProbeBean.java">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Probe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/TFSiteBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/TissueBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/GeneExpressionRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/SearchBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/HibernateGenericDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/repository/ISearchDataRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/SearchDataServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="584" column="65" selection-start-line="584" selection-start-column="65" selection-end-line="584" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/SearchDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/ldap.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5925927">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="37" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Domain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3882353">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="55" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/PromoterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23904383">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webcontent/css/merc.css">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.7211155">
+          <caret line="245" column="0" selection-start-line="242" selection-start-column="4" selection-end-line="248" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/log4j.properties">
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1715" column="32" selection-start-line="1715" selection-start-column="32" selection-end-line="1715" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#14157#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="92" column="74" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49342105">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.12311015">
+          <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
           <folding />
         </state>
       </provider>

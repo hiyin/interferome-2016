@@ -566,6 +566,12 @@ public class SearchAction extends DMBaseAction {
 
     // public void searchTFSiteCaller() {}
 
+    /**
+     * InCiiiDER: searchTFSite action which calls searchTFSite method and process post-analysis results of CiiiDER
+     * @author: Danqing (Angela) Yin - angela.yin@hudson.org.au
+     * @version 2.02
+     */
+
     @SuppressWarnings("unchecked")
     public String searchTFSite() {
         try {
@@ -610,7 +616,7 @@ public class SearchAction extends DMBaseAction {
 
 
             //Convert results into Hash of object[x][4] with gene as hash and
-            //start, end, core match, matrix match ad
+            //start, end, core match, matrix match
             //below block is added 16 Feb 2016 by Danqing Yin
             tfSiteList = new HashMap<String, List<TFSite>>();
 
@@ -1105,18 +1111,60 @@ public class SearchAction extends DMBaseAction {
             //start, end, core match, matrix match ad
 
             tfSiteList = new LinkedHashMap<String, List<TFSite>>();
-/*
-            try {
-           // Put HashMap
 
-            HashMap<String, Double> hashMapMm = filterSigBSFromTfSiteList(CIIIDER_HOME + "Outputs/getPromoter/Mm/MmEnrichment_IRGsFromPCGs_mediumMatrices_2500_MostSigDeficit.txt");
-            // convertBSLToTfSiteList(CIIIDER_HOME + "Outputs/getPromoter/Mm/MmBSL_IRGsFromPCGs_mediumMatrices_2500.txt", hashMapMm);
+            try {
+                File HumanEnrichmentAnalysisMostSig = new File (CIIIDER_USER + userCiiiDERId + "/HumanEnrichmentAnalysis_MostSigDeficit.txt");
+                File MouseEnrichmentAnalysisMostSig = new File (CIIIDER_USER + userCiiiDERId + "/MouseEnrichmentAnalysis_MostSigDeficit.txt");
+
+                HashMap<String, Double> sigTFHuman = new HashMap<String, Double>();
+                HashMap<String, Double> sigTFMouse = new HashMap<String, Double>();
+
+
+                if (HumanEnrichmentAnalysisMostSig.exists()) {
+                    sigTFHuman = filterSigBSFromTfSiteList(CIIIDER_USER + userCiiiDERId + "/HumanEnrichmentAnalysis_MostSigDeficit.txt");
+                }
+
+                if (MouseEnrichmentAnalysisMostSig.exists()) {
+                    sigTFMouse = filterSigBSFromTfSiteList(CIIIDER_USER + userCiiiDERId + "/MouseEnrichmentAnalysis_MostSigDeficit.txt");
+                }
+
+
+
+                HashMap<String, Double> sigTFList = new HashMap<String, Double>();
+                sigTFList.putAll(sigTFHuman); sigTFList.putAll(sigTFMouse);
+
+            // Put HashMap
+            /*
+            HashMap<String, Double> hashMapMm = filterSigBSFromTfSiteList(CIIIDER_USER  + "Outputs/getPromoter/Mm/MmEnrichment_IRGsFromPCGs_mediumMatrices_2500_MostSigDeficit.txt");
+            convertBSLToTfSiteList(CIIIDER_HOME + "Outputs/getPromoter/Mm/MmBSL_IRGsFromPCGs_mediumMatrices_2500.txt", hashMapMm);
             HashMap<String, Double> hashMapHs = filterSigBSFromTfSiteList(CIIIDER_HOME + "Outputs/getPromoter/Hs/HsEnrichment_IRGsFromPCGs_mediumMatrices_2500_MostSigDeficit.txt");
-            // convertBSLToTfSiteList(CIIIDER_HOME + "Outputs/getPromoter/Hs/HsBSL_IRGsFromPCGs_mediumMatrices_2500.txt", hashMapHs);
+            convertBSLToTfSiteList(CIIIDER_HOME + "Outputs/getPromoter/Hs/HsBSL_IRGsFromPCGs_mediumMatrices_2500.txt", hashMapHs);*/
+
+
+                List<Object[]> resultsHuman = new ArrayList<Object[]>();
+                List<Object[]> resultsMouse = new ArrayList<Object[]>();
+
+
+                for (Object[] row : results) {
+                    // Split results by species
+                    String ensgAccession = ((Gene) row[0]).getEnsgAccession();
+                    if (ensgAccession.startsWith("ENSG")) {
+                        resultsHuman.add(row);
+                    } else {
+                        resultsMouse.add(row);
+                    }
+                }
+
+
+                HashMap<String, List<TFSite>> tfSiteListHuman = getTFSiteListBySpecies(resultsHuman, sigTFHuman);
+                HashMap<String, List<TFSite>> tfSiteListMouse = getTFSiteListBySpecies(resultsMouse, sigTFMouse);
+
+
+                tfSiteList.putAll(tfSiteListHuman); tfSiteList.putAll(tfSiteListMouse);
 
 
             } catch(IOException e) {
-            e.printStackTrace();}*/
+            e.printStackTrace();}
 
 
             this.csvInputStream = createCSVFileTFanalysis(searchBean, tfSiteList);

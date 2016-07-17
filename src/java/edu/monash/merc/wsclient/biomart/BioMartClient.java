@@ -364,7 +364,9 @@ public class BioMartClient {
     }
 
     public static void main(String[] args) throws Exception {
-        String wsUrl = "http://www.biomart.org/biomart/martservice/result?query=";
+        // String wsUrl = "http://www.biomart.org/biomart/martservice/result?query=";
+        String wsUrl = "http://www.biomart.org/biomart/martservice?query=";
+
         String species = "hsapiens_gene_ensembl";
 
         BioMartClient bioMartClient = new BioMartClient();

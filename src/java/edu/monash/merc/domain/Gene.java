@@ -117,6 +117,9 @@ public class Gene extends Domain {
     @ManyToMany(mappedBy = "genes")
     private List<Probe> probe;
 
+//    @OneToOne(mappedBy = "gene", targetEntity = Promoter.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private Promoter promoter;
+
     // Try some mapping between species and gene here 160113
 
 
@@ -242,6 +245,14 @@ public class Gene extends Domain {
     }
 
     // Try some mapping here 160113
+
+//    public Promoter getPromoter() {
+//        return promoter;
+//    }
+//
+//    public void setAvatar(Promoter promoter) {
+//        this.promoter = promoter;
+//    }
 
 
     @Override

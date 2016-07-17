@@ -35,6 +35,7 @@ package edu.monash.merc.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Index;
+import org.hibernate.annotations.ForeignKey;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -70,12 +71,21 @@ public class Promoter extends Domain {
     @Column(name = "gene_name")
     private String geneName;
 
-    @Basic
-    @Column(name = "ensg_accession")
-    private String ensgAccession;
+//    @Basic
+//    @Column(name = "ensg_accession")
+//    private String ensgAccession;
+
+    @OneToOne(targetEntity = Gene.class)
+    @ForeignKey(name = "fk_gene_ensg_accession")
+    // @Index(name ="fk_gene_ensg_accession")
+    @JoinColumn(name = "ensg_accession", referencedColumnName = "ensg_accession")
+    private Gene gene;
+
+
+
 
     @Basic
-    @Column(name = "sequence", columnDefinition = "text")
+    @Column(name = "promoter_sequence", columnDefinition = "text")
     private String sequence;
 
 
@@ -95,14 +105,25 @@ public class Promoter extends Domain {
         this.geneName = geneName;
     }
 
-    public String getEnsgAccession() {
-        return ensgAccession;
-    }
+//    public String getEnsgAccession() {
+//        return ensgAccession;
+//    }
+//
+//    public void setEnsgAccession(String ensgAccession) {
+//        this.ensgAccession = ensgAccession;
+//    }
 
-    public void setEnsgAccession(String ensgAccession) {
-        this.ensgAccession = ensgAccession;
-    }
+//    public String getEnsgAccession() {
+//        return gene.getEnsgAccession();
+//    }
 
+
+    public Gene getGene () {
+        return gene;
+    }
+    public Gene setGene (Gene gene) {
+        return this.gene = gene;
+    }
 
     public String getSequence() {
         return sequence;
@@ -122,7 +143,7 @@ public class Promoter extends Domain {
         Promoter promoter = (Promoter) o;
 
         if (id != promoter.id) return false;
-        if (ensgAccession != null ? !ensgAccession.equals(promoter.ensgAccession) : promoter.ensgAccession != null)
+        if (gene.getEnsgAccession() != null ? !gene.getEnsgAccession().equals(promoter.getGene().getEnsgAccession()) : promoter.getGene().getEnsgAccession() != null)
             return false;
         return true;
     }

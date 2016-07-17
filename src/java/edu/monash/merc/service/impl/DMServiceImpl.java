@@ -1707,16 +1707,21 @@ public class DMServiceImpl implements DMService {
     public void deletePromoter(Promoter promoter) { this.promoterService.deletePromoter(promoter); }
 
     @Override
-    public Promoter getPromoterByEnsgAccession(String ensgAccession) { return this.promoterService.getPromoterByEnsgAccession(ensgAccession); }
+    public Promoter getPromoterByEnsgAccession(String ensgAccession) {
+        return this.promoterService.getPromoterByEnsgAccession(ensgAccession); }
 
     @Override
     public void importPromoter(List<Promoter> promoters) {
+
         if (promoters != null) {
             for (Promoter promoter: promoters) {
-                    Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
+
+                    // Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
+                    Promoter foundPromoter = this.getPromoterByEnsgAccession(promoter.getGene().getEnsgAccession());
+                    // ToDo: decide what to do if there is promoter?
                     if (foundPromoter != null) {
-                        // promoter.setId(promoter.getId());
-                        // this.updatePromoter(promoter);
+                         promoter.setId(foundPromoter.getId());
+                         this.mergePromoter(promoter);
                     } else {
                         // Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
                         this.savePromoter(promoter);
@@ -1726,23 +1731,7 @@ public class DMServiceImpl implements DMService {
         }
 
     }
-    }
-
-/*    public void importPromoter(List<Promoter> promoters) {
-        if (promoters != null) {
-            for (Promoter promoter: promoters) {
-                Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
-                if (foundPromoter != null) {
-                    promoter.setId(promoter.getId());
-                    this.mergePromoter(promoter);
-                } else {
-                    this.savePromoter(promoter);
-                }
-
-            }
-        }
-
-    }*/
+}
 
 
 
