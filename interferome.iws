@@ -5,46 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61b110dd-75e9-429a-8da3-757de140a9d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/wsclient/biomart/BioMartClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/service/impl/DMServiceImpl.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/service/impl/DMServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/service/impl/DMServiceImpl.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/service/impl/DMServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/service/impl/DMServiceImpl.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/service/impl/DMServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/Gene.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/Gene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/Gene.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/Gene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/Gene.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/Gene.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/system/scheduling/impl/INFDataProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/Promoter.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/Promoter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/Promoter.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/Promoter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/Promoter.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/Promoter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/dao/impl/PromoterDAO.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/dao/impl/PromoterDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/PromoterDAO.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/PromoterDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/PromoterDAO.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/PromoterDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/struts2/action/SearchAction.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/struts2/action/SearchAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/struts2/action/SearchAction.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/struts2/action/SearchAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/struts2/action/SearchAction.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/struts2/action/SearchAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/dao/impl/SearchDataDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/TFSite.class" afterPath="$PROJECT_DIR$/build/classes/edu/monash/merc/domain/TFSite.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/TFSite.class" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/edu/monash/merc/domain/TFSite.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/TFSite.class" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/edu/monash/merc/domain/TFSite.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java" afterPath="$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/applicationContext.xml" afterPath="$PROJECT_DIR$/conf/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interferome.iws" afterPath="$PROJECT_DIR$/interferome.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/merc.properties" afterPath="$PROJECT_DIR$/conf/merc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/merc.properties" afterPath="$PROJECT_DIR$/deploy/interferome/WEB-INF/classes/merc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/merc.properties" afterPath="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/merc.properties" />
     </list>
     <ignored path="interferome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,8 +56,17 @@
         <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-              <folding />
+              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3127#3128#0" expanded="true" />
+                <element signature="e#3159#3160#0" expanded="true" />
+                <element signature="e#3255#3256#0" expanded="true" />
+                <element signature="e#3289#3290#0" expanded="true" />
+                <element signature="e#3845#3846#0" expanded="true" />
+                <element signature="e#3881#3882#0" expanded="true" />
+                <element signature="e#3949#3950#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,8 +74,8 @@
       <file leaf-file-name="DMServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1715" column="32" selection-start-line="1715" selection-start-column="32" selection-end-line="1715" selection-end-column="32" />
+            <state vertical-scroll-proportion="-6.259259">
+              <caret line="1248" column="59" selection-start-line="1248" selection-start-column="59" selection-end-line="1248" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,23 +83,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="INFDataProcessor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="INFDataProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.31294116">
+              <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
               <folding>
-                <element signature="e#0#14157#0" expanded="true" />
+                <element signature="e#0#16149#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#8999#9007#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchDataDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="694" column="37" selection-start-line="694" selection-start-column="37" selection-end-line="694" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="726" column="48" selection-start-line="726" selection-start-column="16" selection-end-line="726" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12311015">
-              <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+            <state vertical-scroll-proportion="-9.111111">
+              <caret line="92" column="74" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -129,7 +132,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-              <folding />
+              <folding>
+                <element signature="e#0#2497#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Probe.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/SearchDataService.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/SearchDataServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dto/PromoterGeneBean.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/repository/IPromoterRepository.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/DMService.java" />
@@ -206,6 +211,7 @@
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java" />
         <option value="$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java" />
         <option value="$PROJECT_DIR$/conf/applicationContext.xml" />
       </list>
@@ -234,9 +240,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
+    <option name="x" value="81" />
     <option name="y" value="23" />
-    <option name="width" value="1394" />
+    <option name="width" value="1220" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -277,6 +283,210 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="struts2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="struts2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016 copy (importPromoter done)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -742,7 +952,7 @@
       <workItem from="1468301227827" duration="455000" />
       <workItem from="1468556267566" duration="21245000" />
       <workItem from="1468743096503" duration="1136000" />
-      <workItem from="1468748668740" duration="1551000" />
+      <workItem from="1468748668740" duration="6777000" />
     </task>
     <task id="LOCAL-00001" summary="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)">
       <created>1461074977399</created>
@@ -766,17 +976,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277884000" />
+    <option name="totallyTimeSpent" value="283110000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="23" width="1394" height="873" extended-state="0" />
-    <editor active="false" />
+    <frame x="81" y="23" width="1220" height="873" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33674777" sideWeight="0.497543" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33674777" sideWeight="0.497543" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -791,8 +1001,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923833" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24408284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4199744" sideWeight="0.48985508" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24363327" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4199744" sideWeight="0.48985508" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -800,35 +1010,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49603173" sideWeight="0.51014495" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923833" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24408284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4199744" sideWeight="0.48985508" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3378933" sideWeight="0.497543" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42637643" sideWeight="0.46781883" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45326504" sideWeight="0.83928573" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3162612" sideWeight="0.4904762" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -864,25 +1045,25 @@
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java</url>
-          <line>1716</line>
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java</url>
+          <line>272</line>
           <properties />
-          <option name="timeStamp" value="98" />
+          <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java</url>
-          <line>1719</line>
+          <line>1245</line>
           <properties />
-          <option name="timeStamp" value="100" />
+          <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java</url>
-          <line>1710</line>
+          <line>1249</line>
           <properties />
-          <option name="timeStamp" value="101" />
+          <option name="timeStamp" value="106" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="103" />
+      <option name="time" value="107" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -945,13 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.57894737">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="694" column="37" selection-start-line="694" selection-start-column="37" selection-end-line="694" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1073,181 +1247,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.222222">
-          <caret line="1124" column="17" selection-start-line="1124" selection-start-column="17" selection-end-line="1124" selection-end-column="17" />
-          <folding>
-            <element signature="e#12111#12141#0" expanded="false" />
-            <element signature="e#13081#13111#0" expanded="false" />
-            <element signature="e#14307#14337#0" expanded="false" />
-            <element signature="e#15537#15567#0" expanded="false" />
-            <element signature="e#16846#16876#0" expanded="false" />
-            <element signature="e#26326#26356#0" expanded="false" />
-            <element signature="e#27518#27548#0" expanded="false" />
-            <element signature="e#30732#30762#0" expanded="false" />
-            <element signature="e#97061#97069#0" expanded="false" />
-            <element signature="e#98362#98370#0" expanded="false" />
-            <element signature="e#117159#117167#0" expanded="false" />
-            <element signature="e#117989#117997#0" expanded="false" />
-            <element signature="e#119149#119157#0" expanded="false" />
-            <element signature="e#119967#119975#0" expanded="false" />
-            <element signature="e#124879#124880#0" expanded="false" />
-            <element signature="e#124912#124913#0" expanded="false" />
-            <element signature="e#124977#124978#0" expanded="false" />
-            <element signature="e#125021#125022#0" expanded="false" />
-            <element signature="e#125074#125075#0" expanded="false" />
-            <element signature="e#125110#125111#0" expanded="false" />
-            <element signature="e#125181#125182#0" expanded="false" />
-            <element signature="e#125231#125232#0" expanded="false" />
-            <element signature="e#125283#125284#0" expanded="false" />
-            <element signature="e#125318#125319#0" expanded="false" />
-            <element signature="e#125387#125388#0" expanded="false" />
-            <element signature="e#125435#125436#0" expanded="false" />
-            <element signature="e#125485#125486#0" expanded="false" />
-            <element signature="e#125518#125519#0" expanded="false" />
-            <element signature="e#125583#125584#0" expanded="false" />
-            <element signature="e#125627#125628#0" expanded="false" />
-            <element signature="e#125676#125677#0" expanded="false" />
-            <element signature="e#125708#125709#0" expanded="false" />
-            <element signature="e#125771#125772#0" expanded="false" />
-            <element signature="e#125813#125814#0" expanded="false" />
-            <element signature="e#125861#125862#0" expanded="false" />
-            <element signature="e#125892#125893#0" expanded="false" />
-            <element signature="e#125953#125954#0" expanded="false" />
-            <element signature="e#125993#125994#0" expanded="false" />
-            <element signature="e#126040#126041#0" expanded="false" />
-            <element signature="e#126070#126071#0" expanded="false" />
-            <element signature="e#126129#126130#0" expanded="false" />
-            <element signature="e#126167#126168#0" expanded="false" />
-            <element signature="e#126218#126219#0" expanded="false" />
-            <element signature="e#126252#126253#0" expanded="false" />
-            <element signature="e#126319#126320#0" expanded="false" />
-            <element signature="e#126365#126366#0" expanded="false" />
-            <element signature="e#126416#126417#0" expanded="false" />
-            <element signature="e#126450#126451#0" expanded="false" />
-            <element signature="e#126517#126518#0" expanded="false" />
-            <element signature="e#126563#126564#0" expanded="false" />
-            <element signature="e#126609#126610#0" expanded="false" />
-            <element signature="e#126638#126639#0" expanded="false" />
-            <element signature="e#126695#126696#0" expanded="false" />
-            <element signature="e#126731#126732#0" expanded="false" />
-            <element signature="e#126783#126784#0" expanded="false" />
-            <element signature="e#126818#126819#0" expanded="false" />
-            <element signature="e#126887#126888#0" expanded="false" />
-            <element signature="e#126935#126936#0" expanded="false" />
-            <element signature="e#126986#126987#0" expanded="false" />
-            <element signature="e#127020#127021#0" expanded="false" />
-            <element signature="e#127087#127088#0" expanded="false" />
-            <element signature="e#127133#127134#0" expanded="false" />
-            <element signature="e#127174#127175#0" expanded="false" />
-            <element signature="e#127207#127208#0" expanded="false" />
-            <element signature="e#127263#127264#0" expanded="false" />
-            <element signature="e#127307#127308#0" expanded="false" />
-            <element signature="e#127342#127343#0" expanded="false" />
-            <element signature="e#127373#127374#0" expanded="false" />
-            <element signature="e#127422#127423#0" expanded="false" />
-            <element signature="e#127462#127463#0" expanded="false" />
-            <element signature="e#127524#127525#0" expanded="false" />
-            <element signature="e#127561#127562#0" expanded="false" />
-            <element signature="e#127642#127643#0" expanded="false" />
-            <element signature="e#127694#127695#0" expanded="false" />
-            <element signature="e#127730#127731#0" expanded="false" />
-            <element signature="e#127762#127763#0" expanded="false" />
-            <element signature="e#127812#127813#0" expanded="false" />
-            <element signature="e#127854#127855#0" expanded="false" />
-            <element signature="e#127896#127897#0" expanded="false" />
-            <element signature="e#127934#127935#0" expanded="false" />
-            <element signature="e#127997#127998#0" expanded="false" />
-            <element signature="e#128051#128052#0" expanded="false" />
-            <element signature="e#128090#128091#0" expanded="false" />
-            <element signature="e#128125#128126#0" expanded="false" />
-            <element signature="e#128181#128182#0" expanded="false" />
-            <element signature="e#128229#128230#0" expanded="false" />
-            <element signature="e#128267#128268#0" expanded="false" />
-            <element signature="e#128301#128302#0" expanded="false" />
-            <element signature="e#128355#128356#0" expanded="false" />
-            <element signature="e#128401#128402#0" expanded="false" />
-            <element signature="e#128440#128441#0" expanded="false" />
-            <element signature="e#128475#128476#0" expanded="false" />
-            <element signature="e#128531#128532#0" expanded="false" />
-            <element signature="e#128579#128580#0" expanded="false" />
-            <element signature="e#128618#128619#0" expanded="false" />
-            <element signature="e#128653#128654#0" expanded="false" />
-            <element signature="e#128709#128710#0" expanded="false" />
-            <element signature="e#128757#128758#0" expanded="false" />
-            <element signature="e#128790#128791#0" expanded="false" />
-            <element signature="e#128819#128820#0" expanded="false" />
-            <element signature="e#128863#128864#0" expanded="false" />
-            <element signature="e#128899#128900#0" expanded="false" />
-            <element signature="e#128937#128938#0" expanded="false" />
-            <element signature="e#128971#128972#0" expanded="false" />
-            <element signature="e#129025#129026#0" expanded="false" />
-            <element signature="e#129071#129072#0" expanded="false" />
-            <element signature="e#129117#129118#0" expanded="false" />
-            <element signature="e#129154#129155#0" expanded="false" />
-            <element signature="e#129219#129220#0" expanded="false" />
-            <element signature="e#129271#129272#0" expanded="false" />
-            <element signature="e#129314#129315#0" expanded="false" />
-            <element signature="e#129348#129349#0" expanded="false" />
-            <element signature="e#129407#129408#0" expanded="false" />
-            <element signature="e#129453#129454#0" expanded="false" />
-            <element signature="e#129498#129499#0" expanded="false" />
-            <element signature="e#129539#129540#0" expanded="false" />
-            <element signature="e#129607#129608#0" expanded="false" />
-            <element signature="e#129667#129668#0" expanded="false" />
-            <element signature="e#129701#129702#0" expanded="false" />
-            <element signature="e#129734#129735#0" expanded="false" />
-            <element signature="e#129783#129784#0" expanded="false" />
-            <element signature="e#129827#129828#0" expanded="false" />
-            <element signature="e#129861#129862#0" expanded="false" />
-            <element signature="e#129894#129895#0" expanded="false" />
-            <element signature="e#129943#129944#0" expanded="false" />
-            <element signature="e#129987#129988#0" expanded="false" />
-            <element signature="e#130024#130025#0" expanded="false" />
-            <element signature="e#130057#130058#0" expanded="false" />
-            <element signature="e#130109#130110#0" expanded="false" />
-            <element signature="e#130153#130154#0" expanded="false" />
-            <element signature="e#130207#130208#0" expanded="false" />
-            <element signature="e#130244#130245#0" expanded="false" />
-            <element signature="e#130317#130318#0" expanded="false" />
-            <element signature="e#130369#130370#0" expanded="false" />
-            <element signature="e#130422#130423#0" expanded="false" />
-            <element signature="e#130460#130461#0" expanded="false" />
-            <element signature="e#130533#130534#0" expanded="false" />
-            <element signature="e#130587#130588#0" expanded="false" />
-            <element signature="e#130638#130639#0" expanded="false" />
-            <element signature="e#130675#130676#0" expanded="false" />
-            <element signature="e#130745#130746#0" expanded="false" />
-            <element signature="e#130797#130798#0" expanded="false" />
-            <element signature="e#130850#130851#0" expanded="false" />
-            <element signature="e#130885#130886#0" expanded="false" />
-            <element signature="e#130955#130956#0" expanded="false" />
-            <element signature="e#131003#131004#0" expanded="false" />
-            <element signature="e#131063#131064#0" expanded="false" />
-            <element signature="e#131096#131097#0" expanded="false" />
-            <element signature="e#131171#131172#0" expanded="false" />
-            <element signature="e#131215#131216#0" expanded="false" />
-            <element signature="e#131265#131266#0" expanded="false" />
-            <element signature="e#131302#131303#0" expanded="false" />
-            <element signature="e#131370#131371#0" expanded="false" />
-            <element signature="e#131422#131423#0" expanded="false" />
-            <element signature="e#131471#131472#0" expanded="false" />
-            <element signature="e#131512#131513#0" expanded="false" />
-            <element signature="e#131584#131585#0" expanded="false" />
-            <element signature="e#131644#131645#0" expanded="false" />
-            <element signature="e#131684#131685#0" expanded="false" />
-            <element signature="e#131718#131719#0" expanded="false" />
-            <element signature="e#131774#131775#0" expanded="false" />
-            <element signature="e#131820#131821#0" expanded="false" />
-            <element signature="e#131890#131891#0" expanded="false" />
-            <element signature="e#131936#131937#0" expanded="false" />
-            <element signature="e#132006#132007#0" expanded="false" />
-            <element signature="e#132052#132053#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6970297">
@@ -1349,13 +1348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.888889">
-          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.transaction-3.1.1.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.5925927">
@@ -1388,14 +1380,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5925927">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#2497#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1421,16 +1409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/PromoterServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23904383">
@@ -1447,18 +1425,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="726" column="48" selection-start-line="726" selection-start-column="16" selection-end-line="726" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="694" column="37" selection-start-line="694" selection-start-column="37" selection-end-line="694" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9259257">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3127#3128#0" expanded="true" />
+            <element signature="e#3159#3160#0" expanded="true" />
+            <element signature="e#3255#3256#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3845#3846#0" expanded="true" />
+            <element signature="e#3881#3882#0" expanded="true" />
+            <element signature="e#3949#3950#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43548387">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.111111">
+          <caret line="92" column="74" selection-start-line="92" selection-start-column="74" selection-end-line="92" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1715" column="32" selection-start-line="1715" selection-start-column="32" selection-end-line="1715" selection-end-column="32" />
+        <state vertical-scroll-proportion="-6.259259">
+          <caret line="1248" column="59" selection-start-line="1248" selection-start-column="59" selection-end-line="1248" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1467,19 +1504,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.31294116">
+          <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14157#0" expanded="true" />
+            <element signature="e#0#16149#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#8999#9007#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12311015">
-          <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>

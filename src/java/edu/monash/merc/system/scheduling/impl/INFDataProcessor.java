@@ -41,6 +41,7 @@ import edu.monash.merc.domain.Data;
 import edu.monash.merc.domain.Gene;
 import edu.monash.merc.domain.Probe;
 import edu.monash.merc.domain.Promoter;
+import edu.monash.merc.domain.TFSite;
 import edu.monash.merc.dto.GeneOntologyBean;
 
 import edu.monash.merc.dto.ProbeGeneBean;
@@ -55,6 +56,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.hibernate.*;
 
+import org.hibernate.annotations.SourceType;
 import org.hibernate.cache.ehcache.internal.util.HibernateUtil;
 import org.hibernate.cfg.Configuration;
 
@@ -150,16 +152,17 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         long endTime = System.currentTimeMillis();
 
 
-        importCiiiDERPromoter(PROBE_HUMAN_TYPE);
-        importCiiiDERPromoter(PROBE_MOUSE_TYPE);
+        // importCiiiDERPromoter(PROBE_HUMAN_TYPE);
+        // importCiiiDERPromoter(PROBE_MOUSE_TYPE);
 
-
-        //importCiiiDERPromoter(SPECIES_MOUSE_ID);
 
 
         System.out.println("I am updating the CiiiDER data ...");
 
-        // importTFSite
+        importCiiiDERTFSite(PROBE_HUMAN_TYPE);
+        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+
+        System.out.println("Completed updating the CiiiDER TFSite data!");
 
 
         //import human and mouse probes
@@ -223,6 +226,57 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
         } catch (IOException e) {
                 e.printStackTrace();
+        } catch (HibernateException ex) {
+            ex.getCause();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void importCiiiDERTFSite (String species) {
+        try {
+        // Pre-run CiiiDER if bsl.txt file not available
+
+        // Create TFSite array to store TFSite
+        List<TFSite> tfSites = new ArrayList<TFSite>();
+        TFSite tfSite = new TFSite();
+        
+        // Read in bsl.txt 
+        BufferedReader brGeneBSL = new BufferedReader(new FileReader(new File (CIIIDER_HOME + "Output/ScanTFSite/" + species + "GeneBindingSiteList.txt")));
+        String line = null;
+
+        while ((line = brGeneBSL.readLine()) != null) {
+            String[] fields = line.split(",");
+            String[] identifier = fields[0].split("\\|");
+            String quantifier = fields[1];
+            String factor = fields[2];
+            String factor_index = fields[3];
+            int start = Integer.valueOf(fields[4]);
+            int end = Integer.valueOf(fields[5]);
+            String strand = fields[6];
+            Double core_match = Double.valueOf(fields[7]);
+            Double matrix_match = Double.valueOf(fields[8]);
+
+            String geneName = identifier[0];
+            String ensgAccession = identifier[1];
+
+            Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
+            tfSite.setGene(gene);
+            tfSite.setFactor(factor);
+            tfSite.setStart(start);
+            tfSite.setEnd(end);
+            tfSite.setCoreMatch(core_match);
+            tfSite.setMatrixMatch(matrix_match);
+            tfSite.setEnsemblID(ensgAccession);
+
+            tfSites.add(tfSite);
+        } this.dmService.importAllTFSites(tfSites);
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
         } catch (HibernateException ex) {
             ex.getCause();
         } catch (Exception e) {
