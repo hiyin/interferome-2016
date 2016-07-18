@@ -246,6 +246,8 @@ public interface DMService {
 
     public TFSite getTFSite(TFSite tfSite);
 
+    public TFSite getTFSiteById(Long id);
+
     // Tissues
     public TissueExpression getTissueExpressionById(long id);
 

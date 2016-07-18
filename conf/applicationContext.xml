@@ -90,7 +90,7 @@
     <!-- cron job scheduled task for loading the file from ftp server -->
     <task:scheduler id="infScheduler"/>
     <task:scheduled-tasks scheduler="infScheduler">
-        <task:scheduled ref="infDataProcessor" method="process" cron="0 43 21 17 7,9 ?"/>
+        <task:scheduled ref="infDataProcessor" method="process" cron="0 03 15 18 7,9 ?"/>
     </task:scheduled-tasks>
     <!-- Datasource configuration -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">

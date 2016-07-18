@@ -59,7 +59,7 @@ public class TFSite extends Domain {
 
     @ManyToOne
     @JoinColumn(name = "gene_id")
-    // @ForeignKey(name="fk_gene_id")
+    @ForeignKey(name="fk_gene_id")
     private Gene gene;
 
     @Basic

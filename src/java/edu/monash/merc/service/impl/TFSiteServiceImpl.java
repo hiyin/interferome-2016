@@ -101,7 +101,7 @@ public class TFSiteServiceImpl implements TFSiteService {
 
     @Override
     public TFSite getTFSite(TFSite tfSite){
-        return this.tfSiteDao.getTFSite(tfSite.getGene(), tfSite.getFactor(), tfSite.getStart(), tfSite.getEnd());
+        return this.tfSiteDao.getTFSite(tfSite.getGene(), tfSite.getFactor(), tfSite.getStart(), tfSite.getEnd(), tfSite.getCoreMatch(), tfSite.getMatrixMatch());
     }
 
 }

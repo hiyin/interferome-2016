@@ -43,6 +43,6 @@ public interface ITFSiteRepository {
 
     public Pagination<TFSite> getTFSite(int startPageNo, int recordsPerPage, OrderBy[] orderBys);
 
-    public TFSite getTFSite(Gene gene, String factor, int start, int end);
+    public TFSite getTFSite(Gene gene, String factor, int start, int end, Double coreMatch, Double matrixMatch);
 
 }

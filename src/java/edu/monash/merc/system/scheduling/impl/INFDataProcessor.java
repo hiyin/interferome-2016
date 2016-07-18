@@ -261,6 +261,8 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             String geneName = identifier[0];
             String ensgAccession = identifier[1];
 
+            tfSite = new TFSite();
+
             Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
             tfSite.setGene(gene);
             tfSite.setFactor(factor);
@@ -270,7 +272,8 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             tfSite.setMatrixMatch(matrix_match);
             tfSite.setEnsemblID(ensgAccession);
 
-            tfSites.add(tfSite);
+
+            if(!tfSites.contains(tfSite)) tfSites.add(tfSite);
         } this.dmService.importAllTFSites(tfSites);
 
 
