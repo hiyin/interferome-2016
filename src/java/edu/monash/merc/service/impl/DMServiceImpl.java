@@ -1252,7 +1252,6 @@ public class DMServiceImpl implements DMService {
             if (gene != null) {
                 tfSite.setGene(gene);
                 if (StringUtils.isNotBlank(tfSite.getFactor())) {
-
                     TFSite existedTFSite = this.getTFSite(tfSite);
                     if (existedTFSite != null) {
                         tfSite.setId(existedTFSite.getId());

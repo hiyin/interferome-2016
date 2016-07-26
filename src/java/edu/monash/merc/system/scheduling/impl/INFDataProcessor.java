@@ -52,6 +52,7 @@ import edu.monash.merc.service.DMService;
 import edu.monash.merc.wsclient.biomart.BioMartClient;
 import edu.monash.merc.wsclient.biomart.CSVGeneCreator;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.hibernate.*;
@@ -160,7 +161,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         System.out.println("I am updating the CiiiDER data ...");
 
         importCiiiDERTFSite(PROBE_HUMAN_TYPE);
-        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+        //importCiiiDERTFSite(PROBE_MOUSE_TYPE);
 
         System.out.println("Completed updating the CiiiDER TFSite data!");
 
@@ -244,9 +245,11 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         
         // Read in bsl.txt 
         BufferedReader brGeneBSL = new BufferedReader(new FileReader(new File (CIIIDER_HOME + "Output/ScanTFSite/" + species + "GeneBindingSiteList.txt")));
-        String line = null;
+        // LineIterator itGeneBSL = FileUtils.lineIterator(new File (CIIIDER_HOME + "Output/ScanTFSite/" + species + "GeneBindingSiteList.txt"));
 
+        String line = null;
         while ((line = brGeneBSL.readLine()) != null) {
+            // while ((line = itGeneBSL.nextLine()) != null) {
             String[] fields = line.split(",");
             String[] identifier = fields[0].split("\\|");
             String quantifier = fields[1];
@@ -257,6 +260,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             String strand = fields[6];
             Double core_match = Double.valueOf(fields[7]);
             Double matrix_match = Double.valueOf(fields[8]);
+
 
             String geneName = identifier[0];
             String ensgAccession = identifier[1];
@@ -274,7 +278,12 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
 
             if(!tfSites.contains(tfSite)) tfSites.add(tfSite);
-        } this.dmService.importAllTFSites(tfSites);
+
+
+        }
+            System.out.println(tfSites.size());
+            this.dmService.importAllTFSites(tfSites);
+            brGeneBSL.close();
 
 
 
@@ -282,8 +291,6 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             e.printStackTrace();
         } catch (HibernateException ex) {
             ex.getCause();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
