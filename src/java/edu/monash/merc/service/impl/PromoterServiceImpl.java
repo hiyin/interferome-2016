@@ -26,23 +26,46 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package edu.monash.merc.repository;
+package edu.monash.merc.service.impl;
 
-import edu.monash.merc.common.page.Pagination;
-import edu.monash.merc.common.sql.OrderBy;
-import edu.monash.merc.domain.TFSite;
-import edu.monash.merc.domain.Gene;
+import edu.monash.merc.service.PromoterService;
+import edu.monash.merc.dao.impl.PromoterDAO;
+import edu.monash.merc.domain.Promoter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+        
 
 /**
- * IReporterRepository DAO Interface
- *
- * @author Simon Yu - Xiaoming.Yu@monash.edu
- * @version 2.0
+ * Created by dyin on 19/04/16.
  */
-public interface ITFSiteRepository {
+@Scope("prototype")
+@Service
+@Transactional
+public class PromoterServiceImpl implements PromoterService {
 
-    public Pagination<TFSite> getTFSite(int startPageNo, int recordsPerPage, OrderBy[] orderBys);
+    @Autowired
+    private PromoterDAO promoterDao;
 
-    public TFSite getTFSite(Gene gene, String factor, int start, int end, Double coreMatch, Double matrixMatch);
+    public void setPromoterDao(PromoterDAO promoterDao) {
+        this.promoterDao = promoterDao;
+    }
 
+    @Override
+    public Promoter getPromoterByEnsgAccession(String ensgAc) {return this.promoterDao.getPromoterByEnsgAccession(ensgAc);}
+
+    @Override
+    public void savePromoter(Promoter promoter) {this.promoterDao.add(promoter);}
+
+    @Override
+    public void mergePromoter(Promoter promoter) {this.promoterDao.merge(promoter);}
+
+    @Override
+    public void updatePromoter(Promoter promoter) {this.promoterDao.update(promoter);}
+
+    @Override
+    public void deletePromoter(Promoter promoter) {this.promoterDao.remove(promoter);}
+
+   
 }

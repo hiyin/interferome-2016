@@ -28,21 +28,19 @@
 
 package edu.monash.merc.repository;
 
-import edu.monash.merc.common.page.Pagination;
-import edu.monash.merc.common.sql.OrderBy;
-import edu.monash.merc.domain.TFSite;
-import edu.monash.merc.domain.Gene;
+import edu.monash.merc.domain.Promoter;
 
 /**
- * IReporterRepository DAO Interface
- *
- * @author Simon Yu - Xiaoming.Yu@monash.edu
- * @version 2.0
+ * @author Simon Yu
+ * @version 1.0
+ * @email Xiaoming.Yu@monash.edu
+ * @since 1.0
+ *        <p/>
+ *        Date: 26/06/12
+ *        Time: 10:45 PM
  */
-public interface ITFSiteRepository {
+public interface IPromoterRepository {
 
-    public Pagination<TFSite> getTFSite(int startPageNo, int recordsPerPage, OrderBy[] orderBys);
-
-    public TFSite getTFSite(Gene gene, String factor, int start, int end, Double coreMatch, Double matrixMatch);
+    public Promoter getPromoterByEnsgAccession(String ensgAccession);
 
 }

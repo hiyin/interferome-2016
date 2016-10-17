@@ -26,23 +26,27 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package edu.monash.merc.repository;
+package edu.monash.merc.dao.impl;
 
-import edu.monash.merc.common.page.Pagination;
-import edu.monash.merc.common.sql.OrderBy;
-import edu.monash.merc.domain.TFSite;
-import edu.monash.merc.domain.Gene;
+import edu.monash.merc.dao.HibernateGenericDAO;
+import edu.monash.merc.domain.Promoter;
+import edu.monash.merc.repository.IPromoterRepository;
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Repository;
 
 /**
- * IReporterRepository DAO Interface
- *
- * @author Simon Yu - Xiaoming.Yu@monash.edu
- * @version 2.0
+ * Created by dyin on 19/04/16.
  */
-public interface ITFSiteRepository {
-
-    public Pagination<TFSite> getTFSite(int startPageNo, int recordsPerPage, OrderBy[] orderBys);
-
-    public TFSite getTFSite(Gene gene, String factor, int start, int end, Double coreMatch, Double matrixMatch);
-
+@Scope("prototype")
+@Repository
+public class PromoterDAO extends HibernateGenericDAO<Promoter> implements IPromoterRepository {
+    @SuppressWarnings("unchecked")
+    @Override
+    public Promoter getPromoterByEnsgAccession(String ensgAccession) {
+        Criteria Criteria = this.session().createCriteria(this.persistClass);
+        Criteria.add(Restrictions.eq("gene.ensgAccession", ensgAccession).ignoreCase());
+        return (Promoter) Criteria.uniqueResult();
+    }
 }

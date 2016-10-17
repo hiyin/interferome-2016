@@ -28,6 +28,7 @@
 
 package edu.monash.merc.domain;
 
+import org.hibernate.annotations.ForeignKey;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Index;
 
@@ -58,6 +59,7 @@ public class TFSite extends Domain {
 
     @ManyToOne
     @JoinColumn(name = "gene_id")
+    @ForeignKey(name="fk_gene_id")
     private Gene gene;
 
     @Basic

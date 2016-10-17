@@ -30,6 +30,7 @@ package edu.monash.merc.system.scheduling.impl;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
+import com.sun.xml.internal.fastinfoset.util.StringArray;
 import com.thoughtworks.xstream.mapper.AnnotationConfiguration;
 import edu.monash.merc.common.results.DBStats;
 import edu.monash.merc.config.AppPropSettings;
@@ -40,6 +41,7 @@ import edu.monash.merc.domain.Data;
 import edu.monash.merc.domain.Gene;
 import edu.monash.merc.domain.Probe;
 import edu.monash.merc.domain.Promoter;
+import edu.monash.merc.domain.TFSite;
 import edu.monash.merc.dto.GeneOntologyBean;
 
 import edu.monash.merc.dto.ProbeGeneBean;
@@ -50,10 +52,12 @@ import edu.monash.merc.service.DMService;
 import edu.monash.merc.wsclient.biomart.BioMartClient;
 import edu.monash.merc.wsclient.biomart.CSVGeneCreator;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.hibernate.*;
 
+import org.hibernate.annotations.SourceType;
 import org.hibernate.cache.ehcache.internal.util.HibernateUtil;
 import org.hibernate.cfg.Configuration;
 
@@ -140,7 +144,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         Date importedTime = GregorianCalendar.getInstance().getTime();
 
         //Gene for HUMAN
-        //importEnsemblGenes(HUMAN, importedTime);
+        importEnsemblGenes(HUMAN, importedTime);
 
         // 9/9/15 Update promoter sequence code goes here (Hibernate read in file)
 
@@ -149,16 +153,17 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         long endTime = System.currentTimeMillis();
 
 
-        importCiiiDERPromoter(PROBE_HUMAN_TYPE);
-        importCiiiDERPromoter(PROBE_MOUSE_TYPE);
+        // importCiiiDERPromoter(PROBE_HUMAN_TYPE);
+        // importCiiiDERPromoter(PROBE_MOUSE_TYPE);
 
-
-        //importCiiiDERPromoter(SPECIES_MOUSE_ID);
 
 
         System.out.println("I am updating the CiiiDER data ...");
 
-        // importTFSite
+        importCiiiDERTFSite(PROBE_HUMAN_TYPE);
+        //importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+
+        System.out.println("Completed updating the CiiiDER TFSite data!");
 
 
         //import human and mouse probes
@@ -184,7 +189,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
     private void importCiiiDERPromoter(String species)  {
         try {
-            String runCiiiDER = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + CIIIDER_HOME + "FindPromoter/IFNGene/" + species + "ConfigFindPromoterIFN.ini";
+            String runCiiiDER = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + CIIIDER_HOME + "Config/FindPromoter/IFNGene/" + species + "ConfigFindPromoterIFN.ini";
             Process processCiiiDER = Runtime.getRuntime().exec(runCiiiDER);
             processCiiiDER.waitFor();
 
@@ -195,6 +200,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             List<Promoter> promoters = new ArrayList<Promoter>();
             Promoter promoter = new Promoter();
 
+
             BufferedReader brGeneEnsgs = new BufferedReader(new FileReader(new File(CIIIDER_HOME + "Output/FindPromoter/IFNGene/" + species + "IFNGenePromoter.fa")));
 
             String line = null;
@@ -204,8 +210,14 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
                     String geneName = identifier[0].replaceFirst(">","");
                     String ensgAccession = identifier[1];
                     promoter = new Promoter();
+                    Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
+
+                    promoter.setGene(gene);
+                    // String linked_gene_ensgAccession = promoter.getGene().getEnsgAccession();
+                    // System.out.println(linked_gene_ensgAccession);
                     promoter.setGeneName(geneName);
-                    promoter.setEnsgAccession(ensgAccession);
+                    // promoter.setEnsgAccession(ensgAccession);
+                    // promoter.setEnsgAccession(gene.getEnsgAccession());
                 } else if (!line.equals("")) {
                     promoter.setSequence(line);
                     if(!promoters.contains(promoter)) promoters.add(promoter);
@@ -219,6 +231,66 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             ex.getCause();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+
+    private void importCiiiDERTFSite (String species) {
+        try {
+        // Pre-run CiiiDER if bsl.txt file not available
+
+        // Create TFSite array to store TFSite
+        List<TFSite> tfSites = new ArrayList<TFSite>();
+        TFSite tfSite = new TFSite();
+        
+        // Read in bsl.txt 
+        BufferedReader brGeneBSL = new BufferedReader(new FileReader(new File (CIIIDER_HOME + "Output/ScanTFSite/" + species + "GeneBindingSiteList.txt")));
+        // LineIterator itGeneBSL = FileUtils.lineIterator(new File (CIIIDER_HOME + "Output/ScanTFSite/" + species + "GeneBindingSiteList.txt"));
+
+        String line = null;
+        while ((line = brGeneBSL.readLine()) != null) {
+            // while ((line = itGeneBSL.nextLine()) != null) {
+            String[] fields = line.split(",");
+            String[] identifier = fields[0].split("\\|");
+            String quantifier = fields[1];
+            String factor = fields[2];
+            String factor_index = fields[3];
+            int start = Integer.valueOf(fields[4]);
+            int end = Integer.valueOf(fields[5]);
+            String strand = fields[6];
+            Double core_match = Double.valueOf(fields[7]);
+            Double matrix_match = Double.valueOf(fields[8]);
+
+
+            String geneName = identifier[0];
+            String ensgAccession = identifier[1];
+
+            tfSite = new TFSite();
+
+            Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
+            tfSite.setGene(gene);
+            tfSite.setFactor(factor);
+            tfSite.setStart(start);
+            tfSite.setEnd(end);
+            tfSite.setCoreMatch(core_match);
+            tfSite.setMatrixMatch(matrix_match);
+            tfSite.setEnsemblID(ensgAccession);
+
+
+            if(!tfSites.contains(tfSite)) tfSites.add(tfSite);
+
+
+        }
+            System.out.println(tfSites.size());
+            this.dmService.importAllTFSites(tfSites);
+            brGeneBSL.close();
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (HibernateException ex) {
+            ex.getCause();
         }
     }
 

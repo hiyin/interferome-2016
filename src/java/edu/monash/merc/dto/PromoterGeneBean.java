@@ -26,23 +26,45 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package edu.monash.merc.repository;
+package edu.monash.merc.dto;
 
-import edu.monash.merc.common.page.Pagination;
-import edu.monash.merc.common.sql.OrderBy;
-import edu.monash.merc.domain.TFSite;
-import edu.monash.merc.domain.Gene;
+import java.io.Serializable;
 
 /**
- * IReporterRepository DAO Interface
- *
- * @author Simon Yu - Xiaoming.Yu@monash.edu
- * @version 2.0
+ * Created by mimr on 1/25/16.
  */
-public interface ITFSiteRepository {
+public class PromoterGeneBean implements Serializable {
 
-    public Pagination<TFSite> getTFSite(int startPageNo, int recordsPerPage, OrderBy[] orderBys);
+    private String ensgAccession;
 
-    public TFSite getTFSite(Gene gene, String factor, int start, int end, Double coreMatch, Double matrixMatch);
+    private String Id;
 
+    private String sequence;
+
+    private String gene_name;
+
+
+    public String getEnsgAccession() {
+        return ensgAccession;
+    }
+
+    public void setEnsgAccession(String ensgAccession) {
+        this.ensgAccession = ensgAccession;
+    }
+
+    public String getSequence() {
+        return sequence;
+    }
+
+    public void setSequence(String sequence) {
+        this.sequence = sequence;
+    }
+
+    public String getGene_name() {
+        return gene_name;
+    }
+
+    public void setGene_name(String gene_name) {
+        this.gene_name = gene_name;
+    }
 }

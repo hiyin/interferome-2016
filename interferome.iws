@@ -1,0 +1,1754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" line="590" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61b110dd-75e9-429a-8da3-757de140a9d5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interferome.iml" afterPath="$PROJECT_DIR$/interferome.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interferome.iws" afterPath="$PROJECT_DIR$/interferome.iws" />
+    </list>
+    <ignored path="interferome.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/build/classes/" />
+    <ignored path="$PROJECT_DIR$/build/utest/classes/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="interferome" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="TfSiteDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/TfSiteDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#4607#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="726" column="48" selection-start-line="726" selection-start-column="16" selection-end-line="726" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#132378#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#124879#124880#0" expanded="false" />
+                <element signature="e#124912#124913#0" expanded="false" />
+                <element signature="e#124977#124978#0" expanded="false" />
+                <element signature="e#125021#125022#0" expanded="false" />
+                <element signature="e#125074#125075#0" expanded="false" />
+                <element signature="e#125110#125111#0" expanded="false" />
+                <element signature="e#125181#125182#0" expanded="false" />
+                <element signature="e#125231#125232#0" expanded="false" />
+                <element signature="e#125283#125284#0" expanded="false" />
+                <element signature="e#125318#125319#0" expanded="false" />
+                <element signature="e#125387#125388#0" expanded="false" />
+                <element signature="e#125435#125436#0" expanded="false" />
+                <element signature="e#125485#125486#0" expanded="false" />
+                <element signature="e#125518#125519#0" expanded="false" />
+                <element signature="e#125583#125584#0" expanded="false" />
+                <element signature="e#125627#125628#0" expanded="false" />
+                <element signature="e#125676#125677#0" expanded="false" />
+                <element signature="e#125708#125709#0" expanded="false" />
+                <element signature="e#125771#125772#0" expanded="false" />
+                <element signature="e#125813#125814#0" expanded="false" />
+                <element signature="e#125861#125862#0" expanded="false" />
+                <element signature="e#125892#125893#0" expanded="false" />
+                <element signature="e#125953#125954#0" expanded="false" />
+                <element signature="e#125993#125994#0" expanded="false" />
+                <element signature="e#126040#126041#0" expanded="false" />
+                <element signature="e#126070#126071#0" expanded="false" />
+                <element signature="e#126129#126130#0" expanded="false" />
+                <element signature="e#126167#126168#0" expanded="false" />
+                <element signature="e#126218#126219#0" expanded="false" />
+                <element signature="e#126252#126253#0" expanded="false" />
+                <element signature="e#126319#126320#0" expanded="false" />
+                <element signature="e#126365#126366#0" expanded="false" />
+                <element signature="e#126416#126417#0" expanded="false" />
+                <element signature="e#126450#126451#0" expanded="false" />
+                <element signature="e#126517#126518#0" expanded="false" />
+                <element signature="e#126563#126564#0" expanded="false" />
+                <element signature="e#126609#126610#0" expanded="false" />
+                <element signature="e#126638#126639#0" expanded="false" />
+                <element signature="e#126695#126696#0" expanded="false" />
+                <element signature="e#126731#126732#0" expanded="false" />
+                <element signature="e#126783#126784#0" expanded="false" />
+                <element signature="e#126818#126819#0" expanded="false" />
+                <element signature="e#126887#126888#0" expanded="false" />
+                <element signature="e#126935#126936#0" expanded="false" />
+                <element signature="e#126986#126987#0" expanded="false" />
+                <element signature="e#127020#127021#0" expanded="false" />
+                <element signature="e#127087#127088#0" expanded="false" />
+                <element signature="e#127133#127134#0" expanded="false" />
+                <element signature="e#127174#127175#0" expanded="false" />
+                <element signature="e#127207#127208#0" expanded="false" />
+                <element signature="e#127263#127264#0" expanded="false" />
+                <element signature="e#127307#127308#0" expanded="false" />
+                <element signature="e#127342#127343#0" expanded="false" />
+                <element signature="e#127373#127374#0" expanded="false" />
+                <element signature="e#127422#127423#0" expanded="false" />
+                <element signature="e#127462#127463#0" expanded="false" />
+                <element signature="e#127524#127525#0" expanded="false" />
+                <element signature="e#127561#127562#0" expanded="false" />
+                <element signature="e#127642#127643#0" expanded="false" />
+                <element signature="e#127694#127695#0" expanded="false" />
+                <element signature="e#127730#127731#0" expanded="false" />
+                <element signature="e#127762#127763#0" expanded="false" />
+                <element signature="e#127812#127813#0" expanded="false" />
+                <element signature="e#127854#127855#0" expanded="false" />
+                <element signature="e#127896#127897#0" expanded="false" />
+                <element signature="e#127934#127935#0" expanded="false" />
+                <element signature="e#127997#127998#0" expanded="false" />
+                <element signature="e#128051#128052#0" expanded="false" />
+                <element signature="e#128090#128091#0" expanded="false" />
+                <element signature="e#128125#128126#0" expanded="false" />
+                <element signature="e#128181#128182#0" expanded="false" />
+                <element signature="e#128229#128230#0" expanded="false" />
+                <element signature="e#128267#128268#0" expanded="false" />
+                <element signature="e#128301#128302#0" expanded="false" />
+                <element signature="e#128355#128356#0" expanded="false" />
+                <element signature="e#128401#128402#0" expanded="false" />
+                <element signature="e#128440#128441#0" expanded="false" />
+                <element signature="e#128475#128476#0" expanded="false" />
+                <element signature="e#128531#128532#0" expanded="false" />
+                <element signature="e#128579#128580#0" expanded="false" />
+                <element signature="e#128618#128619#0" expanded="false" />
+                <element signature="e#128653#128654#0" expanded="false" />
+                <element signature="e#128709#128710#0" expanded="false" />
+                <element signature="e#128757#128758#0" expanded="false" />
+                <element signature="e#128790#128791#0" expanded="false" />
+                <element signature="e#128819#128820#0" expanded="false" />
+                <element signature="e#128863#128864#0" expanded="false" />
+                <element signature="e#128899#128900#0" expanded="false" />
+                <element signature="e#128937#128938#0" expanded="false" />
+                <element signature="e#128971#128972#0" expanded="false" />
+                <element signature="e#129025#129026#0" expanded="false" />
+                <element signature="e#129071#129072#0" expanded="false" />
+                <element signature="e#129117#129118#0" expanded="false" />
+                <element signature="e#129154#129155#0" expanded="false" />
+                <element signature="e#129219#129220#0" expanded="false" />
+                <element signature="e#129271#129272#0" expanded="false" />
+                <element signature="e#129314#129315#0" expanded="false" />
+                <element signature="e#129348#129349#0" expanded="false" />
+                <element signature="e#129407#129408#0" expanded="false" />
+                <element signature="e#129453#129454#0" expanded="false" />
+                <element signature="e#129498#129499#0" expanded="false" />
+                <element signature="e#129539#129540#0" expanded="false" />
+                <element signature="e#129607#129608#0" expanded="false" />
+                <element signature="e#129667#129668#0" expanded="false" />
+                <element signature="e#129701#129702#0" expanded="false" />
+                <element signature="e#129734#129735#0" expanded="false" />
+                <element signature="e#129783#129784#0" expanded="false" />
+                <element signature="e#129827#129828#0" expanded="false" />
+                <element signature="e#129861#129862#0" expanded="false" />
+                <element signature="e#129894#129895#0" expanded="false" />
+                <element signature="e#129943#129944#0" expanded="false" />
+                <element signature="e#129987#129988#0" expanded="false" />
+                <element signature="e#130024#130025#0" expanded="false" />
+                <element signature="e#130057#130058#0" expanded="false" />
+                <element signature="e#130109#130110#0" expanded="false" />
+                <element signature="e#130153#130154#0" expanded="false" />
+                <element signature="e#130207#130208#0" expanded="false" />
+                <element signature="e#130244#130245#0" expanded="false" />
+                <element signature="e#130317#130318#0" expanded="false" />
+                <element signature="e#130369#130370#0" expanded="false" />
+                <element signature="e#130422#130423#0" expanded="false" />
+                <element signature="e#130460#130461#0" expanded="false" />
+                <element signature="e#130533#130534#0" expanded="false" />
+                <element signature="e#130587#130588#0" expanded="false" />
+                <element signature="e#130638#130639#0" expanded="false" />
+                <element signature="e#130675#130676#0" expanded="false" />
+                <element signature="e#130745#130746#0" expanded="false" />
+                <element signature="e#130797#130798#0" expanded="false" />
+                <element signature="e#130850#130851#0" expanded="false" />
+                <element signature="e#130885#130886#0" expanded="false" />
+                <element signature="e#130955#130956#0" expanded="false" />
+                <element signature="e#131003#131004#0" expanded="false" />
+                <element signature="e#131063#131064#0" expanded="false" />
+                <element signature="e#131096#131097#0" expanded="false" />
+                <element signature="e#131171#131172#0" expanded="false" />
+                <element signature="e#131215#131216#0" expanded="false" />
+                <element signature="e#131265#131266#0" expanded="false" />
+                <element signature="e#131302#131303#0" expanded="false" />
+                <element signature="e#131370#131371#0" expanded="false" />
+                <element signature="e#131422#131423#0" expanded="false" />
+                <element signature="e#131471#131472#0" expanded="false" />
+                <element signature="e#131512#131513#0" expanded="false" />
+                <element signature="e#131584#131585#0" expanded="false" />
+                <element signature="e#131644#131645#0" expanded="false" />
+                <element signature="e#131684#131685#0" expanded="false" />
+                <element signature="e#131718#131719#0" expanded="false" />
+                <element signature="e#131774#131775#0" expanded="false" />
+                <element signature="e#131820#131821#0" expanded="false" />
+                <element signature="e#131890#131891#0" expanded="false" />
+                <element signature="e#131936#131937#0" expanded="false" />
+                <element signature="e#132006#132007#0" expanded="false" />
+                <element signature="e#132052#132053#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchDataDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="870" column="40" selection-start-line="870" selection-start-column="40" selection-end-line="870" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#79767#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#33860#33861#0" expanded="false" />
+                <element signature="e#33895#33896#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="INFDataProcessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="268" column="0" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+              <folding>
+                <element signature="e#4762#4763#0" expanded="false" />
+                <element signature="e#4804#4805#0" expanded="false" />
+                <element signature="e#4865#4866#0" expanded="false" />
+                <element signature="e#4909#4910#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HibernateGenericDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/HibernateGenericDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#4404#0" expanded="false" />
+                <element signature="e#2891#2892#0" expanded="false" />
+                <element signature="e#2943#2944#0" expanded="false" />
+                <element signature="e#2975#2976#0" expanded="false" />
+                <element signature="e#3037#3038#0" expanded="false" />
+                <element signature="e#3084#3085#0" expanded="false" />
+                <element signature="e#3127#3128#0" expanded="false" />
+                <element signature="e#3205#3206#0" expanded="false" />
+                <element signature="e#3273#3274#0" expanded="false" />
+                <element signature="e#3323#3324#0" expanded="false" />
+                <element signature="e#3368#3369#0" expanded="false" />
+                <element signature="e#3418#3419#0" expanded="false" />
+                <element signature="e#3463#3464#0" expanded="false" />
+                <element signature="e#3512#3513#0" expanded="false" />
+                <element signature="e#3556#3557#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="merc.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/merc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/conf/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.85066164">
+              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/hibernate.cfg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/jdbc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ldap.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/ldap.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Angela Yin" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/UserIDGenerator.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/repository/ISearchDataRepository.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/UserAction.java" />
+        <option value="$PROJECT_DIR$/src/webapp/web/search/search_tfsite_result.ftl" />
+        <option value="$PROJECT_DIR$/conf/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/PromoterService.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dto/PromoterBean.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/repository/IGeneRepository.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/GeneService.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/HibernateGenericDAO.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/DBGene.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/DBGenesDAO.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/DBStatisticAction.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/GeneServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DBStatisticsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/DBStatisticsService.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Probe.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/SearchDataService.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/SearchDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dto/PromoterGeneBean.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/repository/IPromoterRepository.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/PromoterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/webcontent/css/merc.css" />
+        <option value="$PROJECT_DIR$/conf/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java" />
+        <option value="$PROJECT_DIR$/conf/merc.properties" />
+        <option value="$PROJECT_DIR$/dist/tmp/interferome/WEB-INF/classes/merc.properties" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/GeneDAO.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/DMService.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/TfSiteDAO.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/repository/ITFSiteRepository.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/TFSiteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java" />
+        <option value="$PROJECT_DIR$/conf/applicationContext.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interferome-master-2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3816092" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/interferome.ipr" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="ReadonlyStatusHandler">
+    <option name="SHOW_DIALOG" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.monash.merc.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Interferome">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="Interferome" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.24" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <file path="$PROJECT_DIR$/deploy/interferome">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_interferome_6" />
+        <option name="JNDI_PORT" value="9999" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59313" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="AntTarget" enabled="true" antfile="file://$PROJECT_DIR$/build.xml" target="generate-dist-test-deploy-dir" />
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Interferome" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61b110dd-75e9-429a-8da3-757de140a9d5" name="Default" comment="" />
+      <created>1441696127834</created>
+      <option name="number" value="Default" />
+      <updated>1441696127834</updated>
+      <workItem from="1441696128406" duration="3398000" />
+      <workItem from="1441783838781" duration="10000" />
+      <workItem from="1441783870102" duration="78000" />
+      <workItem from="1441784188103" duration="347000" />
+      <workItem from="1441784563274" duration="513000" />
+      <workItem from="1441785329036" duration="1605000" />
+      <workItem from="1441939774544" duration="10764000" />
+      <workItem from="1441951996337" duration="859000" />
+      <workItem from="1451966489632" duration="625000" />
+      <workItem from="1451967158036" duration="51000" />
+      <workItem from="1451967315681" duration="4758000" />
+      <workItem from="1452209250405" duration="977000" />
+      <workItem from="1452213319483" duration="4700000" />
+      <workItem from="1452220899131" duration="5372000" />
+      <workItem from="1452477773935" duration="986000" />
+      <workItem from="1452482412453" duration="2062000" />
+      <workItem from="1452566608548" duration="4513000" />
+      <workItem from="1452573023982" duration="2730000" />
+      <workItem from="1452646406090" duration="20190000" />
+      <workItem from="1452815211406" duration="21521000" />
+      <workItem from="1453089761689" duration="115000" />
+      <workItem from="1453161800638" duration="20511000" />
+      <workItem from="1453336206432" duration="17554000" />
+      <workItem from="1453420003883" duration="596000" />
+      <workItem from="1453433559552" duration="1574000" />
+      <workItem from="1453688775330" duration="251000" />
+      <workItem from="1453689055423" duration="58000" />
+      <workItem from="1453689148330" duration="372000" />
+      <workItem from="1453689549679" duration="6176000" />
+      <workItem from="1453941393463" duration="8263000" />
+      <workItem from="1453949709325" duration="12000" />
+      <workItem from="1453958807938" duration="1941000" />
+      <workItem from="1454457136350" duration="2760000" />
+      <workItem from="1454898070244" duration="10672000" />
+      <workItem from="1455156409548" duration="9030000" />
+      <workItem from="1455495762116" duration="11596000" />
+      <workItem from="1455599160336" duration="3639000" />
+      <workItem from="1456272070779" duration="16862000" />
+      <workItem from="1460933066466" duration="99000" />
+      <workItem from="1460934209634" duration="732000" />
+      <workItem from="1460941316372" duration="417000" />
+      <workItem from="1460988987023" duration="111000" />
+      <workItem from="1460989201831" duration="2587000" />
+      <workItem from="1461037389223" duration="26420000" />
+      <workItem from="1461211078647" duration="181000" />
+      <workItem from="1461327095028" duration="98000" />
+      <workItem from="1461328112411" duration="516000" />
+      <workItem from="1461422399400" duration="197000" />
+      <workItem from="1461422840841" duration="2459000" />
+      <workItem from="1461427369005" duration="173000" />
+      <workItem from="1461428771889" duration="151000" />
+      <workItem from="1461430816744" duration="467000" />
+      <workItem from="1461431788817" duration="27000" />
+      <workItem from="1461432235093" duration="145000" />
+      <workItem from="1461433401461" duration="905000" />
+      <workItem from="1461496381279" duration="1913000" />
+      <workItem from="1461728440868" duration="149000" />
+      <workItem from="1461824200507" duration="529000" />
+      <workItem from="1462164750100" duration="4051000" />
+      <workItem from="1463391221500" duration="1245000" />
+      <workItem from="1463570051002" duration="734000" />
+      <workItem from="1463615457286" duration="2027000" />
+      <workItem from="1466267804119" duration="39000" />
+      <workItem from="1466329544885" duration="1406000" />
+      <workItem from="1466494971799" duration="1392000" />
+      <workItem from="1467001650500" duration="2373000" />
+      <workItem from="1467011181043" duration="372000" />
+      <workItem from="1467011695694" duration="906000" />
+      <workItem from="1467742257837" duration="3189000" />
+      <workItem from="1468301227827" duration="455000" />
+      <workItem from="1468556267566" duration="21245000" />
+      <workItem from="1468743096503" duration="1136000" />
+      <workItem from="1468748668740" duration="7933000" />
+      <workItem from="1468802109101" duration="32921000" />
+      <workItem from="1469228550123" duration="2724000" />
+      <workItem from="1469349860905" duration="32000" />
+      <workItem from="1469531801433" duration="1891000" />
+      <workItem from="1470220104004" duration="484000" />
+      <workItem from="1470739077636" duration="2008000" />
+      <workItem from="1471580258145" duration="194000" />
+      <workItem from="1471867720678" duration="110000" />
+      <workItem from="1472014805295" duration="204000" />
+      <workItem from="1475737814106" duration="110000" />
+      <workItem from="1476684832607" duration="583000" />
+      <workItem from="1476685805817" duration="42000" />
+      <workItem from="1476686981286" duration="1839000" />
+    </task>
+    <task id="LOCAL-00001" summary="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)">
+      <created>1461074977399</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1461074977399</updated>
+    </task>
+    <task id="LOCAL-00002" summary="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)">
+      <created>1461076690480</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461076690480</updated>
+    </task>
+    <task id="LOCAL-00003" summary="# Repush (solved mysql issue: column restriction on sequence when importing promoter)&#10;# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root &#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)">
+      <created>1463570519752</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1463570519752</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="327408000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="873" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33674777" sideWeight="0.4635193" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47631243" sideWeight="0.81772333" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25224072" sideWeight="0.32188842" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31609195" sideWeight="0.48775217" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18097281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25224072" sideWeight="0.6781116" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42637643" sideWeight="0.46541786" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
+    <MESSAGE value="# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root&#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
+    <MESSAGE value="# Repush (solved mysql issue: column restriction on sequence when importing promoter)&#10;# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root &#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
+    <option name="LAST_COMMIT_MESSAGE" value="# Repush (solved mysql issue: column restriction on sequence when importing promoter)&#10;# Local development in Angela's Mac laptop&#10;   JDBC Config: user=root &#10;   CiiiDER HOME: /Users/dyin/InCiiiDER/CiiiDER&#10;   &#10;&#10;# implemented import Promoter successfully&#10;   (Not linked with gene table)&#10;   (Not start with id 1 in promoter table)&#10;   &#10;  *changed following files&#10;   Promoter.java&#10;   PromoterService.java&#10;   PromoterServiceImpl.java&#10;   IPromoterRepository.java&#10;   PromoterDAO.java&#10;   DBService.java&#10;   DBServiceImpl.java&#10;   - removed update statement in importPromoter function (if included this will trigger &quot;On the release bash it still contains JDBC statement&quot; hibernate warning)&#10;   &#10;# Solved problem when search genes only contain one species (&quot;Failed to search transcription factor&quot; now solved)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java</url>
+          <line>687</line>
+          <properties />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java</url>
+          <line>708</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java</url>
+          <line>1261</line>
+          <properties />
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java</url>
+          <line>1249</line>
+          <properties />
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java</url>
+          <line>284</line>
+          <properties />
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java</url>
+          <line>250</line>
+          <properties />
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="205" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="line" language="JAVA" custom="" />
+        <watch expression="line.length()" language="JAVA" custom="" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="clean-all" isVisible="false" />
+        <filter targetName="prepare" isVisible="false" />
+        <filter targetName="compile" isVisible="true" />
+        <filter targetName="generate-dev-test-deploy-dir" isVisible="false" />
+        <filter targetName="sync-dev-web-to-tomcat" isVisible="false" />
+        <filter targetName="generate-dist-dir" isVisible="false" />
+        <filter targetName="prepare-dist" isVisible="false" />
+        <filter targetName="dist-war" isVisible="true" />
+        <filter targetName="generate-dist-test-deploy-dir" isVisible="false" />
+        <filter targetName="export-db-schema" isVisible="true" />
+        <filter targetName="utest_compile" isVisible="false" />
+        <filter targetName="utest" isVisible="true" />
+        <filter targetName="generate.src.tar" isVisible="false" />
+        <filter targetName="generate-javadoc" isVisible="false" />
+        <filter targetName="zip-javadoc" isVisible="false" />
+      </targetFilters>
+      <verbose value="false" />
+      <expanded value="true" />
+    </buildFile>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/AdvisedSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33261803">
+          <caret line="366" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/UserType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26977688">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/PromoterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/GeneService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/repository/IPromoterRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/GeneServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/repository/IGeneRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/GeneDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="42" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Probe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/PromoterDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Gene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="37" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Domain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3882353">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/PromoterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23904383">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7211155">
+          <caret line="245" column="0" selection-start-line="242" selection-start-column="4" selection-end-line="248" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dto/TfSiteCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21428572">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/Promoter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.context-3.1.1.RELEASE.jar!/org/springframework/scheduling/support/DelegatingErrorHandlingRunnable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.037037">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.context-3.1.1.RELEASE.jar!/org/springframework/scheduling/concurrent/ReschedulingRunnable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35714287">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/commons-lang-2.5.jar!/org/apache/commons/lang/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.814815">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5925927">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.transaction-3.1.1.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4814816">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/interceptor/ExposeInvocationInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.259259">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4814816">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/TFSiteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/web/search/search_tfsite_result.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.25">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/web/data/import_tfsite.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2506204">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/tmp/interferome/web/template/jquery_header.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.15384616">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/TFSiteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="160" selection-start-line="103" selection-start-column="160" selection-end-line="103" selection-end-column="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.aop-3.1.1.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.814815">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/commons-io-2.0.1.jar!/org/apache/commons/io/LineIterator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33150685">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/core_lib/org.springframework.context-3.1.1.RELEASE.jar!/org/springframework/scheduling/support/ScheduledMethodRunnable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45753425">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8392857">
+          <caret line="1102" column="0" selection-start-line="1102" selection-start-column="0" selection-end-line="1102" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/net/PlainSocketImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35875705">
+          <caret line="573" column="24" selection-start-line="573" selection-start-column="24" selection-end-line="573" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Thread.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5847458">
+          <caret line="637" column="0" selection-start-line="637" selection-start-column="0" selection-end-line="637" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/util/tfsite/ImportTFSiteThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="69" selection-start-line="91" selection-start-column="69" selection-end-line="91" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/wsclient/biomart/BioMartClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/DMService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="221" column="96" selection-start-line="221" selection-start-column="96" selection-end-line="221" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/service/impl/DMServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1253" column="65" selection-start-line="1253" selection-start-column="65" selection-end-line="1253" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/domain/TFSite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#4044#0" expanded="false" />
+            <element signature="e#2943#2944#0" expanded="false" />
+            <element signature="e#2968#2969#0" expanded="false" />
+            <element signature="e#3002#3003#0" expanded="false" />
+            <element signature="e#3030#3031#0" expanded="false" />
+            <element signature="e#3059#3060#0" expanded="false" />
+            <element signature="e#3086#3087#0" expanded="false" />
+            <element signature="e#3185#3186#0" expanded="false" />
+            <element signature="e#3213#3214#0" expanded="false" />
+            <element signature="e#3252#3253#0" expanded="false" />
+            <element signature="e#3286#3287#0" expanded="false" />
+            <element signature="e#3313#3314#0" expanded="false" />
+            <element signature="e#3339#3340#0" expanded="false" />
+            <element signature="e#3374#3375#0" expanded="false" />
+            <element signature="e#3404#3405#0" expanded="false" />
+            <element signature="e#3440#3441#0" expanded="false" />
+            <element signature="e#3472#3473#0" expanded="false" />
+            <element signature="e#3522#3523#0" expanded="false" />
+            <element signature="e#3564#3565#0" expanded="false" />
+            <element signature="e#3602#3603#0" expanded="false" />
+            <element signature="e#3636#3637#0" expanded="false" />
+            <element signature="e#3690#3691#0" expanded="false" />
+            <element signature="e#3736#3737#0" expanded="false" />
+            <element signature="e#3769#3770#0" expanded="false" />
+            <element signature="e#3798#3799#0" expanded="false" />
+            <element signature="e#3842#3843#0" expanded="false" />
+            <element signature="e#3878#3879#0" expanded="false" />
+            <element signature="e#3914#3915#0" expanded="false" />
+            <element signature="e#3946#3947#0" expanded="false" />
+            <element signature="e#3996#3997#0" expanded="false" />
+            <element signature="e#4038#4039#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/repository/ITFSiteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="110" selection-start-line="45" selection-start-column="110" selection-end-line="45" selection-end-column="110" />
+          <folding>
+            <element signature="e#0#2189#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/TfSiteDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#4607#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/struts2/action/SearchAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="726" column="48" selection-start-line="726" selection-start-column="16" selection-end-line="726" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#132378#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#124879#124880#0" expanded="false" />
+            <element signature="e#124912#124913#0" expanded="false" />
+            <element signature="e#124977#124978#0" expanded="false" />
+            <element signature="e#125021#125022#0" expanded="false" />
+            <element signature="e#125074#125075#0" expanded="false" />
+            <element signature="e#125110#125111#0" expanded="false" />
+            <element signature="e#125181#125182#0" expanded="false" />
+            <element signature="e#125231#125232#0" expanded="false" />
+            <element signature="e#125283#125284#0" expanded="false" />
+            <element signature="e#125318#125319#0" expanded="false" />
+            <element signature="e#125387#125388#0" expanded="false" />
+            <element signature="e#125435#125436#0" expanded="false" />
+            <element signature="e#125485#125486#0" expanded="false" />
+            <element signature="e#125518#125519#0" expanded="false" />
+            <element signature="e#125583#125584#0" expanded="false" />
+            <element signature="e#125627#125628#0" expanded="false" />
+            <element signature="e#125676#125677#0" expanded="false" />
+            <element signature="e#125708#125709#0" expanded="false" />
+            <element signature="e#125771#125772#0" expanded="false" />
+            <element signature="e#125813#125814#0" expanded="false" />
+            <element signature="e#125861#125862#0" expanded="false" />
+            <element signature="e#125892#125893#0" expanded="false" />
+            <element signature="e#125953#125954#0" expanded="false" />
+            <element signature="e#125993#125994#0" expanded="false" />
+            <element signature="e#126040#126041#0" expanded="false" />
+            <element signature="e#126070#126071#0" expanded="false" />
+            <element signature="e#126129#126130#0" expanded="false" />
+            <element signature="e#126167#126168#0" expanded="false" />
+            <element signature="e#126218#126219#0" expanded="false" />
+            <element signature="e#126252#126253#0" expanded="false" />
+            <element signature="e#126319#126320#0" expanded="false" />
+            <element signature="e#126365#126366#0" expanded="false" />
+            <element signature="e#126416#126417#0" expanded="false" />
+            <element signature="e#126450#126451#0" expanded="false" />
+            <element signature="e#126517#126518#0" expanded="false" />
+            <element signature="e#126563#126564#0" expanded="false" />
+            <element signature="e#126609#126610#0" expanded="false" />
+            <element signature="e#126638#126639#0" expanded="false" />
+            <element signature="e#126695#126696#0" expanded="false" />
+            <element signature="e#126731#126732#0" expanded="false" />
+            <element signature="e#126783#126784#0" expanded="false" />
+            <element signature="e#126818#126819#0" expanded="false" />
+            <element signature="e#126887#126888#0" expanded="false" />
+            <element signature="e#126935#126936#0" expanded="false" />
+            <element signature="e#126986#126987#0" expanded="false" />
+            <element signature="e#127020#127021#0" expanded="false" />
+            <element signature="e#127087#127088#0" expanded="false" />
+            <element signature="e#127133#127134#0" expanded="false" />
+            <element signature="e#127174#127175#0" expanded="false" />
+            <element signature="e#127207#127208#0" expanded="false" />
+            <element signature="e#127263#127264#0" expanded="false" />
+            <element signature="e#127307#127308#0" expanded="false" />
+            <element signature="e#127342#127343#0" expanded="false" />
+            <element signature="e#127373#127374#0" expanded="false" />
+            <element signature="e#127422#127423#0" expanded="false" />
+            <element signature="e#127462#127463#0" expanded="false" />
+            <element signature="e#127524#127525#0" expanded="false" />
+            <element signature="e#127561#127562#0" expanded="false" />
+            <element signature="e#127642#127643#0" expanded="false" />
+            <element signature="e#127694#127695#0" expanded="false" />
+            <element signature="e#127730#127731#0" expanded="false" />
+            <element signature="e#127762#127763#0" expanded="false" />
+            <element signature="e#127812#127813#0" expanded="false" />
+            <element signature="e#127854#127855#0" expanded="false" />
+            <element signature="e#127896#127897#0" expanded="false" />
+            <element signature="e#127934#127935#0" expanded="false" />
+            <element signature="e#127997#127998#0" expanded="false" />
+            <element signature="e#128051#128052#0" expanded="false" />
+            <element signature="e#128090#128091#0" expanded="false" />
+            <element signature="e#128125#128126#0" expanded="false" />
+            <element signature="e#128181#128182#0" expanded="false" />
+            <element signature="e#128229#128230#0" expanded="false" />
+            <element signature="e#128267#128268#0" expanded="false" />
+            <element signature="e#128301#128302#0" expanded="false" />
+            <element signature="e#128355#128356#0" expanded="false" />
+            <element signature="e#128401#128402#0" expanded="false" />
+            <element signature="e#128440#128441#0" expanded="false" />
+            <element signature="e#128475#128476#0" expanded="false" />
+            <element signature="e#128531#128532#0" expanded="false" />
+            <element signature="e#128579#128580#0" expanded="false" />
+            <element signature="e#128618#128619#0" expanded="false" />
+            <element signature="e#128653#128654#0" expanded="false" />
+            <element signature="e#128709#128710#0" expanded="false" />
+            <element signature="e#128757#128758#0" expanded="false" />
+            <element signature="e#128790#128791#0" expanded="false" />
+            <element signature="e#128819#128820#0" expanded="false" />
+            <element signature="e#128863#128864#0" expanded="false" />
+            <element signature="e#128899#128900#0" expanded="false" />
+            <element signature="e#128937#128938#0" expanded="false" />
+            <element signature="e#128971#128972#0" expanded="false" />
+            <element signature="e#129025#129026#0" expanded="false" />
+            <element signature="e#129071#129072#0" expanded="false" />
+            <element signature="e#129117#129118#0" expanded="false" />
+            <element signature="e#129154#129155#0" expanded="false" />
+            <element signature="e#129219#129220#0" expanded="false" />
+            <element signature="e#129271#129272#0" expanded="false" />
+            <element signature="e#129314#129315#0" expanded="false" />
+            <element signature="e#129348#129349#0" expanded="false" />
+            <element signature="e#129407#129408#0" expanded="false" />
+            <element signature="e#129453#129454#0" expanded="false" />
+            <element signature="e#129498#129499#0" expanded="false" />
+            <element signature="e#129539#129540#0" expanded="false" />
+            <element signature="e#129607#129608#0" expanded="false" />
+            <element signature="e#129667#129668#0" expanded="false" />
+            <element signature="e#129701#129702#0" expanded="false" />
+            <element signature="e#129734#129735#0" expanded="false" />
+            <element signature="e#129783#129784#0" expanded="false" />
+            <element signature="e#129827#129828#0" expanded="false" />
+            <element signature="e#129861#129862#0" expanded="false" />
+            <element signature="e#129894#129895#0" expanded="false" />
+            <element signature="e#129943#129944#0" expanded="false" />
+            <element signature="e#129987#129988#0" expanded="false" />
+            <element signature="e#130024#130025#0" expanded="false" />
+            <element signature="e#130057#130058#0" expanded="false" />
+            <element signature="e#130109#130110#0" expanded="false" />
+            <element signature="e#130153#130154#0" expanded="false" />
+            <element signature="e#130207#130208#0" expanded="false" />
+            <element signature="e#130244#130245#0" expanded="false" />
+            <element signature="e#130317#130318#0" expanded="false" />
+            <element signature="e#130369#130370#0" expanded="false" />
+            <element signature="e#130422#130423#0" expanded="false" />
+            <element signature="e#130460#130461#0" expanded="false" />
+            <element signature="e#130533#130534#0" expanded="false" />
+            <element signature="e#130587#130588#0" expanded="false" />
+            <element signature="e#130638#130639#0" expanded="false" />
+            <element signature="e#130675#130676#0" expanded="false" />
+            <element signature="e#130745#130746#0" expanded="false" />
+            <element signature="e#130797#130798#0" expanded="false" />
+            <element signature="e#130850#130851#0" expanded="false" />
+            <element signature="e#130885#130886#0" expanded="false" />
+            <element signature="e#130955#130956#0" expanded="false" />
+            <element signature="e#131003#131004#0" expanded="false" />
+            <element signature="e#131063#131064#0" expanded="false" />
+            <element signature="e#131096#131097#0" expanded="false" />
+            <element signature="e#131171#131172#0" expanded="false" />
+            <element signature="e#131215#131216#0" expanded="false" />
+            <element signature="e#131265#131266#0" expanded="false" />
+            <element signature="e#131302#131303#0" expanded="false" />
+            <element signature="e#131370#131371#0" expanded="false" />
+            <element signature="e#131422#131423#0" expanded="false" />
+            <element signature="e#131471#131472#0" expanded="false" />
+            <element signature="e#131512#131513#0" expanded="false" />
+            <element signature="e#131584#131585#0" expanded="false" />
+            <element signature="e#131644#131645#0" expanded="false" />
+            <element signature="e#131684#131685#0" expanded="false" />
+            <element signature="e#131718#131719#0" expanded="false" />
+            <element signature="e#131774#131775#0" expanded="false" />
+            <element signature="e#131820#131821#0" expanded="false" />
+            <element signature="e#131890#131891#0" expanded="false" />
+            <element signature="e#131936#131937#0" expanded="false" />
+            <element signature="e#132006#132007#0" expanded="false" />
+            <element signature="e#132052#132053#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/impl/SearchDataDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="870" column="40" selection-start-line="870" selection-start-column="40" selection-end-line="870" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#79767#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#33860#33861#0" expanded="false" />
+            <element signature="e#33895#33896#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="268" column="0" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+          <folding>
+            <element signature="e#4762#4763#0" expanded="false" />
+            <element signature="e#4804#4805#0" expanded="false" />
+            <element signature="e#4865#4866#0" expanded="false" />
+            <element signature="e#4909#4910#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/edu/monash/merc/dao/HibernateGenericDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#4404#0" expanded="false" />
+            <element signature="e#2891#2892#0" expanded="false" />
+            <element signature="e#2943#2944#0" expanded="false" />
+            <element signature="e#2975#2976#0" expanded="false" />
+            <element signature="e#3037#3038#0" expanded="false" />
+            <element signature="e#3084#3085#0" expanded="false" />
+            <element signature="e#3127#3128#0" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="e#3273#3274#0" expanded="false" />
+            <element signature="e#3323#3324#0" expanded="false" />
+            <element signature="e#3368#3369#0" expanded="false" />
+            <element signature="e#3418#3419#0" expanded="false" />
+            <element signature="e#3463#3464#0" expanded="false" />
+            <element signature="e#3512#3513#0" expanded="false" />
+            <element signature="e#3556#3557#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/merc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/ldap.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85066164">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>interferome</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3816092" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Hibernate|interferome</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -26,23 +26,55 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package edu.monash.merc.repository;
+package edu.monash.merc.service;
 
 import edu.monash.merc.common.page.Pagination;
 import edu.monash.merc.common.sql.OrderBy;
-import edu.monash.merc.domain.TFSite;
-import edu.monash.merc.domain.Gene;
+import edu.monash.merc.domain.Promoter;
+
+import java.util.List;
 
 /**
- * IReporterRepository DAO Interface
- *
- * @author Simon Yu - Xiaoming.Yu@monash.edu
- * @version 2.0
+ * Created by mimr on 1/13/16.
  */
-public interface ITFSiteRepository {
 
-    public Pagination<TFSite> getTFSite(int startPageNo, int recordsPerPage, OrderBy[] orderBys);
+public interface PromoterService {
 
-    public TFSite getTFSite(Gene gene, String factor, int start, int end, Double coreMatch, Double matrixMatch);
+    /**
+     * Save a Promoter
+     *
+     * @param promoter a Promoter object
+     */
+    void savePromoter(Promoter promoter);
+
+    /**
+     * Merge a Promoter object
+     *
+     * @param promoter a Promoter object
+     */
+    void mergePromoter(Promoter promoter);
+
+    /**
+     * Update a Promoter object
+     *
+     * @param promoter a Promoter object
+     */
+    void updatePromoter(Promoter promoter);
+
+    /**
+     * Delete a Promoter object
+     *
+     * @param promoter a Promoter object
+     */
+    void deletePromoter(Promoter promoter);
+
+    /**
+     * Get the Promoter by an ensembl accession id
+     *
+     * @param ensgAccession an ensembl accession id
+     * @return a Promoter
+     */
+    public Promoter getPromoterByEnsgAccession(String ensgAccession);
+
 
 }

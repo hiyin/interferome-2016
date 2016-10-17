@@ -27,6 +27,7 @@
  */
 package edu.monash.merc.service.impl;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import edu.monash.merc.common.page.Pagination;
 import edu.monash.merc.common.results.SearchResultRow;
 import edu.monash.merc.common.service.file.FileSystemSerivce;
@@ -1234,6 +1235,10 @@ public class DMServiceImpl implements DMService {
     public TFSite getTFSite(TFSite tfSite) {
         return this.tfSiteService.getTFSite(tfSite);
     }
+    @Override
+    public TFSite getTFSiteById(Long id) {
+        return this.tfSiteService.getTFSiteById(id);
+    }
 
     @Override
     public TfSiteCounter importAllTFSites(List<TFSite> tfSites) {
@@ -1251,7 +1256,8 @@ public class DMServiceImpl implements DMService {
                     if (existedTFSite != null) {
                         tfSite.setId(existedTFSite.getId());
                         // this.mergeReporter(reporter);
-                        this.updateTFSite(tfSite);
+                        // this.updateTFSite(tfSite);
+                        this.mergeTFSite(tfSite);
                         //count how many reporters have been updated
                         countUpdated++;
                     } else {
@@ -1707,16 +1713,21 @@ public class DMServiceImpl implements DMService {
     public void deletePromoter(Promoter promoter) { this.promoterService.deletePromoter(promoter); }
 
     @Override
-    public Promoter getPromoterByEnsgAccession(String ensgAccession) { return this.promoterService.getPromoterByEnsgAccession(ensgAccession); }
+    public Promoter getPromoterByEnsgAccession(String ensgAccession) {
+        return this.promoterService.getPromoterByEnsgAccession(ensgAccession); }
 
     @Override
     public void importPromoter(List<Promoter> promoters) {
+
         if (promoters != null) {
             for (Promoter promoter: promoters) {
-                    Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
+
+                    // Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
+                    Promoter foundPromoter = this.getPromoterByEnsgAccession(promoter.getGene().getEnsgAccession());
+                    // ToDo: decide what to do if there is promoter?
                     if (foundPromoter != null) {
-                        // promoter.setId(promoter.getId());
-                        // this.updatePromoter(promoter);
+                         promoter.setId(foundPromoter.getId());
+                         this.mergePromoter(promoter);
                     } else {
                         // Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
                         this.savePromoter(promoter);
@@ -1726,23 +1737,7 @@ public class DMServiceImpl implements DMService {
         }
 
     }
-    }
-
-/*    public void importPromoter(List<Promoter> promoters) {
-        if (promoters != null) {
-            for (Promoter promoter: promoters) {
-                Promoter foundPromoter = this.promoterService.getPromoterByEnsgAccession(promoter.getEnsgAccession());
-                if (foundPromoter != null) {
-                    promoter.setId(promoter.getId());
-                    this.mergePromoter(promoter);
-                } else {
-                    this.savePromoter(promoter);
-                }
-
-            }
-        }
-
-    }*/
+}
 
 
 
