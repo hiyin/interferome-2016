@@ -33,7 +33,7 @@ Classes have been modified:
 - src/java/edu/monash/merc/struts2/action/SearchAction.java 
 - src/java/edu/monash/merc/dao/impl/SearchDataDAO.java
 - src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java
-- classes have moderate change - 
+### classes have moderate change 
 - src/java/edu/monash/merc/domain/TFSite.java
 - src/java/edu/monash/merc/dao/impl/TfSiteDAO.java
 - src/java/edu/monash/merc/service/impl/TFSiteServiceImpl.java
