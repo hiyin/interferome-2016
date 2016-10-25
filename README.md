@@ -7,11 +7,12 @@ CiiiDER: Java-based Transcription Factor Enrichment Analysis bioinformatics soft
 CiiiDER is aimed to empower existing transcription factor analysis with statistical analysis, triggered by clicking "TF Analysis" tab embedded in INTERFEROME top menu.
 
 ## How INTERFEROME works
-INTERFEROME is a online bioinformatics database/web app that has several components 
-1. database (data model)
-2. web user interface
-3. backend (Java)
-Web workflow: User makes search request to interferome web app -> retrieve data from interferome database based on request -> Data being sent as input and analyzed by CiiiDER into statstical results -> extract and parse CiiiDER results in interferome backend -> generate graphical results upon user query.
+> INTERFEROME is a online bioinformatics database/web app that has several components 
+- database (data model)
+- web user interface
+- backend (Java)
+
+> Web workflow: User makes search request to interferome web app -> retrieve data from interferome database based on request -> Data being sent as input and analyzed by CiiiDER into statstical results -> extract and parse CiiiDER results in interferome backend -> generate graphical results upon user query.
 
 ## Improvement in data processing/user search performance
 Traditionally interferome parse CiiiDER's results in text files that are stored data locally (on server), which is inefficient as Java reading and writing text files takes time, later CiiiDER's input and results are moved to interferome local database, with modification in logic that handles this process, also implementing relevant classes (ORM by Hibernate) to direct query from database. 
