@@ -14,7 +14,9 @@ INTERFEROME is a online bioinformatics database/web app that has several compone
 Web workflow: User makes search request to interferome web app -> retrieve data from interferome database based on request -> Data being sent as input and analyzed by CiiiDER into statstical results -> extract and parse CiiiDER results in interferome backend -> generate graphical results upon user query.
 
 ## Improvement in data processing/user search performance
-Traditionally interferome parse CiiiDER's results in text files that are stored data locally (on server), which is inefficient as Java reading and writing text files takes time, later CiiiDER's input and results are moved to interferome local database, with modification in logic that handles this process, also implementing relevant classes (ORM by Hibernate) to direct query from database. This whole CiiiDER analysis involves use of gene, promoter and tfsite tables as CiiiDER requires them to be input to generate results (i.e. enriched transcription factor site), because gene table are updated timely (therefore promoter table), automating the updating of those tables then needs additional logic to serve. The upgrade work then separates to three iterations as below.
+Traditionally interferome parse CiiiDER's results in text files that are stored data locally (on server), which is inefficient as Java reading and writing text files takes time, later CiiiDER's input and results are moved to interferome local database, with modification in logic that handles this process, also implementing relevant classes (ORM by Hibernate) to direct query from database. 
+
+This whole CiiiDER analysis involves use of gene, promoter and tfsite tables as CiiiDER requires them to be input to generate results (i.e. enriched transcription factor site), because gene table are updated timely (therefore promoter table), automating the updating of those tables then needs additional logic to serve. The upgrade work then separates to three iterations as below.
 
 ## Development Iteration:
 Iteration 1 (Jul-Sept 2015): Integrate CiiiDER and Interferome
@@ -25,25 +27,25 @@ Trello board (task tracker): https://trello.com/b/MYtni3w9/interferomev2-1-upgra
 Note: the board only contains records for Iteration 2 and 3, 
 for Iteration 1 work please refer to single document that contains complete log: see https://trello.com/c/nzp3tD2w/24-monash-interferome-upgrade-agenda attached pdf)
 
-This is a working copy of Interferome from Angela
+## Modification to Interferome
 Classes have been modified: 
-- classes have large change - 
-src/java/edu/monash/merc/struts2/action/SearchAction.java 
-src/java/edu/monash/merc/dao/impl/SearchDataDAO.java
-src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java
+### classes have large change - 
+- src/java/edu/monash/merc/struts2/action/SearchAction.java 
+- src/java/edu/monash/merc/dao/impl/SearchDataDAO.java
+- src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java
 - classes have moderate change - 
-src/java/edu/monash/merc/domain/TFSite.java
-src/java/edu/monash/merc/dao/impl/TfSiteDAO.java
-src/java/edu/monash/merc/service/impl/TFSiteServiceImpl.java
-src/java/edu/monash/merc/repository/ITFSiteRepository.java
-src/java/edu/monash/merc/service/impl/DMServiceImpl.java
-src/java/edu/monash/merc/service/DMService.java
+- src/java/edu/monash/merc/domain/TFSite.java
+- src/java/edu/monash/merc/dao/impl/TfSiteDAO.java
+- src/java/edu/monash/merc/service/impl/TFSiteServiceImpl.java
+- src/java/edu/monash/merc/repository/ITFSiteRepository.java
+- src/java/edu/monash/merc/service/impl/DMServiceImpl.java
+- src/java/edu/monash/merc/service/DMService.java
 
-Classes created:
-src/java/edu/monash/merc/domain/Promoter.java 
-src/java/edu/monash/merc/dao/impl/PromoterDAO.java
-src/java/edu/monash/merc/service/PromoterService.java
-src/java/edu/monash/merc/service/impl/PromoterServiceImpl.java
-src/java/edu/monash/merc/repository/IPromoterRepository.java
+### Classes created:
+- src/java/edu/monash/merc/domain/Promoter.java 
+- src/java/edu/monash/merc/dao/impl/PromoterDAO.java
+- src/java/edu/monash/merc/service/PromoterService.java
+- src/java/edu/monash/merc/service/impl/PromoterServiceImpl.java
+- src/java/edu/monash/merc/repository/IPromoterRepository.java
 
 
