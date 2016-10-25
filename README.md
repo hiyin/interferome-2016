@@ -25,13 +25,14 @@ Traditionally interferome parse CiiiDER's results in text files that are stored 
 This whole CiiiDER analysis involves use of gene, promoter and tfsite tables as CiiiDER requires them to be input to generate results (i.e. enriched transcription factor site), because gene table are updated timely (therefore promoter table), automating the updating of those tables then needs additional logic to serve. The upgrade work then separates to three iterations as below.
 
 ## Development Iteration:
-Iteration 1 (Jul-Sept 2015): Integrate CiiiDER and Interferome
-Iteration 2 (Jan-Feb 2016): Optimising data processing/query for user search performance
-Iteration 3 (July-present 2016): Automating updating database and detailed code documentation (comments)
+- Iteration 1 (Jul-Sept 2015): Integrate CiiiDER and Interferome
+- Iteration 2 (Jan-Feb 2016): Optimising data processing/query for user search performance
+- Iteration 3 (July-present 2016): Automating updating database and detailed code documentation (comments)
 
 Trello board (task tracker): https://trello.com/b/MYtni3w9/interferomev2-1-upgrade
-Note: the board only contains records for Iteration 2 and 3, 
-for Iteration 1 work please refer to single document that contains complete log: see https://trello.com/c/nzp3tD2w/24-monash-interferome-upgrade-agenda attached pdf)
+Note: 
+- the board only contains records for Iteration 2 and 3
+- for Iteration 1 records please refer to single document that contains complete log: see https://trello.com/c/nzp3tD2w/24-monash-interferome-upgrade-agenda attached pdf)
 
 ## Modification to Interferome
 ### classes have large change
