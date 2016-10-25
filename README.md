@@ -28,11 +28,11 @@ Note: the board only contains records for Iteration 2 and 3,
 for Iteration 1 work please refer to single document that contains complete log: see https://trello.com/c/nzp3tD2w/24-monash-interferome-upgrade-agenda attached pdf)
 
 ## Modification to Interferome
-Classes have been modified: 
-### classes have large change - 
+### classes have large change
 - src/java/edu/monash/merc/struts2/action/SearchAction.java 
 - src/java/edu/monash/merc/dao/impl/SearchDataDAO.java
 - src/java/edu/monash/merc/system/scheduling/impl/INFDataProcessor.java
+
 ### classes have moderate change 
 - src/java/edu/monash/merc/domain/TFSite.java
 - src/java/edu/monash/merc/dao/impl/TfSiteDAO.java
