@@ -697,20 +697,16 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
     public void createCiiiDERBackgroundGeneList (List<Probe> probes, String userDirCiiiDER) throws  IOException {
         // Pagination<Probe> uniqueProbesPages = searchProbes(searchBean, startPageNo, -1, orderBy, sortBy);
 
-        String goBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession NOT IN (SELECT g.ensgAccession FROM Gene g INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes))";
-        Query goBgGeneQuery = this.session().createQuery(goBgGeneHQL);
-        goBgGeneQuery.setParameterList(("probes"), probes);
-        goBgGeneQuery.setMaxResults(2500);
-        List<String> goBgGeneList = goBgGeneQuery.list();
-        ArrayList<String> HsBgGeneList = new ArrayList<String>();
-        ArrayList<String> MmBgGeneList = new ArrayList<String>();
-        for (String ensgAccession : goBgGeneList) {
-            if (ensgAccession.startsWith("ENSG")) HsBgGeneList.add(ensgAccession);
-            if (ensgAccession.startsWith("ENSMUSG")) MmBgGeneList.add(ensgAccession);
-        }
 
-        FileUtils.writeLines(new File(userDirCiiiDER + "MmBackgroundGeneList.txt"), MmBgGeneList);
-        FileUtils.writeLines(new File(userDirCiiiDER + "HsBackgroundGeneList.txt"), HsBgGeneList);
+
+        String HsBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT g.ensgAccession FROM Gene g INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) AND g.ensgAccession LIKE 'ENSG%')";
+        String MmBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSMUSG%' AND g.ensgAccession  NOT IN (SELECT g.ensgAccession FROM Gene g INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) AND g.ensgAccession LIKE 'ENSMUSG%')";
+
+        List<String> HsBgGenes = this.session().createQuery(HsBgGeneHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
+        List<String> MmBgGenes = this.session().createQuery(MmBgGeneHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
+
+        FileUtils.writeLines(new File(userDirCiiiDER + "MmBackgroundGeneList.txt"), MmBgGenes);
+        FileUtils.writeLines(new File(userDirCiiiDER + "HsBackgroundGeneList.txt"), HsBgGenes);
         System.out.println("Creating background genes ...");
     }
     /**
@@ -768,16 +764,6 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
                     Double matr_match = ((TFSite)row[1]).getMatrixMatch();
                     int start = ((TFSite)row[1]).getStart();
                     int end = ((TFSite)row[1]).getEnd();
-
-
-
-
-
-
-
-
-
-
                     if (!HsQueryEnsgsList.contains(ensgAccession) && ensgAccession.startsWith("ENSG")) {
                         HsQueryEnsgsList.add(ensgAccession);
                     }
