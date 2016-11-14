@@ -51,6 +51,7 @@ import edu.monash.merc.system.scheduling.DataProcessor;
 import edu.monash.merc.service.DMService;
 import edu.monash.merc.wsclient.biomart.BioMartClient;
 import edu.monash.merc.wsclient.biomart.CSVGeneCreator;
+import org.apache.axis2.transport.http.util.SOAPUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
 import org.apache.commons.lang.StringUtils;
@@ -164,8 +165,12 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
 
         System.out.println("Updating the CiiiDER genome files ...");
-        downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
-        downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
+        // downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
+        // downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
+
+        System.out.println("Updating the CiiiDER genome gtf files ...");
+        downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
+        downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
 
         System.out.println("I am updating the CiiiDER data ...");
 
@@ -345,11 +350,57 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
                 outputStream.close();
                 inputStream.close();
 
-                System.out.println("File downloaded");
+                System.out.println("Genome file downloaded");
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
         }
+
+    private void downloadCiiiDERGenomeGTF (String species) {
+
+        int BUFFER_SIZE = 8192;
+        String ftpUrl = "ftp://%s:%s@%s/%s;type=i";
+        String ftpFilePath = null;
+        String host = "ftp.ensembl.org";
+        String user = "anonymous";
+        String pass = "anonymous";
+        String savePath = null;
+
+        if (species == PROBE_HUMAN_TYPE) {
+            ftpFilePath = "/pub/current_gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz";
+            savePath = CIIIDER_INPUT + "/Homo_sapiens.GRCh38.86.gtf.gz";
+
+        }
+        if (species == PROBE_MOUSE_TYPE) {
+            ftpFilePath = "/pub/current_gtf/mus_musculus/Mus_musculus.GRCm38.86.gtf.gz";
+            savePath = CIIIDER_INPUT + "/Mus_musculus.GRCm38.86.gtf.gz";
+        }
+
+        ftpUrl = String.format(ftpUrl, user, pass, host, ftpFilePath);
+        System.out.println("URL: " + ftpUrl);
+
+        try {
+            URL url = new URL(ftpUrl);
+            URLConnection conn = url.openConnection();
+            InputStream inputStream = conn.getInputStream();
+
+            FileOutputStream outputStream = new FileOutputStream(savePath);
+
+            byte[] buffer = new byte[BUFFER_SIZE];
+            int bytesRead = -1;
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
+            }
+
+            outputStream.close();
+            inputStream.close();
+
+            System.out.println("GTF file downloaded");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
 
 
     private void importEnsemblGenes(String species, Date importedTime) {
