@@ -114,6 +114,8 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
     public static String CIIIDER_HOME = SearchDataDAO.CIIIDER_HOME;
 
+    public static String CIIIDER_INPUT = SearchDataDAO.CIIIDER_INPUT;
+
     private static String MOUSE = "mmusculus_gene_ensembl";
 
     private static String HUMAN = "hsapiens_gene_ensembl";
