@@ -52,6 +52,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.*;
 import java.io.*;
+import java.io.FileWriter;
+import org.apache.commons.io.FileUtils;
 /**
  * SearchDataDAO class which provides searching functionality for Data domain object
  *
@@ -691,6 +693,26 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
         return coeff;
     }
 
+
+    public void createCiiiDERBackgroundGeneList (List<Probe> probes, String userDirCiiiDER) throws  IOException {
+        // Pagination<Probe> uniqueProbesPages = searchProbes(searchBean, startPageNo, -1, orderBy, sortBy);
+
+        String goBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession NOT IN (SELECT g.ensgAccession FROM Gene g INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes))";
+        Query goBgGeneQuery = this.session().createQuery(goBgGeneHQL);
+        goBgGeneQuery.setParameterList(("probes"), probes);
+        goBgGeneQuery.setMaxResults(2500);
+        List<String> goBgGeneList = goBgGeneQuery.list();
+        ArrayList<String> HsBgGeneList = new ArrayList<String>();
+        ArrayList<String> MmBgGeneList = new ArrayList<String>();
+        for (String ensgAccession : goBgGeneList) {
+            if (ensgAccession.startsWith("ENSG")) HsBgGeneList.add(ensgAccession);
+            if (ensgAccession.startsWith("ENSMUSG")) MmBgGeneList.add(ensgAccession);
+        }
+
+        FileUtils.writeLines(new File(userDirCiiiDER + "MmBackgroundGeneList.txt"), MmBgGeneList);
+        FileUtils.writeLines(new File(userDirCiiiDER + "HsBackgroundGeneList.txt"), HsBgGeneList);
+        System.out.println("Creating background genes ...");
+    }
     /**
      * InCiiiDER: searchTFSite method which direct sent-back search results to CiiiDER for TF analysis
      * @author: Danqing (Angela) Yin - angela.yin@hudson.org.au
@@ -723,11 +745,12 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
 
 
             try {
-                // uid stands for userId to provide path for user temp file of running CiiiDER to get result of TF Analysis
 
+                // uid stands for userId to provide path for user temp file of running CiiiDER to get result of TF Analysis
 
                 String userDir = CIIIDER_USER + userCiiiDERId + "/"; // make directory for userID
                 File userFolder = new File(userDir); userFolder.mkdirs();
+                createCiiiDERBackgroundGeneList(probes, userDir);
 
                 BufferedWriter HsEnrichConfig = new BufferedWriter(new FileWriter(new File(userDir + "HumanConfigMain.ini")));
                 BufferedWriter MmEnrichConfig = new BufferedWriter(new FileWriter(new File(userDir + "MouseConfigMain.ini")));
