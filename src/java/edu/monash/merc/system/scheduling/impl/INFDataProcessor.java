@@ -91,7 +91,11 @@ import java.util.ArrayList;
 
 import java.util.List;
 import java.util.logging.Level;
-
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
 
 /**
  * @author Simon Yu
@@ -146,7 +150,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         Date importedTime = GregorianCalendar.getInstance().getTime();
 
         //Gene for HUMAN
-        importEnsemblGenes(HUMAN, importedTime);
+        // importEnsemblGenes(HUMAN, importedTime);
 
         // 9/9/15 Update promoter sequence code goes here (Hibernate read in file)
 
@@ -159,11 +163,14 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         // importCiiiDERPromoter(PROBE_MOUSE_TYPE);
 
 
+        System.out.println("Updating the CiiiDER genome files ...");
+        downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
+        downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
 
         System.out.println("I am updating the CiiiDER data ...");
 
-        importCiiiDERTFSite(PROBE_HUMAN_TYPE);
-        //importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+        // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
+        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
 
         System.out.println("Completed updating the CiiiDER TFSite data!");
 
@@ -295,6 +302,55 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             ex.getCause();
         }
     }
+
+
+
+
+    private void downloadCiiiDERGenome (String species) {
+
+            int BUFFER_SIZE = 8192;
+            String ftpUrl = "ftp://%s:%s@%s/%s;type=i";
+            String ftpFilePath = null;
+            String host = "ftp.ensembl.org";
+            String user = "anonymous";
+            String pass = "anonymous";
+            String savePath = null;
+
+            if (species == PROBE_HUMAN_TYPE) {
+                ftpFilePath = "/pub/current_fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.toplevel.fa.gz";
+                savePath = CIIIDER_INPUT + "/Homo_sapiens.GRCh38.dna.toplevel.fa.gz";
+
+            }
+            if (species == PROBE_MOUSE_TYPE) {
+                ftpFilePath = "/pub/current_fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.toplevel.fa.gz";
+                savePath = CIIIDER_INPUT + "/Mus_musculus.GRCm38.dna.toplevel.fa.gz";
+            }
+
+            ftpUrl = String.format(ftpUrl, user, pass, host, ftpFilePath);
+            System.out.println("URL: " + ftpUrl);
+
+            try {
+                URL url = new URL(ftpUrl);
+                URLConnection conn = url.openConnection();
+                InputStream inputStream = conn.getInputStream();
+
+                FileOutputStream outputStream = new FileOutputStream(savePath);
+
+                byte[] buffer = new byte[BUFFER_SIZE];
+                int bytesRead = -1;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+
+                outputStream.close();
+                inputStream.close();
+
+                System.out.println("File downloaded");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+
 
     private void importEnsemblGenes(String species, Date importedTime) {
         BioMartClient client = null;
