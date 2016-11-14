@@ -27,9 +27,9 @@
  */
 
 package edu.monash.merc.system.scheduling.impl;
-
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
+// JDBC connection packages imports are changed to sql's
+import java.sql.Connection;
+import java.sql.Statement;
 import com.sun.xml.internal.fastinfoset.util.StringArray;
 import com.thoughtworks.xstream.mapper.AnnotationConfiguration;
 import edu.monash.merc.common.results.DBStats;
@@ -84,6 +84,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.swing.*;
 import java.util.*;
+
 
 // SearchDAO impl
 
@@ -158,7 +159,8 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         //Gene for MOUSE
         //importEnsemblGenes(MOUSE, importedTime);
         long endTime = System.currentTimeMillis();
-
+        System.out.println("Updating the CiiiDER gene list data");
+        exportCiiiDERGeneList(PROBE_HUMAN_TYPE);
 
         // importCiiiDERPromoter(PROBE_HUMAN_TYPE);
         // importCiiiDERPromoter(PROBE_MOUSE_TYPE);
@@ -169,8 +171,8 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         // downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
 
         System.out.println("Updating the CiiiDER genome gtf files ...");
-        downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
-        downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
+        // downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
+        // downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
 
         System.out.println("I am updating the CiiiDER data ...");
 
@@ -401,6 +403,44 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         }
     }
 
+    private void exportCiiiDERGeneList(String species) {
+        // Export geneAccession from Interferome to update promoter information
+        String host = "localhost";
+        String username = "mimr";
+        String password = "";
+        String database = "infdev2";
+        String query = "SELECT DISTINCT g.ensg_accession FROM gene g, probe_gene pg, probe p, data d WHERE g.id = pg.gene_id and pg.probe_id = p.id and p.id = d.probe_id and d.data_value not between -2 and 2 and g.ensg_accession LIKE 'ENSG%' LIMIT 1000000";
+        // Changed imported package jdbc.connection to sql.Connection 15 Nov 16
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection geneConnect = null;
+
+            geneConnect = DriverManager.getConnection("jdbc:mysql://" + host + "/" + database + "?"
+                    + "user=" + username + "&password=" + password + "");
+            Statement geneStmt = geneConnect.createStatement();
+
+            ResultSet geneResult = geneStmt.executeQuery(query);
+
+            ArrayList<String> geneEnsgAccessionList = new ArrayList<String>();
+            while (geneResult.next()) {
+                String geneEnsgAccession = geneResult.getString("ensg_accession");
+                geneEnsgAccessionList.add(geneEnsgAccession);
+            }
+            File geneList = new File(CIIIDER_INPUT + "GeneList.txt");
+            FileUtils.writeLines(geneList, geneEnsgAccessionList, "\n");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception ex) {
+            // handle the error
+        }
+
+    }
 
 
     private void importEnsemblGenes(String species, Date importedTime) {
