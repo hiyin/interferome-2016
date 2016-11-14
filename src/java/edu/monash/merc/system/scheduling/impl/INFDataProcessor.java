@@ -161,6 +161,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         long endTime = System.currentTimeMillis();
         System.out.println("Updating the CiiiDER gene list data");
         exportCiiiDERGeneList(PROBE_HUMAN_TYPE);
+        exportCiiiDERGeneList(PROBE_MOUSE_TYPE);
 
         // importCiiiDERPromoter(PROBE_HUMAN_TYPE);
         // importCiiiDERPromoter(PROBE_MOUSE_TYPE);
@@ -409,7 +410,14 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         String username = "mimr";
         String password = "";
         String database = "infdev2";
-        String query = "SELECT DISTINCT g.ensg_accession FROM gene g, probe_gene pg, probe p, data d WHERE g.id = pg.gene_id and pg.probe_id = p.id and p.id = d.probe_id and d.data_value not between -2 and 2 and g.ensg_accession LIKE 'ENSG%' LIMIT 1000000";
+        String query = null;
+
+        if (species == PROBE_HUMAN_TYPE) {
+            query = "SELECT DISTINCT g.ensg_accession FROM gene g, probe_gene pg, probe p, data d WHERE g.id = pg.gene_id and pg.probe_id = p.id and p.id = d.probe_id and d.data_value not between -2 and 2 and g.ensg_accession LIKE 'ENSG%' LIMIT 1000000";
+        }
+        if (species == PROBE_MOUSE_TYPE) {
+            query = "SELECT DISTINCT g.ensg_accession FROM gene g, probe_gene pg, probe p, data d WHERE g.id = pg.gene_id and pg.probe_id = p.id and p.id = d.probe_id and d.data_value not between -2 and 2 and g.ensg_accession LIKE 'ENSMUSG%' LIMIT 1000000";
+        }
         // Changed imported package jdbc.connection to sql.Connection 15 Nov 16
 
         try {
@@ -427,7 +435,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
                 String geneEnsgAccession = geneResult.getString("ensg_accession");
                 geneEnsgAccessionList.add(geneEnsgAccession);
             }
-            File geneList = new File(CIIIDER_INPUT + "GeneList.txt");
+            File geneList = new File(CIIIDER_INPUT + species + "IFNGeneList.txt");
             FileUtils.writeLines(geneList, geneEnsgAccessionList, "\n");
 
         } catch (IOException e) {
