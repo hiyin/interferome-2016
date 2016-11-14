@@ -778,10 +778,10 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
 
 
 
-                    if(!HsQueryEnsgsList.contains(ensgAccession) && ensgAccession.startsWith("ENSG")) {
+                    if (!HsQueryEnsgsList.contains(ensgAccession) && ensgAccession.startsWith("ENSG")) {
                         HsQueryEnsgsList.add(ensgAccession);
                     }
-                    else {
+                    if (!MmQueryEnsgsList.contains(ensgAccession) && ensgAccession.startsWith("ENSMUSG")) {
                         MmQueryEnsgsList.add(ensgAccession);
                     }
 
