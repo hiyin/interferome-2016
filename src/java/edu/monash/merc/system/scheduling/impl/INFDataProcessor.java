@@ -455,10 +455,10 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
 
         if (species == PROBE_HUMAN_TYPE) {
-            query = "SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -2 and 2 and g.ensgAccession LIKE 'ENSG%'";
+            query = "SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%'";
         }
         if (species == PROBE_MOUSE_TYPE) {
-            query = "SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -2 and 2 and g.ensgAccession LIKE 'ENSMUSG%'";
+            query = "SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%'";
         }
 
         try {
