@@ -172,12 +172,12 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
 
         System.out.println("Updating the CiiiDER genome files ...");
-        // downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
-        // downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
+        downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
+        downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
 
         System.out.println("Updating the CiiiDER genome gtf files ...");
         downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
-        // downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
+        downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
 
         System.out.println("I am updating the CiiiDER data ...");
 
@@ -322,26 +322,35 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
             int BUFFER_SIZE = 8192;
             String ftpUrl = "ftp://%s:%s@%s/%s;type=i";
-            String ftpFilePath = null;
+            String ftpFileLocation = null;
+            String ftpFilename = null;
             String host = "ftp.ensembl.org";
             String user = "anonymous";
             String pass = "anonymous";
             String savePath = null;
 
+            try {
+
+            FTPClient ftpClient = new FTPClient();
+            ftpClient.connect(host, 21);
+            ftpClient.login(user, pass);
+
             if (species == PROBE_HUMAN_TYPE) {
-                ftpFilePath = "/pub/current_fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.toplevel.fa.gz";
+                ftpFileLocation = "/pub/current_fasta/homo_sapiens/dna/";
+                ftpFilename = getFTPFilePath(ftpClient, ftpFileLocation, "Homo_sapiens.*.dna.toplevel.fa.gz");
                 savePath = CIIIDER_INPUT + "/Homo_sapiens.GRCh38.dna.toplevel.fa.gz";
-
             }
+
             if (species == PROBE_MOUSE_TYPE) {
-                ftpFilePath = "/pub/current_fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.toplevel.fa.gz";
-                savePath = CIIIDER_INPUT + "/Mus_musculus.GRCm38.dna.toplevel.fa.gz";
+                ftpFileLocation = "/pub/current_fasta/mus_musculus/dna/";
+                ftpFilename = getFTPFilePath(ftpClient, ftpFileLocation, "Mus_musculus.*.dna.toplevel.fa.gz");
+                savePath = CIIIDER_INPUT + ftpFilename;
+
             }
 
-            ftpUrl = String.format(ftpUrl, user, pass, host, ftpFilePath);
+            ftpUrl = String.format(ftpUrl, user, pass, host, ftpFileLocation + ftpFilename);
             System.out.println("URL: " + ftpUrl);
 
-            try {
                 URL url = new URL(ftpUrl);
                 URLConnection conn = url.openConnection();
                 InputStream inputStream = conn.getInputStream();
