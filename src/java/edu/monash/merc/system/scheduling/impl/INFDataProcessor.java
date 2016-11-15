@@ -364,14 +364,14 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         }
 
     private String getFTPFilePath(FTPClient ftpClient, String ftpFileLocation, String pattern) {
-        String ftpFilePath = null;
+        String ftpFilename = null;
         try {
             FTPFile[] files = ftpClient.listFiles(ftpFileLocation);
             for (FTPFile file : files) {
                 System.out.println(file.getName());
                 if (file.getName().matches(pattern)) {
                     System.out.println("Matched: " + file.getName());
-                    ftpFilePath = ftpFileLocation + file.getName();
+                    ftpFilename = file.getName();
                 }
 
             }
@@ -381,18 +381,20 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             ex.printStackTrace();
         }
 
-        return ftpFilePath;
+        return ftpFilename;
     }
 
     private void downloadCiiiDERGenomeGTF (String species) {
 
         int BUFFER_SIZE = 8192;
         String ftpUrl = "ftp://%s:%s@%s/%s;type=i";
-        String ftpFilePath = null;
+        String ftpFileLocation = null;
+        String ftpFilename = null;
         String host = "ftp.ensembl.org";
         String user = "anonymous";
         String pass = "anonymous";
         String savePath = null;
+
 
         try {
 
@@ -401,18 +403,18 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             ftpClient.login(user, pass);
 
             if (species == PROBE_HUMAN_TYPE) {
-                String ftpFileLocation = "/pub/current_gtf/homo_sapiens/";
-                String pattern = "Homo_sapiens.*.[0-9*].gtf.gz";
-                ftpFilePath = getFTPFilePath(ftpClient, ftpFileLocation, pattern);
-                savePath = CIIIDER_INPUT + "/Homo_sapiens.GRCh38.86.gtf.gz";
-
+                ftpFileLocation = "/pub/current_gtf/homo_sapiens/";
+                ftpFilename = getFTPFilePath(ftpClient, ftpFileLocation, "Homo_sapiens.*.[0-9*].gtf.gz");
+                savePath = CIIIDER_INPUT + ftpFilename;
             }
+
             if (species == PROBE_MOUSE_TYPE) {
-                ftpFilePath = "/pub/current_gtf/mus_musculus/Mus_musculus.GRCm38.86.gtf.gz";
-                savePath = CIIIDER_INPUT + "/Mus_musculus.GRCm38.86.gtf.gz";
+                ftpFileLocation = "/pub/current_gtf/mus_musculus/";
+                ftpFilename = getFTPFilePath(ftpClient, ftpFileLocation, "Mus_musculus.*.[0-9*].gtf.gz");
+                savePath = CIIIDER_INPUT + ftpFilename;
             }
 
-        ftpUrl = String.format(ftpUrl, user, pass, host, ftpFilePath);
+        ftpUrl = String.format(ftpUrl, user, pass, host, ftpFileLocation + ftpFilename);
 
         System.out.println("URL: " + ftpUrl);
 
