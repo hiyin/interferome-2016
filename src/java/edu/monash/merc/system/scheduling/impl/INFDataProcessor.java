@@ -30,6 +30,7 @@ package edu.monash.merc.system.scheduling.impl;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 import com.sun.xml.internal.fastinfoset.util.StringArray;
+import com.thoughtworks.xstream.io.path.Path;
 import com.thoughtworks.xstream.mapper.AnnotationConfiguration;
 import edu.monash.merc.common.results.DBStats;
 import edu.monash.merc.config.AppPropSettings;
@@ -54,6 +55,8 @@ import org.apache.axis2.transport.http.util.SOAPUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPFile;
 import org.apache.log4j.Logger;
 import org.hibernate.*;
 
@@ -84,7 +87,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.swing.*;
 import java.util.*;
 import org.hibernate.Query;
-
+import org.apache.commons.io.filefilter.WildcardFileFilter;
 
 // SearchDAO impl
 
@@ -173,7 +176,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         // downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
 
         System.out.println("Updating the CiiiDER genome gtf files ...");
-        // downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
+        downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
         // downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
 
         System.out.println("I am updating the CiiiDER data ...");
@@ -360,6 +363,27 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             }
         }
 
+    private String getFTPFilePath(FTPClient ftpClient, String ftpFileLocation, String pattern) {
+        String ftpFilePath = null;
+        try {
+            FTPFile[] files = ftpClient.listFiles(ftpFileLocation);
+            for (FTPFile file : files) {
+                System.out.println(file.getName());
+                if (file.getName().matches(pattern)) {
+                    System.out.println("Matched: " + file.getName());
+                    ftpFilePath = ftpFileLocation + file.getName();
+                }
+
+            }
+        }
+
+        catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+        return ftpFilePath;
+    }
+
     private void downloadCiiiDERGenomeGTF (String species) {
 
         int BUFFER_SIZE = 8192;
@@ -370,20 +394,29 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         String pass = "anonymous";
         String savePath = null;
 
-        if (species == PROBE_HUMAN_TYPE) {
-            ftpFilePath = "/pub/current_gtf/homo_sapiens/Homo_sapiens.GRCh38.86.gtf.gz";
-            savePath = CIIIDER_INPUT + "/Homo_sapiens.GRCh38.86.gtf.gz";
+        try {
 
-        }
-        if (species == PROBE_MOUSE_TYPE) {
-            ftpFilePath = "/pub/current_gtf/mus_musculus/Mus_musculus.GRCm38.86.gtf.gz";
-            savePath = CIIIDER_INPUT + "/Mus_musculus.GRCm38.86.gtf.gz";
-        }
+            FTPClient ftpClient = new FTPClient();
+            ftpClient.connect(host, 21);
+            ftpClient.login(user, pass);
+
+            if (species == PROBE_HUMAN_TYPE) {
+                String ftpFileLocation = "/pub/current_gtf/homo_sapiens/";
+                String pattern = "Homo_sapiens.*.[0-9*].gtf.gz";
+                ftpFilePath = getFTPFilePath(ftpClient, ftpFileLocation, pattern);
+                savePath = CIIIDER_INPUT + "/Homo_sapiens.GRCh38.86.gtf.gz";
+
+            }
+            if (species == PROBE_MOUSE_TYPE) {
+                ftpFilePath = "/pub/current_gtf/mus_musculus/Mus_musculus.GRCm38.86.gtf.gz";
+                savePath = CIIIDER_INPUT + "/Mus_musculus.GRCm38.86.gtf.gz";
+            }
 
         ftpUrl = String.format(ftpUrl, user, pass, host, ftpFilePath);
+
         System.out.println("URL: " + ftpUrl);
 
-        try {
+
             URL url = new URL(ftpUrl);
             URLConnection conn = url.openConnection();
             InputStream inputStream = conn.getInputStream();
