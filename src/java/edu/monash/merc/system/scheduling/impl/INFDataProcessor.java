@@ -166,15 +166,16 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
         //import human and mouse probes
         //importProbes();
-
-        importCiiiDERBgGenePromoter();
+        // importCiiiDERAllInput();
+        importCiiiDERBgGenePromoter(PROBE_HUMAN_TYPE);
+        importCiiiDERBgGenePromoter(PROBE_MOUSE_TYPE);
 
         //GeneOntology for HUMAN
         long goStartTime = System.currentTimeMillis();
         //importGeneOntology(HUMAN);
 
         //import the geneontology for mouse
-        importGeneOntology(MOUSE);
+        // importGeneOntology(MOUSE);
         long goEndTime = System.currentTimeMillis();
 
         logger.info("=====> The total process time for Gene: " + (endTime - startTime) / 1000 + "seconds");
@@ -187,12 +188,57 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
 
 
-    private void importCiiiDERBgGenePromoter() {
+    private void importCiiiDERBgGenePromoter(String species) {
         try {
-            String HsBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d, Species s INNER JOIN g.probe pg INNER JOIN d.probe dp INNER JOIN p.species ps WHERE pg.probeId = p.probeId and p.probeId = dp.probeId AND ps.speciesId = s.speciesId AND s.speciesName = 'Human')";
-            List<String> HsBgGenes = this.session().createQuery(HsBgGeneHQL).list();
-            FileUtils.writeLines(new File(CIIIDER_INPUT + "HsBackgroundGeneList.txt"), HsBgGenes);
+            String BgGeneHQL = null;
+            if (species == PROBE_HUMAN_TYPE) {
+                BgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%')";
+            }
+            if (species == PROBE_MOUSE_TYPE) {
+                BgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSMUSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%')";
+            }
+
+            List<String> BgGenes = this.session().createQuery(BgGeneHQL).setMaxResults(5000).list();
+            FileUtils.writeLines(new File(CIIIDER_INPUT + species + "BgGeneIdList.txt"), BgGenes);
+
+            String runCiiiDER = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + CIIIDER_HOME + "Config/FindPromoter/BackgroundGene/" + species + "ConfigFindPromoterBg.ini";
+            Process processCiiiDER = Runtime.getRuntime().exec(runCiiiDER);
+            processCiiiDER.waitFor();
+
+            List<Promoter> promoters = new ArrayList<Promoter>();
+            Promoter promoter = new Promoter();
+
+
+            BufferedReader brGeneEnsgs = new BufferedReader(new FileReader(new File(CIIIDER_HOME + "Output/FindPromoter/BackgroundGene/" + species + "BgGenePromoter.fa")));
+
+            String line = null;
+            while ((line = brGeneEnsgs.readLine()) != null) {
+                if (line.startsWith(">")) {
+                    String[] identifier = line.split("\\|");
+                    String geneName = identifier[0].replaceFirst(">","");
+                    String ensgAccession = identifier[1];
+                    promoter = new Promoter();
+                    Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
+
+                    promoter.setGene(gene);
+                    // String linked_gene_ensgAccession = promoter.getGene().getEnsgAccession();
+                    // System.out.println(linked_gene_ensgAccession);
+                    promoter.setGeneName(geneName);
+                    // promoter.setEnsgAccession(ensgAccession);
+                    // promoter.setEnsgAccession(gene.getEnsgAccession());
+                } else if (!line.equals("")) {
+                    promoter.setSequence(line);
+                    if(!promoters.contains(promoter)) promoters.add(promoter);
+                }
+            }
+            this.dmService.importPromoter(promoters);
+
+
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (HibernateException ex) {
+            ex.getCause();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -212,12 +258,12 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
         System.out.println("Updating the CiiiDER genome gtf files ...");
         // downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
-        downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
+        // downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
 
         System.out.println("I am updating the CiiiDER data ...");
 
         // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
-        importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
 
         System.out.println("Completed updating the CiiiDER TFSite data!");
 
