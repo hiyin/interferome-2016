@@ -163,32 +163,11 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         //Gene for MOUSE
         //importEnsemblGenes(MOUSE, importedTime);
         long endTime = System.currentTimeMillis();
-        System.out.println("Updating the CiiiDER gene list data");
-        exportCiiiDERGeneList(PROBE_HUMAN_TYPE);
-        exportCiiiDERGeneList(PROBE_MOUSE_TYPE);
-
-        // importCiiiDERPromoter(PROBE_HUMAN_TYPE);
-        // importCiiiDERPromoter(PROBE_MOUSE_TYPE);
-
-
-        System.out.println("Updating the CiiiDER genome files ...");
-        downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
-        downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
-
-        System.out.println("Updating the CiiiDER genome gtf files ...");
-        downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
-        downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
-
-        System.out.println("I am updating the CiiiDER data ...");
-
-        // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
-        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
-
-        System.out.println("Completed updating the CiiiDER TFSite data!");
-
 
         //import human and mouse probes
         //importProbes();
+
+        importCiiiDERBgGenePromoter();
 
         //GeneOntology for HUMAN
         long goStartTime = System.currentTimeMillis();
@@ -205,6 +184,44 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         logger.info("=====> The total process time for gene and genontology: " + (goEndTime - startTime) / 1000 + "seconds");
     }
 
+
+
+
+    private void importCiiiDERBgGenePromoter() {
+        try {
+            String HsBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d, Species s INNER JOIN g.probe pg INNER JOIN d.probe dp INNER JOIN p.species ps WHERE pg.probeId = p.probeId and p.probeId = dp.probeId AND ps.speciesId = s.speciesId AND s.speciesName = 'Human')";
+            List<String> HsBgGenes = this.session().createQuery(HsBgGeneHQL).list();
+            FileUtils.writeLines(new File(CIIIDER_INPUT + "HsBackgroundGeneList.txt"), HsBgGenes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void importCiiiDERAllInput() {
+        System.out.println("Updating the CiiiDER gene list data");
+        // exportCiiiDERGeneList(PROBE_HUMAN_TYPE);
+        // exportCiiiDERGeneList(PROBE_MOUSE_TYPE);
+
+        // importCiiiDERPromoter(PROBE_HUMAN_TYPE);
+        // importCiiiDERPromoter(PROBE_MOUSE_TYPE);
+
+
+        System.out.println("Updating the CiiiDER genome files ...");
+        // downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
+        // downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
+
+        System.out.println("Updating the CiiiDER genome gtf files ...");
+        // downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
+        downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
+
+        System.out.println("I am updating the CiiiDER data ...");
+
+        // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
+        importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+
+        System.out.println("Completed updating the CiiiDER TFSite data!");
+
+    }
 
 
 
