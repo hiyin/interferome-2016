@@ -712,19 +712,20 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
         for (Object[] row: HsBgGeneList) {
             String ensgAccession = ((Gene)row[0]).getEnsgAccession();
             String sequence = ((Promoter)row[1]).getSequence();
-            HsBgGenes.add(String.format(">%s\n%s", ensgAccession, sequence));
+            String geneName = ((Promoter)row[1]).getGeneName();
+            HsBgGenes.add(String.format(">%s%s%s\n%s", ensgAccession, '|', geneName, sequence));
         }
-
         List<String> MmBgGenes = new ArrayList<String>();
         for (Object[] row: MmBgGeneList) {
             String ensgAccession = ((Gene)row[0]).getEnsgAccession();
             String sequence = ((Promoter)row[1]).getSequence();
-            MmBgGenes.add(String.format(">%s\n%s", ensgAccession, sequence));
+            String geneName = ((Promoter)row[1]).getGeneName();
+            MmBgGenes.add(String.format(">%s%s%s\n%s", ensgAccession, '|', geneName, sequence));
         }
 
 
-        FileUtils.writeLines(new File(userDirCiiiDER + "MmBackgroundGeneList.txt"), MmBgGenes);
-        FileUtils.writeLines(new File(userDirCiiiDER + "HsBackgroundGenePromoter.fa"), HsBgGenes);
+        FileUtils.writeLines(new File(userDirCiiiDER + "MouseBgGene.fa"), MmBgGenes);
+        FileUtils.writeLines(new File(userDirCiiiDER + "HumanBgGene.fa"), HsBgGenes);
         System.out.println("Creating background genes ...");
     }
     /**
@@ -797,7 +798,7 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
                 String MmConfigString = "STARTPOINT=1 \n"
                         + "ENDPOINT=2 \n"
                         + "GENELISTFILENAME=" + userDir + "MouseGeneSearch.fa \n"
-                        + "BGGENELISTFILENAME=" + CIIIDER_INPUT + "MouseBgGene.fa \n"
+                        + "BGGENELISTFILENAME=" + userDir + "MouseBgGene.fa \n"
                         + "MATRIXFILE=" + CIIIDER_INPUT + "selectedJasparMatrice.txt \n"
                         + "GENESCANRESULTS=" + userDir + "MouseGeneBindingSiteList.txt \n"
                         + "BGBINDSITEFILENAME=" + CIIIDER_OUTPUT + "ScanTFSite/MouseBgGeneSiteList.csl \n"
@@ -835,25 +836,6 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
                 String EnrichRuntimeParamsHs = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + userDir + "HumanConfigMain.ini";
                 String EnrichRuntimeParamsMm = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + userDir + "MouseConfigMain.ini";
                 Process EnrichProcessHs = Runtime.getRuntime().exec(EnrichRuntimeParamsHs);
-
-               /* BufferedReader stdInput = new BufferedReader(new
-                        InputStreamReader(EnrichProcessHs.getInputStream()));
-
-                BufferedReader stdError = new BufferedReader(new
-                        InputStreamReader(EnrichProcessHs.getErrorStream()));
-
-
-                System.out.println("Here is the standard output of the command:\n");
-                String s = null;
-                while ((s = stdInput.readLine()) != null) {
-                    System.out.println(s);
-                }
-
-                System.out.println("Here is the standard error of the command (if any):\n");
-                while ((s = stdError.readLine()) != null) {
-                    System.out.println(s);
-                }
-*/
                 EnrichProcessHs.waitFor();
 
 
