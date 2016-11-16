@@ -700,9 +700,9 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
 
 
         // String HsBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT g.ensgAccession FROM Gene g INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) AND g.ensgAccession LIKE 'ENSG%')";
-        String HsBgGeneHQL = "SELECT DISTINCT g, m From Gene g, Promoter m INNER JOIN m.gene mg WHERE g.ensgAccession = g.ensgAccession and mg.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) and pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%')";
+        String HsBgGeneHQL = "SELECT DISTINCT g, m From Gene g, Promoter m INNER JOIN m.gene mg WHERE mg.ensgAccession = g.ensgAccession and g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) and pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%')";
 
-        String MmBgGeneHQL = "SELECT DISTINCT g, m From Gene g, Promoter m INNER JOIN m.gene mg WHERE g.ensgAccession = g.ensgAccession and mg.ensgAccession LIKE 'ENSMUSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) and pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%')";
+        String MmBgGeneHQL = "SELECT DISTINCT g, m From Gene g, Promoter m INNER JOIN m.gene mg WHERE mg.ensgAccession = g.ensgAccession and g.ensgAccession LIKE 'ENSMUSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) and pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%')";
 
         List<Object[]> HsBgGeneList = this.session().createQuery(HsBgGeneHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
 
@@ -893,6 +893,22 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
         writer.write(toWrite);
         writer.close();
     }
+    
+//    public void getSearchGenePromoter(List<Probe> probes) {
+//
+//        String pmHQL = "SELECT DISTINCT g, m FROM Promoter m INNER JOIN Gene g  INNER JOIN g.probe pbs INNER JOIN m.gene mg WHERE mg.ensgAccession = g.ensgAccession AND pbs.probeId IN (:probes)";
+//
+//        List<Object[]> pmList = this.session().createQuery(pmHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
+//
+//        List<String> HsBgGenes = new ArrayList<String>();
+//        for (Object[] row: HsBgGeneList) {
+//            String ensgAccession = ((Gene)row[0]).getEnsgAccession();
+//            String sequence = ((Promoter)row[1]).getSequence();
+//            String geneName = ((Promoter)row[1]).getGeneName();
+//            HsBgGenes.add(String.format(">%s%s%s\n%s", ensgAccession, '|', geneName, sequence));
+//        }
+//
+//    }
 
     @Override
     public Pagination<Probe> searchProbes(SearchBean searchBean, int startPageNo, int recordPerPage, String orderBy, String sortBy) {
