@@ -757,18 +757,11 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
             goTFQuery.setParameterList(("probes"), probes);
             List<Object[]> goTFList = goTFQuery.list();
 
-
-
             try {
-
                 // uid stands for userId to provide path for user temp file of running CiiiDER to get result of TF Analysis
-
                 String userDir = CIIIDER_USER + userCiiiDERId + "/"; // make directory for userID
                 File userFolder = new File(userDir); userFolder.mkdirs();
                 createCiiiDERBackgroundGeneList(probes, userDir);
-
-                BufferedWriter HsEnrichConfig = new BufferedWriter(new FileWriter(new File(userDir + "HumanConfigMain.ini")));
-                BufferedWriter MmEnrichConfig = new BufferedWriter(new FileWriter(new File(userDir + "MouseConfigMain.ini")));
 
                 ArrayList<String> HsQueryEnsgsList = new ArrayList<String>();
                 ArrayList<String> MmQueryEnsgsList = new ArrayList<String>();
@@ -789,111 +782,76 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
                     if (!MmQueryEnsgsList.contains(ensgAccession) && ensgAccession.startsWith("ENSMUSG")) {
                         MmQueryEnsgsList.add(ensgAccession);
                     }
-
                 }
-
 //                getGeneListPromoter(HsQueryEnsgsList, "HumanGeneSearch", "HumanIFNGenePromoter", userDir);
 //                getGeneListPromoter(MmQueryEnsgsList, "MouseGeneSearch", "MouseIFNGenePromoter", userDir);
                 getSearchGenePromoter(probes, userDir);
+                generateCiiiDERConfigFile(userDir);
+                runCiiiDER(userDir, "ConfigMain.ini");
 
-                String MmConfigString = "STARTPOINT=1 \n"
-                        + "ENDPOINT=2 \n"
-                        + "GENELISTFILENAME=" + userDir + "MouseGeneSearch.fa \n"
-                        + "BGGENELISTFILENAME=" + userDir + "MouseBgGene.fa \n"
-                        + "MATRIXFILE=" + CIIIDER_INPUT + "selectedJasparMatrice.txt \n"
-                        + "GENESCANRESULTS=" + userDir + "MouseGeneBindingSiteList.txt \n"
-                        + "BGBINDSITEFILENAME=" + CIIIDER_OUTPUT + "ScanTFSite/MouseBgGeneSiteList.csl \n"
-                        + "ENRICHMENTCOVERAGEPVALUE=1.0 \n"
-                        + "ENRICHMENTSITEPVALUE=1.0 \n"
-                        + "DEFICIT=0.15 \n"
-                        + "ENRICHMENTOUTPUTFILE=" + userDir + "MouseEnrichmentAnalysis.txt \n"
-                        + "PROJECTOUTPUTFILE=" + userDir + "MouseProject.CDR \n"
-                        + "DEBUGLOGFILE=" + userDir + "MouseRun.log";
-
-                MmEnrichConfig.write(MmConfigString);
-                MmEnrichConfig.close();
-
-                // BufferWriter for HsConfig.ini
-                String HsConfigString = "STARTPOINT=1 \n"
-                        + "ENDPOINT=2 \n"
-                        + "GENELISTFILENAME=" + userDir + "HumanGeneSearch.fa \n"
-                        + "BGGENELISTFILENAME=" + userDir + "HumanBgGene.fa \n"
-                        + "MATRIXFILE=" + CIIIDER_INPUT + "selectedJasparMatrice.txt \n"
-                        + "GENESCANRESULTS=" + userDir + "HumanGeneBindingSiteList.txt \n"
-                        + "BGBINDSITEFILENAME=" + CIIIDER_OUTPUT + "ScanTFSite/HumanBgGeneSiteList.csl \n"
-                        + "ENRICHMENTCOVERAGEPVALUE=1.0 \n"
-                        + "ENRICHMENTSITEPVALUE=1.0 \n"
-                        + "DEFICIT=0.15 \n"
-                        + "ENRICHMENTOUTPUTFILE=" + userDir + "HumanEnrichmentAnalysis.txt \n"
-                        + "PROJECTOUTPUTFILE=" + userDir + "HumanProject.CDR \n"
-                        + "DEBUGLOGFILE=" + userDir + "HumanRun.log";
-
-                HsEnrichConfig.write(HsConfigString);
-                HsEnrichConfig.close();
-
-
-
-                // Params for Runtime
-                String EnrichRuntimeParamsHs = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + userDir + "HumanConfigMain.ini";
-                String EnrichRuntimeParamsMm = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + userDir + "MouseConfigMain.ini";
-                Process EnrichProcessHs = Runtime.getRuntime().exec(EnrichRuntimeParamsHs);
-                EnrichProcessHs.waitFor();
-
-
-                Process EnrichProcessMm = Runtime.getRuntime().exec(EnrichRuntimeParamsMm);
-                EnrichProcessMm.waitFor();
             } catch (IOException e) {
                 e.printStackTrace();}
-            catch (InterruptedException e) {
-                e.printStackTrace();}
-
             return goTFList;
         } else {
             return new ArrayList<Object[]>();
         }
     }
 
-//    public HashMap<String, String> getPromoterSeqHashMap(String promoterSeqInFilename) throws IOException {
-//        BufferedReader promoterReference = new BufferedReader(new FileReader(new File(CIIIDER_OUTPUT +"FindPromoter/IFNGene/" + promoterSeqInFilename + ".fa")));
-//        HashMap<String, String> promoterHashMap = new HashMap<String, String>();
-//        String key = "";
-//        String promoterLine = "";
-//
-//        while ((promoterLine = promoterReference.readLine()) != null){
-//            if (promoterLine.startsWith(">")){
-//                // ensgID = promoterLine.split("\\|")[0];
-//                // key = ensgID.replace(">", "");
-//                key = promoterLine;
-//            }
-//            else {
-//                String value = promoterLine;
-//                promoterHashMap.put(key, value);}
-//        }return promoterHashMap;
-//    }
-//
-//    public void getGeneListPromoter (ArrayList<String> QueryEnsgsList, String GeneListFaFilename, String promoterSeqInFilename, String uidPath) throws IOException {
-//        HashMap<String, String> promoterHashMap = getPromoterSeqHashMap(promoterSeqInFilename);
-//        String toWrite = "";
-//
-//        String QueryEnsg;
-//        Iterator<String> iterator = QueryEnsgsList.iterator();
-//        while (iterator.hasNext()) {
-//            QueryEnsg = iterator.next();
-//            for (Map.Entry<String, String> entry : promoterHashMap.entrySet()) {
-//                String key = entry.getKey();
-//                String valueSeq = entry.getValue();
-//                if (key.contains(QueryEnsg)){
-//                    String[] splitKey = key.split("\\|");
-//                    String newKey = splitKey[1];
-//                    toWrite += (">" + newKey + "\n" + valueSeq + "\n");}
-//                else {continue;}
-//            }
-//        }
-//
-//        BufferedWriter writer = new BufferedWriter(new FileWriter(new File (uidPath + GeneListFaFilename + ".fa")));
-//        writer.write(toWrite);
-//        writer.close();
-//    }
+    public void runCiiiDER(String userDir, String configFilename) {
+        try {
+            String HsRunParam = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + userDir + "Human" + configFilename;
+            Process HsProcess = Runtime.getRuntime().exec(HsRunParam);
+            HsProcess.waitFor();
+            String MmRunParam = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + userDir + "Mouse" + configFilename;
+            Process MmProcess = Runtime.getRuntime().exec(MmRunParam);
+            MmProcess.waitFor();
+        } catch (InterruptedException e) {
+            e.printStackTrace();}
+          catch (IOException e) {
+            e.printStackTrace();}
+    }
+
+    public void generateCiiiDERConfigFile(String userDir) {
+        try {
+        BufferedWriter HsEnrichConfig = new BufferedWriter(new FileWriter(new File(userDir + "HumanConfigMain.ini")));
+        BufferedWriter MmEnrichConfig = new BufferedWriter(new FileWriter(new File(userDir + "MouseConfigMain.ini")));
+
+        String MmConfigString = "STARTPOINT=1 \n"
+                + "ENDPOINT=2 \n"
+                + "GENELISTFILENAME=" + userDir + "MouseGeneSearch.fa \n"
+                + "BGGENELISTFILENAME=" + userDir + "MouseBgGene.fa \n"
+                + "MATRIXFILE=" + CIIIDER_INPUT + "selectedJasparMatrice.txt \n"
+                + "GENESCANRESULTS=" + userDir + "MouseGeneBindingSiteList.txt \n"
+                + "BGBINDSITEFILENAME=" + CIIIDER_OUTPUT + "ScanTFSite/MouseBgGeneSiteList.csl \n"
+                + "ENRICHMENTCOVERAGEPVALUE=1.0 \n"
+                + "ENRICHMENTSITEPVALUE=1.0 \n"
+                + "DEFICIT=0.15 \n"
+                + "ENRICHMENTOUTPUTFILE=" + userDir + "MouseEnrichmentAnalysis.txt \n"
+                + "PROJECTOUTPUTFILE=" + userDir + "MouseProject.CDR \n"
+                + "DEBUGLOGFILE=" + userDir + "MouseRun.log";
+
+        MmEnrichConfig.write(MmConfigString);
+        MmEnrichConfig.close();
+        // BufferWriter for HsConfig.ini
+        String HsConfigString = "STARTPOINT=1 \n"
+                + "ENDPOINT=2 \n"
+                + "GENELISTFILENAME=" + userDir + "HumanGeneSearch.fa \n"
+                + "BGGENELISTFILENAME=" + userDir + "HumanBgGene.fa \n"
+                + "MATRIXFILE=" + CIIIDER_INPUT + "selectedJasparMatrice.txt \n"
+                + "GENESCANRESULTS=" + userDir + "HumanGeneBindingSiteList.txt \n"
+                + "BGBINDSITEFILENAME=" + CIIIDER_OUTPUT + "ScanTFSite/HumanBgGeneSiteList.csl \n"
+                + "ENRICHMENTCOVERAGEPVALUE=1.0 \n"
+                + "ENRICHMENTSITEPVALUE=1.0 \n"
+                + "DEFICIT=0.15 \n"
+                + "ENRICHMENTOUTPUTFILE=" + userDir + "HumanEnrichmentAnalysis.txt \n"
+                + "PROJECTOUTPUTFILE=" + userDir + "HumanProject.CDR \n"
+                + "DEBUGLOGFILE=" + userDir + "HumanRun.log";
+        HsEnrichConfig.write(HsConfigString);
+        HsEnrichConfig.close();
+    } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void getSearchGenePromoter(List<Probe> probes, String userDir) {
         String pmGeneHQL = "SELECT DISTINCT g, m FROM Promoter m, Gene g INNER JOIN g.probe pbs INNER JOIN m.gene mg WHERE mg.ensgAccession = g.ensgAccession AND pbs.probeId IN (:probes)";
