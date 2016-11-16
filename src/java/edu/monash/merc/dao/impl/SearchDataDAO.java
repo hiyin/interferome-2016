@@ -699,14 +699,32 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
 
 
 
-        String HsBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT g.ensgAccession FROM Gene g INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) AND g.ensgAccession LIKE 'ENSG%')";
-        String MmBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSMUSG%' AND g.ensgAccession  NOT IN (SELECT g.ensgAccession FROM Gene g INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) AND g.ensgAccession LIKE 'ENSMUSG%')";
+        // String HsBgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT g.ensgAccession FROM Gene g INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) AND g.ensgAccession LIKE 'ENSG%')";
+        String HsBgGeneHQL = "SELECT DISTINCT g, m From Gene g, Promoter m INNER JOIN m.gene mg WHERE g.ensgAccession = g.ensgAccession and mg.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) and pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%')";
 
-        List<String> HsBgGenes = this.session().createQuery(HsBgGeneHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
-        List<String> MmBgGenes = this.session().createQuery(MmBgGeneHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
+        String MmBgGeneHQL = "SELECT DISTINCT g, m From Gene g, Promoter m INNER JOIN m.gene mg WHERE g.ensgAccession = g.ensgAccession and mg.ensgAccession LIKE 'ENSMUSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp INNER JOIN g.probe pbs WHERE pbs.probeId IN (:probes) and pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%')";
+
+        List<Object[]> HsBgGeneList = this.session().createQuery(HsBgGeneHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
+
+        List<Object[]> MmBgGeneList = this.session().createQuery(MmBgGeneHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
+
+        List<String> HsBgGenes = new ArrayList<String>();
+        for (Object[] row: HsBgGeneList) {
+            String ensgAccession = ((Gene)row[0]).getEnsgAccession();
+            String sequence = ((Promoter)row[1]).getSequence();
+            HsBgGenes.add(String.format(">%s\n%s", ensgAccession, sequence));
+        }
+
+        List<String> MmBgGenes = new ArrayList<String>();
+        for (Object[] row: MmBgGeneList) {
+            String ensgAccession = ((Gene)row[0]).getEnsgAccession();
+            String sequence = ((Promoter)row[1]).getSequence();
+            MmBgGenes.add(String.format(">%s\n%s", ensgAccession, sequence));
+        }
+
 
         FileUtils.writeLines(new File(userDirCiiiDER + "MmBackgroundGeneList.txt"), MmBgGenes);
-        FileUtils.writeLines(new File(userDirCiiiDER + "HsBackgroundGeneList.txt"), HsBgGenes);
+        FileUtils.writeLines(new File(userDirCiiiDER + "HsBackgroundGenePromoter.fa"), HsBgGenes);
         System.out.println("Creating background genes ...");
     }
     /**
@@ -797,7 +815,7 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
                 String HsConfigString = "STARTPOINT=1 \n"
                         + "ENDPOINT=2 \n"
                         + "GENELISTFILENAME=" + userDir + "HumanGeneSearch.fa \n"
-                        + "BGGENELISTFILENAME=" + CIIIDER_INPUT + "HumanBgGene.fa \n"
+                        + "BGGENELISTFILENAME=" + userDir + "HumanBgGene.fa \n"
                         + "MATRIXFILE=" + CIIIDER_INPUT + "selectedJasparMatrice.txt \n"
                         + "GENESCANRESULTS=" + userDir + "HumanGeneBindingSiteList.txt \n"
                         + "BGBINDSITEFILENAME=" + CIIIDER_OUTPUT + "ScanTFSite/HumanBgGeneSiteList.csl \n"
