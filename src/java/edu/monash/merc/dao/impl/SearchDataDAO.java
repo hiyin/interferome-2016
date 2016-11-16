@@ -792,8 +792,9 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
 
                 }
 
-                getGeneListPromoter(HsQueryEnsgsList, "HumanGeneSearch", "HumanIFNGenePromoter", userDir);
-                getGeneListPromoter(MmQueryEnsgsList, "MouseGeneSearch", "MouseIFNGenePromoter", userDir);
+//                getGeneListPromoter(HsQueryEnsgsList, "HumanGeneSearch", "HumanIFNGenePromoter", userDir);
+//                getGeneListPromoter(MmQueryEnsgsList, "MouseGeneSearch", "MouseIFNGenePromoter", userDir);
+                getSearchGenePromoter(probes, userDir);
 
                 String MmConfigString = "STARTPOINT=1 \n"
                         + "ENDPOINT=2 \n"
@@ -852,63 +853,78 @@ public class SearchDataDAO extends HibernateGenericDAO<Data> implements ISearchD
         }
     }
 
-    public HashMap<String, String> getPromoterSeqHashMap(String promoterSeqInFilename) throws IOException {
-        BufferedReader promoterReference = new BufferedReader(new FileReader(new File(CIIIDER_OUTPUT +"FindPromoter/IFNGene/" + promoterSeqInFilename + ".fa")));
-        HashMap<String, String> promoterHashMap = new HashMap<String, String>();
-        String key = "";
-        String promoterLine = "";
-
-        while ((promoterLine = promoterReference.readLine()) != null){
-            if (promoterLine.startsWith(">")){
-                // ensgID = promoterLine.split("\\|")[0];
-                // key = ensgID.replace(">", "");
-                key = promoterLine;
-            }
-            else {
-                String value = promoterLine;
-                promoterHashMap.put(key, value);}
-        }return promoterHashMap;
-    }
-
-    public void getGeneListPromoter (ArrayList<String> QueryEnsgsList, String GeneListFaFilename, String promoterSeqInFilename, String uidPath) throws IOException {
-        HashMap<String, String> promoterHashMap = getPromoterSeqHashMap(promoterSeqInFilename);
-        String toWrite = "";
-
-        String QueryEnsg;
-        Iterator<String> iterator = QueryEnsgsList.iterator();
-        while (iterator.hasNext()) {
-            QueryEnsg = iterator.next();
-            for (Map.Entry<String, String> entry : promoterHashMap.entrySet()) {
-                String key = entry.getKey();
-                String valueSeq = entry.getValue();
-                if (key.contains(QueryEnsg)){
-                    String[] splitKey = key.split("\\|");
-                    String newKey = splitKey[1];
-                    toWrite += (">" + newKey + "\n" + valueSeq + "\n");}
-                else {continue;}
-            }
-        }
-
-        BufferedWriter writer = new BufferedWriter(new FileWriter(new File (uidPath + GeneListFaFilename + ".fa")));
-        writer.write(toWrite);
-        writer.close();
-    }
-    
-//    public void getSearchGenePromoter(List<Probe> probes) {
+//    public HashMap<String, String> getPromoterSeqHashMap(String promoterSeqInFilename) throws IOException {
+//        BufferedReader promoterReference = new BufferedReader(new FileReader(new File(CIIIDER_OUTPUT +"FindPromoter/IFNGene/" + promoterSeqInFilename + ".fa")));
+//        HashMap<String, String> promoterHashMap = new HashMap<String, String>();
+//        String key = "";
+//        String promoterLine = "";
 //
-//        String pmHQL = "SELECT DISTINCT g, m FROM Promoter m INNER JOIN Gene g  INNER JOIN g.probe pbs INNER JOIN m.gene mg WHERE mg.ensgAccession = g.ensgAccession AND pbs.probeId IN (:probes)";
+//        while ((promoterLine = promoterReference.readLine()) != null){
+//            if (promoterLine.startsWith(">")){
+//                // ensgID = promoterLine.split("\\|")[0];
+//                // key = ensgID.replace(">", "");
+//                key = promoterLine;
+//            }
+//            else {
+//                String value = promoterLine;
+//                promoterHashMap.put(key, value);}
+//        }return promoterHashMap;
+//    }
 //
-//        List<Object[]> pmList = this.session().createQuery(pmHQL).setParameterList(("probes"), probes).setMaxResults(2500).list();
+//    public void getGeneListPromoter (ArrayList<String> QueryEnsgsList, String GeneListFaFilename, String promoterSeqInFilename, String uidPath) throws IOException {
+//        HashMap<String, String> promoterHashMap = getPromoterSeqHashMap(promoterSeqInFilename);
+//        String toWrite = "";
 //
-//        List<String> HsBgGenes = new ArrayList<String>();
-//        for (Object[] row: HsBgGeneList) {
-//            String ensgAccession = ((Gene)row[0]).getEnsgAccession();
-//            String sequence = ((Promoter)row[1]).getSequence();
-//            String geneName = ((Promoter)row[1]).getGeneName();
-//            HsBgGenes.add(String.format(">%s%s%s\n%s", ensgAccession, '|', geneName, sequence));
+//        String QueryEnsg;
+//        Iterator<String> iterator = QueryEnsgsList.iterator();
+//        while (iterator.hasNext()) {
+//            QueryEnsg = iterator.next();
+//            for (Map.Entry<String, String> entry : promoterHashMap.entrySet()) {
+//                String key = entry.getKey();
+//                String valueSeq = entry.getValue();
+//                if (key.contains(QueryEnsg)){
+//                    String[] splitKey = key.split("\\|");
+//                    String newKey = splitKey[1];
+//                    toWrite += (">" + newKey + "\n" + valueSeq + "\n");}
+//                else {continue;}
+//            }
 //        }
 //
+//        BufferedWriter writer = new BufferedWriter(new FileWriter(new File (uidPath + GeneListFaFilename + ".fa")));
+//        writer.write(toWrite);
+//        writer.close();
 //    }
+
+    public void getSearchGenePromoter(List<Probe> probes, String userDir) {
+        String pmGeneHQL = "SELECT DISTINCT g, m FROM Promoter m, Gene g INNER JOIN g.probe pbs INNER JOIN m.gene mg WHERE mg.ensgAccession = g.ensgAccession AND pbs.probeId IN (:probes)";
+
+        List<Object[]> pmGeneList = this.session().createQuery(pmGeneHQL).setParameterList(("probes"), probes).list();
+
+        List<String> HsPmGenes = new ArrayList<String>();
+        List<String> MmPmGenes = new ArrayList<String>();
+
+        try {
+            for (Object[] row : pmGeneList) {
+                String ensgAccession = ((Gene) row[0]).getEnsgAccession();
+                String sequence = ((Promoter) row[1]).getSequence();
+                String geneName = ((Promoter) row[1]).getGeneName();
+                if (ensgAccession.startsWith("ENSG")) {
+                    HsPmGenes.add(String.format(">%s%s%s\n%s", ensgAccession, '|', geneName, sequence));
+                }
+                if (ensgAccession.startsWith("ENSMUSG")) {
+                    MmPmGenes.add(String.format(">%s%s%s\n%s", ensgAccession, '|', geneName, sequence));
+                }
+            }
+
+            FileUtils.writeLines(new File(userDir + "HumanGeneSearch.fa"), HsPmGenes);
+            FileUtils.writeLines(new File(userDir + "MouseGeneSearch.fa"), MmPmGenes);
+
+
+    } catch (IOException e) {
+        e.printStackTrace();
+        }
+    }
+
 
     @Override
     public Pagination<Probe> searchProbes(SearchBean searchBean, int startPageNo, int recordPerPage, String orderBy, String sortBy) {
