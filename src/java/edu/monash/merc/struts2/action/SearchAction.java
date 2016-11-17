@@ -458,7 +458,6 @@ public class SearchAction extends DMBaseAction {
         searchBean.getCellLines().add("-1");
     }
 
-
     @SuppressWarnings("unchecked")
     public String searchData() {
         try {
@@ -670,16 +669,17 @@ public class SearchAction extends DMBaseAction {
 
             storeInSession(ActionConts.SEARCH_CON_KEY, searchBean);
 
-
         } catch (Exception ex) {
             logger.error(ex);
             addActionError(getText("data.search.tf.analysis.failed"));
             return ERROR;
         }
 
-        // FileUtils.deleteQuietly(new File("/home/mimr/dyin/enrich/" + userIDEnrich));
+        if (isSearched()) FileUtils.deleteQuietly(new File(CIIIDER_USER + userCiiiDERId));
 
         return SUCCESS;
+
+
     }
 
 
@@ -1164,7 +1164,7 @@ public class SearchAction extends DMBaseAction {
 
 
             } catch(IOException e) {
-            e.printStackTrace();}
+                e.printStackTrace();}
 
 
             this.csvInputStream = createCSVFileTFanalysis(searchBean, tfSiteList);
@@ -3085,6 +3085,8 @@ public class SearchAction extends DMBaseAction {
         }
         return SUCCESS;
     }
+
+
 
     public Map<String, String> getIfnTypeMap() {
         return ifnTypeMap;
