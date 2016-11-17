@@ -187,6 +187,48 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
 
 
+    private void importCiiiDERAllInput() {
+
+        System.out.println("Updating the CiiiDER genome files ...");
+        // downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
+        // downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
+
+        System.out.println("Updating the CiiiDER genome gtf files ...");
+        // downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
+        // downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
+
+        System.out.println("Updating the CiiiDER gene list text files ...");
+        // exportCiiiDERGeneList("IFNGene", PROBE_HUMAN_TYPE);
+        // exportCiiiDERGeneList("IFNGene", PROBE_MOUSE_TYPE);
+        // exportCiiiDERGeneList("BackgroundGene", PROBE_HUMAN_TYPE);
+        // exportCiiiDERGeneList("BackgroundGene", PROBE_MOUSE_TYPE);
+
+        System.out.println("Generating the CiiiDER background and IFN gene promoter fasta files ...");
+        // generateCiiiDERPromoter("BackgroundGene", PROBE_HUMAN_TYPE);
+        // generateCiiiDERPromoter("BackgroundGene", PROBE_MOUSE_TYPE);
+
+        // importCiiiDERBgGenePromoter(PROBE_HUMAN_TYPE);
+        // importCiiiDERBgGenePromoter(PROBE_MOUSE_TYPE);
+
+        generateCiiiDERPromoter("IFNGene", PROBE_HUMAN_TYPE);
+        // generateCiiiDERPromoter("IFNGene", PROBE_MOUSE_TYPE);
+
+        // importCiiiDERGenePromoter(PROBE_HUMAN_TYPE);
+        // importCiiiDERGenePromoter(PROBE_MOUSE_TYPE);
+
+        System.out.println("Generating the CiiiDER tfsite file ...");
+        generateCiiiDERTFSite(PROBE_HUMAN_TYPE);
+        generateCiiiDERTFSite(PROBE_MOUSE_TYPE);
+
+        System.out.println("Importing the CiiiDER tfsite data into database...");
+        // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
+        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+
+        System.out.println("Completed updating ALL CiiiDER input data!");
+
+    }
+
+
     private void importCiiiDERBgGenePromoter(String species) {
         try {
 
@@ -227,42 +269,6 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         }
     }
 
-    private void importCiiiDERAllInput() {
-        System.out.println("Updating the CiiiDER gene list text files ...");
-        // exportCiiiDERGeneList("IFNGene", PROBE_HUMAN_TYPE);
-        exportCiiiDERGeneList("IFNGene", PROBE_MOUSE_TYPE);
-        // exportCiiiDERGeneList("BackgroundGene", PROBE_HUMAN_TYPE);
-        // exportCiiiDERGeneList("BackgroundGene", PROBE_MOUSE_TYPE);
-
-        System.out.println("Generating the CiiiDER gene promoter fasta files ...");
-        // generateCiiiDERPromoter("BackgroundGene", PROBE_HUMAN_TYPE);
-        // generateCiiiDERPromoter("BackgroundGene", PROBE_MOUSE_TYPE);
-
-        // importCiiiDERBgGenePromoter(PROBE_HUMAN_TYPE);
-        // importCiiiDERBgGenePromoter(PROBE_MOUSE_TYPE);
-
-        generateCiiiDERPromoter("IFNGene", PROBE_HUMAN_TYPE);
-        generateCiiiDERPromoter("IFNGene", PROBE_MOUSE_TYPE);
-
-        // importCiiiDERGenePromoter(PROBE_HUMAN_TYPE);
-        // importCiiiDERGenePromoter(PROBE_MOUSE_TYPE);
-
-        System.out.println("Updating the CiiiDER genome files ...");
-        // downloadCiiiDERGenome(PROBE_HUMAN_TYPE);
-        // downloadCiiiDERGenome(PROBE_MOUSE_TYPE);
-
-        System.out.println("Updating the CiiiDER genome gtf files ...");
-        // downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
-        // downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
-
-        System.out.println("Updating the CiiiDER tfsite data ...");
-
-        // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
-        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
-
-        System.out.println("Completed updating ALL CiiiDER input data!");
-
-    }
 
     private void generateCiiiDERPromoter(String promoterType, String species) {
 
@@ -330,11 +336,31 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         }
     }
 
+    private void generateCiiiDERTFSite(String species) {
+
+        try {
+            String runCiiiDER = null;
+            if (species == PROBE_HUMAN_TYPE) {
+                runCiiiDER = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + CIIIDER_HOME + "Config/ScanTFSite/" + species + "ConfigScanTFSite.ini";
+            }
+            if (species == PROBE_MOUSE_TYPE) {
+                runCiiiDER = "java -jar " + CIIIDER_HOME + "Jar/CiiiDER.jar" + " -n " + CIIIDER_HOME + "Config/ScanTFSite/" + species + "ConfigScanTFSite.ini";
+            }
+            Process processCiiiDER = Runtime.getRuntime().exec(runCiiiDER);
+            processCiiiDER.waitFor();
+
+            System.out.println(String.format("Completed generating the CiiiDER TFSite files for %s ...", species));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private void importCiiiDERTFSite (String species) {
         try {
         // Pre-run CiiiDER if bsl.txt file not available
-
         // Create TFSite array to store TFSite
         List<TFSite> tfSites = new ArrayList<TFSite>();
         TFSite tfSite = new TFSite();
