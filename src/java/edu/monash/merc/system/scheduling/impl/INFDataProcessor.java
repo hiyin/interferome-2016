@@ -228,12 +228,13 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
     }
 
     private void importCiiiDERAllInput() {
-        System.out.println("Updating the CiiiDER gene list data");
+        System.out.println("Updating the CiiiDER gene list text files ...");
         // exportCiiiDERGeneList("IFNGene", PROBE_HUMAN_TYPE);
         exportCiiiDERGeneList("IFNGene", PROBE_MOUSE_TYPE);
         // exportCiiiDERGeneList("BackgroundGene", PROBE_HUMAN_TYPE);
         // exportCiiiDERGeneList("BackgroundGene", PROBE_MOUSE_TYPE);
 
+        System.out.println("Generating the CiiiDER gene promoter fasta files ...");
         // generateCiiiDERPromoter("BackgroundGene", PROBE_HUMAN_TYPE);
         // generateCiiiDERPromoter("BackgroundGene", PROBE_MOUSE_TYPE);
 
@@ -254,12 +255,12 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         // downloadCiiiDERGenomeGTF(PROBE_HUMAN_TYPE);
         // downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
 
-        System.out.println("I am updating the CiiiDER data ...");
+        System.out.println("Updating the CiiiDER tfsite data ...");
 
         // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
         // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
 
-        System.out.println("Completed updating the CiiiDER TFSite data!");
+        System.out.println("Completed updating ALL CiiiDER input data!");
 
     }
 
@@ -275,6 +276,8 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             }
             Process processCiiiDER = Runtime.getRuntime().exec(runCiiiDER);
             processCiiiDER.waitFor();
+
+            System.out.println(String.format("Completed generating the CiiiDER %s promoter fasta files for %s ...", promoterType, species));
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (IOException e) {
