@@ -210,19 +210,19 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         // importCiiiDERBgGenePromoter(PROBE_HUMAN_TYPE);
         // importCiiiDERBgGenePromoter(PROBE_MOUSE_TYPE);
 
-        generateCiiiDERPromoter("IFNGene", PROBE_HUMAN_TYPE);
+        // generateCiiiDERPromoter("IFNGene", PROBE_HUMAN_TYPE);
         // generateCiiiDERPromoter("IFNGene", PROBE_MOUSE_TYPE);
 
         // importCiiiDERGenePromoter(PROBE_HUMAN_TYPE);
         // importCiiiDERGenePromoter(PROBE_MOUSE_TYPE);
 
         System.out.println("Generating the CiiiDER tfsite file ...");
-        generateCiiiDERTFSite(PROBE_HUMAN_TYPE);
-        generateCiiiDERTFSite(PROBE_MOUSE_TYPE);
+        // generateCiiiDERTFSite(PROBE_HUMAN_TYPE);
+        // generateCiiiDERTFSite(PROBE_MOUSE_TYPE);
 
         System.out.println("Importing the CiiiDER tfsite data into database...");
-        // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
-        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+        importCiiiDERTFSite(PROBE_HUMAN_TYPE);
+        //importCiiiDERTFSite(PROBE_MOUSE_TYPE);
 
         System.out.println("Completed updating ALL CiiiDER input data!");
 
@@ -366,36 +366,47 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         TFSite tfSite = new TFSite();
         
         // Read in bsl.txt 
-        BufferedReader brGeneBSL = new BufferedReader(new FileReader(new File (CIIIDER_HOME + "Output/ScanTFSite/" + species + "GeneBindingSiteList.txt")));
+        BufferedReader brGeneBSL = new BufferedReader(new FileReader
+                (new File (CIIIDER_HOME + "Output/ScanTFSite/" + species + "GeneBindingSiteList.txt")));
         // LineIterator itGeneBSL = FileUtils.lineIterator(new File (CIIIDER_HOME + "Output/ScanTFSite/" + species + "GeneBindingSiteList.txt"));
 
-        String line = null;
+        String line;
+
         while ((line = brGeneBSL.readLine()) != null) {
             // while ((line = itGeneBSL.nextLine()) != null) {
-            String[] fields = line.split(",");
-            String[] identifier = fields[0].split("\\|");
-            String quantifier = fields[1];
-            String factor = fields[2];
-            String factor_index = fields[3];
-            int start = Integer.valueOf(fields[4]);
-            int end = Integer.valueOf(fields[5]);
-            String strand = fields[6];
-            Double core_match = Double.valueOf(fields[7]);
-            Double matrix_match = Double.valueOf(fields[8]);
+//            String[] fields = line.split(",");
+////            String[] identifier = fields[0].split("\\|");
+////            String quantifier = fields[1];
+//            String factor = fields[2];
+//            String factor_index = fields[3];
+//            int start = Integer.valueOf(fields[4]);
+//            int end = Integer.valueOf(fields[5]);
+//            String strand = fields[6];
+//            Double core_match = Double.valueOf(fields[7]);
+//            Double matrix_match = Double.valueOf(fields[8]);
 
+//
+//            String geneName = identifier[0];
+//            String ensgAccession = identifier[1];
 
-            String geneName = identifier[0];
-            String ensgAccession = identifier[1];
+                // String geneName = line.substring(0, line.indexOf("|"));
+                String ensgAccession = line.substring(line.indexOf("|")+1, line.indexOf(","));
+                // int quantifier = Integer.valueOf(line.substring(line.indexOf(",")+1, StringUtils.ordinalIndexOf(line, ",", 2)));
+                String factor = line.substring(StringUtils.ordinalIndexOf(line, ",", 2)+1, StringUtils.ordinalIndexOf(line, ",", 3));
+                int start = Integer.valueOf(line.substring(StringUtils.ordinalIndexOf(line, ",", 4) + 1, StringUtils.ordinalIndexOf(line, ",", 5)));
+                int end = Integer.valueOf(line.substring(StringUtils.ordinalIndexOf(line, ",", 5) + 1, StringUtils.ordinalIndexOf(line, ",", 6)));
+                Double coreMatch = Double.valueOf(line.substring(StringUtils.ordinalIndexOf(line, ",", 7) + 1, StringUtils.ordinalIndexOf(line, ",", 8)));
+                Double matrixMatch = Double.valueOf(line.substring(StringUtils.ordinalIndexOf(line, ",", 8)+1));
 
             tfSite = new TFSite();
 
             Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
-            tfSite.setGene(gene);
+            // tfSite.setGene(gene);
             tfSite.setFactor(factor);
             tfSite.setStart(start);
             tfSite.setEnd(end);
-            tfSite.setCoreMatch(core_match);
-            tfSite.setMatrixMatch(matrix_match);
+            tfSite.setCoreMatch(coreMatch);
+            tfSite.setMatrixMatch(matrixMatch);
             tfSite.setEnsemblID(ensgAccession);
 
 
