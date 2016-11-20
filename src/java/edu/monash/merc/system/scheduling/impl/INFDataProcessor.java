@@ -207,7 +207,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         // generateCiiiDERPromoter("BackgroundGene", PROBE_HUMAN_TYPE);
         // generateCiiiDERPromoter("BackgroundGene", PROBE_MOUSE_TYPE);
 
-        // importCiiiDERBgGenePromoter(PROBE_HUMAN_TYPE);
+         importCiiiDERBgGenePromoter(PROBE_HUMAN_TYPE);
         // importCiiiDERBgGenePromoter(PROBE_MOUSE_TYPE);
 
         // generateCiiiDERPromoter("IFNGene", PROBE_HUMAN_TYPE);
@@ -222,7 +222,7 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
         System.out.println("Importing the CiiiDER tfsite data into database...");
         // importCiiiDERTFSite(PROBE_HUMAN_TYPE);
-        importCiiiDERTFSite(PROBE_MOUSE_TYPE);
+        // importCiiiDERTFSite(PROBE_MOUSE_TYPE);
 
         System.out.println("Completed updating ALL CiiiDER input data!");
 
@@ -240,9 +240,12 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             String line = null;
             while ((line = brGeneEnsgs.readLine()) != null) {
                 if (line.startsWith(">")) {
-                    String[] identifier = line.split("\\|");
-                    String geneName = identifier[0].replaceFirst(">","");
-                    String ensgAccession = identifier[1];
+//                    String[] identifier = line.split("\\|");
+//                    String geneName = identifier[0].replaceFirst(">","");
+//                    String ensgAccession = identifier[1];
+                    String geneName = line.substring(line.indexOf(">")+1, line.indexOf("|"));
+                    String ensgAccession = line.substring(line.indexOf("|")+1);
+
                     promoter = new Promoter();
                     Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
 
@@ -308,9 +311,8 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
             String line = null;
             while ((line = brGeneEnsgs.readLine()) != null) {
                 if (line.startsWith(">")) {
-                    String[] identifier = line.split("\\|");
-                    String geneName = identifier[0].replaceFirst(">","");
-                    String ensgAccession = identifier[1];
+                    String geneName = line.substring(line.indexOf(">") + 1, line.indexOf("|"));
+                    String ensgAccession = line.substring(line.indexOf("|")+1);
                     promoter = new Promoter();
                     Gene gene = this.dmService.getGeneByEnsgAccession(ensgAccession);
 
@@ -397,10 +399,11 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
 
         }
 
+            brGeneBSL.close();
             System.out.println(tfSites.size());
             this.dmService.importAllTFSites(tfSites);
-            System.out.println("Completed importing CiiiDER tfsite of size:" + tfSites.size());
-            brGeneBSL.close();
+            System.out.println("Completed importing CiiiDER tfsite of size :" + tfSites.size());
+
 
 
 
