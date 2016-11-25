@@ -15,6 +15,7 @@
     <bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest" name="merc" class="edu.monash.merc.struts2.multipart.MonitoredMultiPartRequest" scope="default"/>
     <constant name="struts.multipart.handler" value="merc"/>
     <constant name="struts.multipart.maxSize" value="2048000000"/>
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
 
     <package name="core.merc" extends="struts-default">
         <result-types>
