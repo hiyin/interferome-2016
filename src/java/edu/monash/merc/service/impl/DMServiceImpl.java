@@ -1222,6 +1222,9 @@ public class DMServiceImpl implements DMService {
     }
 
     @Override
+    public int saveTFSites(List<TFSite> tfSites) { this.tfSiteService.saveTFSites(tfSites);}
+
+    @Override
     public void mergeTFSite(TFSite tfSite) {
         this.tfSiteService.mergeTFSite(tfSite);
     }
@@ -1247,6 +1250,9 @@ public class DMServiceImpl implements DMService {
         //reporters counter
         TfSiteCounter counter = new TfSiteCounter();
 
+        newTFSites = new List<TFSite>;
+        existTFSites = new List<TFSite>;
+
         for (TFSite tfSite : tfSites) {
             Gene gene = this.getGeneByEnsgAccession(tfSite.getEnsemblID());
             if (gene != null) {
@@ -1255,19 +1261,27 @@ public class DMServiceImpl implements DMService {
                     TFSite existedTFSite = this.getTFSite(tfSite);
                     if (existedTFSite != null) {
                         tfSite.setId(existedTFSite.getId());
+
                         // this.mergeReporter(reporter);
                         // this.updateTFSite(tfSite);
+                        exitTFSite.add(tfSite);
                         this.mergeTFSite(tfSite);
                         //count how many reporters have been updated
                         countUpdated++;
                     } else {
+
+                        newTFSite.add(tfSite);
                         this.saveTFSite(tfSite);
+
                         //count how many reporters are new
                         countNew++;
                     }
                 }
             }
         }
+
+        this.saveTFSites(mewTFSites);
+
         counter.setTotalUpdated(countUpdated);
         counter.setTotalNew(countNew);
         return counter;
