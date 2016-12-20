@@ -4,3 +4,4 @@ deploy/
 dist/
 interferome.iws
 .idea/
+out/
