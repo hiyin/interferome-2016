@@ -142,6 +142,9 @@ public class DMServiceImpl implements DMService {
     @Autowired
     private GeneService geneService;
 
+    @Autowired
+    private CiiiDERGeneService ciiiDERGeneService;
+
     // Promoter Date: 160113
     @Autowired
     private PromoterService promoterService;
@@ -1698,6 +1701,18 @@ public class DMServiceImpl implements DMService {
             }
         }
     }
+
+    // CiiiDER Genes
+    @Override
+    public List<String> getIFNGeneAccessionBySpecies(int lowerValue, int upperValue, String speciesIdentifier) {
+        return this.ciiiDERGeneService.getIFNGeneAccessionBySpecies(lowerValue, upperValue, speciesIdentifier);
+    }
+
+    @Override
+    public List<String> getBgGeneAccessionBySpecies(int lowerValue, int upperValue, String speciesIdentifier) {
+        return this.ciiiDERGeneService.getBgGeneAccessionBySpecies(lowerValue, upperValue, speciesIdentifier);
+    }
+
 
     // Promoters
     @Override
