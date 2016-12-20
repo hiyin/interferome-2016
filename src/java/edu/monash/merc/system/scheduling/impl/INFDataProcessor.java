@@ -35,6 +35,7 @@ import com.thoughtworks.xstream.mapper.AnnotationConfiguration;
 import edu.monash.merc.common.results.DBStats;
 import edu.monash.merc.config.AppPropSettings;
 import edu.monash.merc.dao.HibernateGenericDAO;
+import edu.monash.merc.dao.impl.CiiiDERGeneDAO;
 import edu.monash.merc.dao.impl.GeneDAO;
 import edu.monash.merc.dao.impl.SearchDataDAO;
 import edu.monash.merc.domain.Data;
@@ -198,16 +199,16 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         // downloadCiiiDERGenomeGTF(PROBE_MOUSE_TYPE);
 
         System.out.println("Updating the CiiiDER gene list text files ...");
-        // exportCiiiDERGeneList("IFNGene", PROBE_HUMAN_TYPE);
-        // exportCiiiDERGeneList("IFNGene", PROBE_MOUSE_TYPE);
-        // exportCiiiDERGeneList("BackgroundGene", PROBE_HUMAN_TYPE);
-        // exportCiiiDERGeneList("BackgroundGene", PROBE_MOUSE_TYPE);
+        exportCiiiDERGeneList("IFNGene", PROBE_HUMAN_TYPE);
+        exportCiiiDERGeneList("IFNGene", PROBE_MOUSE_TYPE);
+        exportCiiiDERGeneList("BackgroundGene", PROBE_HUMAN_TYPE);
+        exportCiiiDERGeneList("BackgroundGene", PROBE_MOUSE_TYPE);
 
         System.out.println("Generating the CiiiDER background and IFN gene promoter fasta files ...");
         // generateCiiiDERPromoter("BackgroundGene", PROBE_HUMAN_TYPE);
         // generateCiiiDERPromoter("BackgroundGene", PROBE_MOUSE_TYPE);
 
-         importCiiiDERBgGenePromoter(PROBE_HUMAN_TYPE);
+        // importCiiiDERBgGenePromoter(PROBE_HUMAN_TYPE);
         // importCiiiDERBgGenePromoter(PROBE_MOUSE_TYPE);
 
         // generateCiiiDERPromoter("IFNGene", PROBE_HUMAN_TYPE);
@@ -548,40 +549,78 @@ public class INFDataProcessor extends HibernateGenericDAO<Data> implements DataP
         }
     }
 
+//    private void exportCiiiDERGeneList(String geneType, String species) {
+//        // Export geneAccession from Interferome to update promoter information
+//
+//        try {
+//            if (geneType == "IFNGene") {
+//                String query = null;
+//                if (species == PROBE_HUMAN_TYPE) {
+//                    query = "SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%'";
+//                }
+//                if (species == PROBE_MOUSE_TYPE) {
+//                    query = "SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%'";
+//                }
+//                List<String> IFNGeneList = this.session().createQuery(query).setMaxResults(100000).list();
+//                if (!IFNGeneList.isEmpty()) {
+//                    FileUtils.writeLines(new File(CIIIDER_INPUT + species + "IFNGeneIdList.txt"), IFNGeneList);
+//                    System.out.println("Finished writing the gene id/ensg accession list file ...");
+//                }
+//            }
+//            if (geneType == "BackgroundGene") {
+//                String BgGeneHQL = null;
+//                if (species == PROBE_HUMAN_TYPE) {
+//                    BgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%')";
+//                }
+//                if (species == PROBE_MOUSE_TYPE) {
+//                    BgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSMUSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%')";
+//                }
+//
+//                List<String> BgGenes = this.session().createQuery(BgGeneHQL).setMaxResults(5000).list();
+//                FileUtils.writeLines(new File(CIIIDER_INPUT + species + "BgGeneIdList.txt"), BgGenes);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
     private void exportCiiiDERGeneList(String geneType, String species) {
         // Export geneAccession from Interferome to update promoter information
 
         try {
+
+
             if (geneType == "IFNGene") {
-                String query = null;
+                List<String> IFNGeneList = new ArrayList<String>();
                 if (species == PROBE_HUMAN_TYPE) {
-                    query = "SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%'";
+                    IFNGeneList = this.dmService.getIFNGeneAccessionBySpecies(-1, 1, "ENSG");
                 }
                 if (species == PROBE_MOUSE_TYPE) {
-                    query = "SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%'";
+                    IFNGeneList = this.dmService.getIFNGeneAccessionBySpecies(-1, 1, "ENSMUSG");
                 }
-                List<String> IFNGeneList = this.session().createQuery(query).setMaxResults(100000).list();
+
                 if (!IFNGeneList.isEmpty()) {
                     FileUtils.writeLines(new File(CIIIDER_INPUT + species + "IFNGeneIdList.txt"), IFNGeneList);
-                    System.out.println("Finished writing the gene id/ensg accession list file ...");
                 }
             }
             if (geneType == "BackgroundGene") {
-                String BgGeneHQL = null;
+                List<String> BgGeneList = new ArrayList<String>();
                 if (species == PROBE_HUMAN_TYPE) {
-                    BgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSG%')";
+                    BgGeneList = this.dmService.getBgGeneAccessionBySpecies(-1, 1, "ENSG");
                 }
                 if (species == PROBE_MOUSE_TYPE) {
-                    BgGeneHQL = "SELECT DISTINCT g.ensgAccession From Gene g WHERE g.ensgAccession LIKE 'ENSMUSG%' AND g.ensgAccession NOT IN (SELECT DISTINCT g.ensgAccession FROM Gene g, Probe p, Data d INNER JOIN g.probe pg INNER JOIN d.probe dp WHERE pg.probeId = p.probeId and p.probeId = dp.probeId and d.value not between -1 and 1 and g.ensgAccession LIKE 'ENSMUSG%')";
+                    BgGeneList = this.dmService.getBgGeneAccessionBySpecies(-1, 1, "ENSMUSG");
                 }
-
-                List<String> BgGenes = this.session().createQuery(BgGeneHQL).setMaxResults(5000).list();
-                FileUtils.writeLines(new File(CIIIDER_INPUT + species + "BgGeneIdList.txt"), BgGenes);
+                if (!BgGeneList.isEmpty()) {
+                    FileUtils.writeLines(new File(CIIIDER_INPUT + species + "BgGeneIdList.txt"), BgGeneList);
+                }
             }
+            System.out.println("Finished writing the gene id/ensg accession list file ...");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 
     private void importEnsemblGenes(String species, Date importedTime) {
