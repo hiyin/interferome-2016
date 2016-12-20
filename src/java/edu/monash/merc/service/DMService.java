@@ -350,6 +350,11 @@ public interface DMService {
 
     void importGenes(List<Gene> genes, Date importedTime);
 
+    // CiiiDER Gene
+    public List<String> getIFNGeneAccessionBySpecies(int lowerValue, int upperValue, String speciesIdentifier);
+
+    public List<String> getBgGeneAccessionBySpecies(int lowerValue, int upperValue, String speciesIdentifier);
+
     // Promoters Date: 160111
     public void savePromoter(Promoter promoter);
 
