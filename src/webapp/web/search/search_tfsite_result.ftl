@@ -22,17 +22,18 @@
 <br>
 <br/>
 <div class="export_div">
-    Save as a Pen file (Mouse) <a
-    href="file:///home/mimr/dyin/enrich/Outputs/Mm/MmProject_2500.pen">
+    Save as a project file (Mouse) <a
+    href="file://${stack.findValue("@edu.monash.merc.struts2.action.SearchAction@USERDIR")}/MouseProject.CDR">
     <img src="${base}/images/export.png" class="search_ctip_image" id="export_pic"/></a>
+
 </div>
 <br>
 <br/>
 <br>
 <br/>
 <div class="export_div">
-    Save as a Pen file (Human) <a
-    href="file:///home/mimr/dyin/enrich/Outputs/Hs/HsProject.pen">
+    Save as a project file (Human) <a
+    href="file://${stack.findValue("@edu.monash.merc.struts2.action.SearchAction@USERDIR")}/HumanProject.CDR">
     <img src="${base}/images/export.png" class="search_ctip_image" id="export_pic"/></a>
 </div>
 <br>

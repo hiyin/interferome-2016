@@ -42,22 +42,28 @@ import edu.monash.merc.exception.DCConfigException;
 import edu.monash.merc.exception.DCException;
 import edu.monash.merc.service.SearchDataService;
 import edu.monash.merc.util.MercUtil;
+import freemarker.template.TemplateHashModel;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
+import org.apache.struts2.views.freemarker.StrutsBeanWrapper;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.util.*;
 import java.io.*;
-
+import freemarker.ext.beans.BeansWrapper;
 /**
  * SearchAction Action class
  *
@@ -69,7 +75,14 @@ import java.io.*;
 public class SearchAction extends DMBaseAction {
     public static String CIIIDER_USER = SearchDataDAO.getCiiiderUser();
     // Generate random number for user-specifc Enrich run analysis file
-    public final String userCiiiDERId = Long.toHexString(Double.doubleToLongBits(Math.random())).toString();
+    public final static String userCiiiDERId = Long.toHexString(Double.doubleToLongBits(Math.random())).toString();
+
+    public String getUSERDIR() {
+        return USERDIR;
+    }
+
+    public final static String USERDIR = CIIIDER_USER + userCiiiDERId;
+
 
     @Autowired
     private SearchDataService searchDataService;
@@ -675,7 +688,7 @@ public class SearchAction extends DMBaseAction {
             return ERROR;
         }
 
-        if (isSearched()) FileUtils.deleteQuietly(new File(CIIIDER_USER + userCiiiDERId));
+        // if (isSearched()) FileUtils.deleteQuietly(new File(CIIIDER_USER + userCiiiDERId));
 
         return SUCCESS;
 

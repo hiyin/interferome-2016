@@ -76,7 +76,7 @@ public class Promoter extends Domain {
 //    private String ensgAccession;
 
     @OneToOne(targetEntity = Gene.class)
-    @ForeignKey(name = "fk_gene_ensg_accession")
+    @ForeignKey(name = "fk_ensg_accession")
     // @Index(name ="fk_gene_ensg_accession")
     @JoinColumn(name = "ensg_accession", referencedColumnName = "ensg_accession")
     private Gene gene;
